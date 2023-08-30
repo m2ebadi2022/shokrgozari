@@ -646,3 +646,53 @@ Sub get_State_tamrinat_saved (roz As Int,tamrin As Int) As Int
 	
 End Sub
 
+
+
+
+Sub get_all_tamrin27 As List
+	Dim ls_content As List
+	ls_content.Initialize
+	
+	connection_sql
+	Main.res=Main.sql.ExecQuery("SELECT * FROM tamrin27 ")
+	
+	Do While Main.res.NextRow
+		ls_content.Add(Main.res.GetString("matn"))
+	Loop
+	
+	Main.sql.Close
+	Main.res.Close
+	
+	Return ls_content
+	
+End Sub
+
+ Sub update_tamrin27 (id As Int,matn As String) As Boolean
+ 	Dim state1 As Int=1
+	If(matn="")Then
+		state1=0
+	End If
+	
+	connection_sql
+	Main.sql.ExecNonQuery2("UPDATE tamrin27 SET matn=?, state=? WHERE id=?;", Array As Object(matn, state1,id))
+	Main.sql.Close
+	
+	Return True
+End Sub
+
+Sub get_state_tamrin27 As Int
+	Dim res_state As Int=0
+	
+	connection_sql
+	Main.res=Main.sql.ExecQuery("SELECT * FROM tamrin27 ")
+	
+	Do While Main.res.NextRow
+		res_state=res_state+Main.res.Getint("state")
+	Loop
+	
+	Main.sql.Close
+	Main.res.Close
+	
+	Return res_state
+	
+End Sub

@@ -211,7 +211,19 @@ Sub fill_list
 					lbl_icon_roz.TextColor=0xFFFF9900
 				End If
 			
-				Log(state_tamrin19)
+			Case 22
+				Dim state_tamrin22 As Int=myFunc.get_State_tamrinat_saved(Main.current_roz_tamrin,22)
+				If(state_tamrin22=9)Then
+					lbl_icon_roz.TextColor=0xFF0FA900
+				Else If(state_tamrin22 = 0 )Then
+					lbl_icon_roz.TextColor=0xFFFF211F
+				Else
+					lbl_icon_roz.TextColor=0xFFFF9900
+				End If
+				
+				
+			
+				
 			Case 25
 				Dim state_tamrin25 As Int=myFunc.get_State_tamrinat_saved(Main.current_roz_tamrin,25)
 				If(state_tamrin25=3)Then
@@ -222,6 +234,16 @@ Sub fill_list
 					lbl_icon_roz.TextColor=0xFFFF9900
 				End If
 			
+			Case 27
+				
+				Dim state_tamrin27 As Int=myFunc.get_state_tamrin27
+				If(state_tamrin27>10)Then
+					lbl_icon_roz.TextColor=0xFF0FA900
+				Else If(state_tamrin27 = 0 )Then
+					lbl_icon_roz.TextColor=0xFFFF211F
+				Else
+					lbl_icon_roz.TextColor=0xFFFF9900
+				End If
 			
 				
 				
@@ -284,11 +306,18 @@ Private Sub pan_roz_Click
 		Case 19
 			Main.current_tamrin=19
 			StartActivity(tamrin19_activity)
-			
+		Case 22
+			Main.current_tamrin=22
+			StartActivity(tamrin22_activity)
 			
 		Case 25
 			Main.current_tamrin=25
 			StartActivity(tamrin25_activity)
+		Case 27
+			Main.current_tamrin=27
+			StartActivity(tamrin27_activity)
+		
+		
 			
 	End Select
 	
@@ -332,4 +361,18 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 	Else
 		Return False
 	End If
+End Sub
+
+
+Private Sub WebView1_OverrideUrl (Url As String) As Boolean
+	
+	If Url.EndsWith(".pdf") Then
+		
+		Private i As Intent
+		i.Initialize(i.ACTION_VIEW,Url)
+		StartActivity(i)
+	End If
+	
+	
+	
 End Sub

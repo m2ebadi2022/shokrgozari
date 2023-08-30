@@ -34,7 +34,7 @@ public class download_activity extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "ir.taravatgroup.shokrgozari", "ir.taravatgroup.shokrgozari.download_activity");
+			processBA = new BA(this.getApplicationContext(), null, null, "ir.taravatgroup.shokrgozari", "ir.taravatgroup.shokrgozari.download_activity");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class download_activity extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper _p = null;
@@ -359,215 +350,87 @@ public static String _current_down_name = "";
 public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
-public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
 public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
 public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
 public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
 public ir.taravatgroup.shokrgozari.setting_activity _setting_activity = null;
 public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=9371648;
- //BA.debugLineNum = 9371648;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=9371650;
- //BA.debugLineNum = 9371650;BA.debugLine="Activity.LoadLayout(\"download_layout\")";
+ //BA.debugLineNum = 32;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 34;BA.debugLine="Activity.LoadLayout(\"download_layout\")";
 mostCurrent._activity.LoadLayout("download_layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=9371651;
- //BA.debugLineNum = 9371651;BA.debugLine="strFunc.Initialize";
+ //BA.debugLineNum = 35;BA.debugLine="strFunc.Initialize";
 mostCurrent._strfunc._initialize(processBA);
-RDebugUtils.currentLine=9371652;
- //BA.debugLineNum = 9371652;BA.debugLine="j.Initialize(\"job\", Me)";
-mostCurrent._j._initialize /*String*/ (null,processBA,"job",download_activity.getObject());
-RDebugUtils.currentLine=9371654;
- //BA.debugLineNum = 9371654;BA.debugLine="list_download.Initialize";
+ //BA.debugLineNum = 36;BA.debugLine="j.Initialize(\"job\", Me)";
+mostCurrent._j._initialize /*String*/ (processBA,"job",download_activity.getObject());
+ //BA.debugLineNum = 38;BA.debugLine="list_download.Initialize";
 mostCurrent._list_download.Initialize();
-RDebugUtils.currentLine=9371657;
- //BA.debugLineNum = 9371657;BA.debugLine="End Sub";
+ //BA.debugLineNum = 41;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_keypress", false))
-	 {return ((Boolean) Debug.delegate(mostCurrent.activityBA, "activity_keypress", new Object[] {_keycode}));}
-RDebugUtils.currentLine=9633792;
- //BA.debugLineNum = 9633792;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
-RDebugUtils.currentLine=9633793;
- //BA.debugLineNum = 9633793;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 58;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 59;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
-RDebugUtils.currentLine=9633794;
- //BA.debugLineNum = 9633794;BA.debugLine="lbl_back_Click";
+ //BA.debugLineNum = 60;BA.debugLine="lbl_back_Click";
 _lbl_back_click();
-RDebugUtils.currentLine=9633795;
- //BA.debugLineNum = 9633795;BA.debugLine="Return True";
+ //BA.debugLineNum = 61;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  }else {
-RDebugUtils.currentLine=9633797;
- //BA.debugLineNum = 9633797;BA.debugLine="Return False";
+ //BA.debugLineNum = 63;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
-RDebugUtils.currentLine=9633799;
- //BA.debugLineNum = 9633799;BA.debugLine="End Sub";
+ //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return false;
 }
-public static String  _lbl_back_click() throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_back_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_back_click", null));}
-RDebugUtils.currentLine=9568256;
- //BA.debugLineNum = 9568256;BA.debugLine="Private Sub lbl_back_Click";
-RDebugUtils.currentLine=9568257;
- //BA.debugLineNum = 9568257;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
-RDebugUtils.currentLine=9568258;
- //BA.debugLineNum = 9568258;BA.debugLine="End Sub";
-return "";
-}
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="download_activity";
-RDebugUtils.currentLine=9502720;
- //BA.debugLineNum = 9502720;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=9502722;
- //BA.debugLineNum = 9502722;BA.debugLine="End Sub";
+ //BA.debugLineNum = 47;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 49;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=9437184;
- //BA.debugLineNum = 9437184;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=9437185;
- //BA.debugLineNum = 9437185;BA.debugLine="fill_list";
+ //BA.debugLineNum = 43;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 44;BA.debugLine="fill_list";
 _fill_list();
-RDebugUtils.currentLine=9437186;
- //BA.debugLineNum = 9437186;BA.debugLine="End Sub";
-return "";
-}
-public static String  _fill_list() throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "fill_list", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "fill_list", null));}
-anywheresoftware.b4a.objects.collections.List _list_fehrest = null;
-int _i = 0;
-anywheresoftware.b4a.objects.collections.List _list_row = null;
-RDebugUtils.currentLine=9830400;
- //BA.debugLineNum = 9830400;BA.debugLine="Sub fill_list";
-RDebugUtils.currentLine=9830402;
- //BA.debugLineNum = 9830402;BA.debugLine="CustomListView1.Clear";
-mostCurrent._customlistview1._clear();
-RDebugUtils.currentLine=9830404;
- //BA.debugLineNum = 9830404;BA.debugLine="Dim list_fehrest As List";
-_list_fehrest = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=9830405;
- //BA.debugLineNum = 9830405;BA.debugLine="list_fehrest.Initialize";
-_list_fehrest.Initialize();
-RDebugUtils.currentLine=9830406;
- //BA.debugLineNum = 9830406;BA.debugLine="list_fehrest=myFunc.get_download_list";
-_list_fehrest = mostCurrent._myfunc._get_download_list /*anywheresoftware.b4a.objects.collections.List*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=9830409;
- //BA.debugLineNum = 9830409;BA.debugLine="For i=0 To list_fehrest.Size-1";
-{
-final int step5 = 1;
-final int limit5 = (int) (_list_fehrest.getSize()-1);
-_i = (int) (0) ;
-for (;_i <= limit5 ;_i = _i + step5 ) {
-RDebugUtils.currentLine=9830411;
- //BA.debugLineNum = 9830411;BA.debugLine="p = xui.CreatePanel(\"p\")";
-mostCurrent._p = mostCurrent._xui.CreatePanel(processBA,"p");
-RDebugUtils.currentLine=9830413;
- //BA.debugLineNum = 9830413;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, 100%x, 75dip)";
-mostCurrent._p.SetLayoutAnimated((int) (0),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (75)));
-RDebugUtils.currentLine=9830414;
- //BA.debugLineNum = 9830414;BA.debugLine="p.LoadLayout(\"item_list_downloads\")";
-mostCurrent._p.LoadLayout("item_list_downloads",mostCurrent.activityBA);
-RDebugUtils.currentLine=9830417;
- //BA.debugLineNum = 9830417;BA.debugLine="CustomListView1.Add(p,i)";
-mostCurrent._customlistview1._add(mostCurrent._p,(Object)(_i));
-RDebugUtils.currentLine=9830420;
- //BA.debugLineNum = 9830420;BA.debugLine="Dim list_row As List";
-_list_row = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=9830421;
- //BA.debugLineNum = 9830421;BA.debugLine="list_row.Initialize";
-_list_row.Initialize();
-RDebugUtils.currentLine=9830422;
- //BA.debugLineNum = 9830422;BA.debugLine="list_row=strFunc.Split(list_fehrest.Get(i) , \"@\"";
-_list_row = mostCurrent._strfunc._vvvvvv5(BA.ObjectToString(_list_fehrest.Get(_i)),"@");
-RDebugUtils.currentLine=9830425;
- //BA.debugLineNum = 9830425;BA.debugLine="lbl_donw_title.Text=\" \"&list_row.Get(1)";
-mostCurrent._lbl_donw_title.setText(BA.ObjectToCharSequence(" "+BA.ObjectToString(_list_row.Get((int) (1)))));
-RDebugUtils.currentLine=9830426;
- //BA.debugLineNum = 9830426;BA.debugLine="lbl_donw_detile.Text=\" \"&list_row.Get(2)";
-mostCurrent._lbl_donw_detile.setText(BA.ObjectToCharSequence(" "+BA.ObjectToString(_list_row.Get((int) (2)))));
-RDebugUtils.currentLine=9830428;
- //BA.debugLineNum = 9830428;BA.debugLine="pan_download.Tag=list_row.Get(0)";
-mostCurrent._pan_download.setTag(_list_row.Get((int) (0)));
-RDebugUtils.currentLine=9830430;
- //BA.debugLineNum = 9830430;BA.debugLine="If(File.Exists(File.DirInternal,list_row.Get(3))";
-if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),BA.ObjectToString(_list_row.Get((int) (3)))))) { 
-RDebugUtils.currentLine=9830431;
- //BA.debugLineNum = 9830431;BA.debugLine="lbl_down_del.Text=Chr(0xF014)  'delete icon";
-mostCurrent._lbl_down_del.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf014))));
-RDebugUtils.currentLine=9830432;
- //BA.debugLineNum = 9830432;BA.debugLine="lbl_down_del.textColor=0xFFFF5050";
-mostCurrent._lbl_down_del.setTextColor(((int)0xffff5050));
-RDebugUtils.currentLine=9830433;
- //BA.debugLineNum = 9830433;BA.debugLine="lbl_down_del.Tag=\"del@\"&list_row.Get(3)";
-mostCurrent._lbl_down_del.setTag((Object)("del@"+BA.ObjectToString(_list_row.Get((int) (3)))));
- }else {
-RDebugUtils.currentLine=9830436;
- //BA.debugLineNum = 9830436;BA.debugLine="lbl_down_del.Text=Chr(0xF019)  'download icon";
-mostCurrent._lbl_down_del.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf019))));
-RDebugUtils.currentLine=9830437;
- //BA.debugLineNum = 9830437;BA.debugLine="lbl_down_del.textColor=0xFF0CA300";
-mostCurrent._lbl_down_del.setTextColor(((int)0xff0ca300));
-RDebugUtils.currentLine=9830438;
- //BA.debugLineNum = 9830438;BA.debugLine="lbl_down_del.Tag=\"down@\"&list_row.Get(3)";
-mostCurrent._lbl_down_del.setTag((Object)("down@"+BA.ObjectToString(_list_row.Get((int) (3)))));
- };
- }
-};
-RDebugUtils.currentLine=9830444;
- //BA.debugLineNum = 9830444;BA.debugLine="End Sub";
+ //BA.debugLineNum = 45;BA.debugLine="End Sub";
 return "";
 }
 public static String  _delete_filebyname(String _name) throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "delete_filebyname", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "delete_filebyname", new Object[] {_name}));}
-RDebugUtils.currentLine=9961472;
- //BA.debugLineNum = 9961472;BA.debugLine="Sub delete_fileByName(name As String)";
-RDebugUtils.currentLine=9961473;
- //BA.debugLineNum = 9961473;BA.debugLine="If(File.Exists(File.DirInternal,name))Then";
+ //BA.debugLineNum = 210;BA.debugLine="Sub delete_fileByName(name As String)";
+ //BA.debugLineNum = 211;BA.debugLine="If(File.Exists(File.DirInternal,name))Then";
 if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_name))) { 
-RDebugUtils.currentLine=9961474;
- //BA.debugLineNum = 9961474;BA.debugLine="File.Delete(File.DirInternal,name)";
+ //BA.debugLineNum = 212;BA.debugLine="File.Delete(File.DirInternal,name)";
 anywheresoftware.b4a.keywords.Common.File.Delete(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_name);
-RDebugUtils.currentLine=9961475;
- //BA.debugLineNum = 9961475;BA.debugLine="fill_list";
+ //BA.debugLineNum = 213;BA.debugLine="fill_list";
 _fill_list();
-RDebugUtils.currentLine=9961476;
- //BA.debugLineNum = 9961476;BA.debugLine="ToastMessageShow(\"فایل صوتی حذف شد.\",False)";
+ //BA.debugLineNum = 214;BA.debugLine="ToastMessageShow(\"فایل صوتی حذف شد.\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("فایل صوتی حذف شد."),anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=9961481;
- //BA.debugLineNum = 9961481;BA.debugLine="End Sub";
+ //BA.debugLineNum = 219;BA.debugLine="End Sub";
 return "";
 }
 public static void  _download_byname() throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "download_byname", false))
-	 {Debug.delegate(mostCurrent.activityBA, "download_byname", null); return;}
 ResumableSub_download_byName rsub = new ResumableSub_download_byName(null);
 rsub.resume(processBA, null);
 }
@@ -581,7 +444,6 @@ anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper _out = null;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="download_activity";
 
     while (true) {
 try {
@@ -593,8 +455,7 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=9895937;
- //BA.debugLineNum = 9895937;BA.debugLine="Try";
+ //BA.debugLineNum = 175;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -608,12 +469,10 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 15;
-RDebugUtils.currentLine=9895940;
- //BA.debugLineNum = 9895940;BA.debugLine="j.Download(\"https://m2ebadi.whi.ir/shokrgozari/s";
-parent.mostCurrent._j._download /*String*/ (null,"https://m2ebadi.whi.ir/shokrgozari/sounds/"+parent.mostCurrent._current_down_name);
-RDebugUtils.currentLine=9895943;
- //BA.debugLineNum = 9895943;BA.debugLine="Wait For JobDone(job As HttpJob)";
-anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "download_activity", "download_byname"), null);
+ //BA.debugLineNum = 178;BA.debugLine="j.Download(\"https://m2ebadi.whi.ir/shokrgozari/s";
+parent.mostCurrent._j._download /*String*/ ("https://m2ebadi.whi.ir/shokrgozari/sounds/"+parent.mostCurrent._current_down_name);
+ //BA.debugLineNum = 181;BA.debugLine="Wait For JobDone(job As HttpJob)";
+anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, this, null);
 this.state = 17;
 return;
 case 17:
@@ -621,8 +480,7 @@ case 17:
 this.state = 4;
 _job = (ir.taravatgroup.shokrgozari.httpjob) result[0];
 ;
-RDebugUtils.currentLine=9895944;
- //BA.debugLineNum = 9895944;BA.debugLine="If j.Success Then";
+ //BA.debugLineNum = 182;BA.debugLine="If j.Success Then";
 if (true) break;
 
 case 4:
@@ -635,18 +493,14 @@ this.state = 6;
 case 6:
 //C
 this.state = 7;
-RDebugUtils.currentLine=9895946;
- //BA.debugLineNum = 9895946;BA.debugLine="Dim out As OutputStream = File.OpenOutput(File.";
+ //BA.debugLineNum = 184;BA.debugLine="Dim out As OutputStream = File.OpenOutput(File.";
 _out = new anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper();
 _out = anywheresoftware.b4a.keywords.Common.File.OpenOutput(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),parent.mostCurrent._current_down_name,anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=9895947;
- //BA.debugLineNum = 9895947;BA.debugLine="File.Copy2(job.GetInputStream, out)";
-anywheresoftware.b4a.keywords.Common.File.Copy2((java.io.InputStream)(_job._getinputstream /*anywheresoftware.b4a.objects.streams.File.InputStreamWrapper*/ (null).getObject()),(java.io.OutputStream)(_out.getObject()));
-RDebugUtils.currentLine=9895948;
- //BA.debugLineNum = 9895948;BA.debugLine="out.Close";
+ //BA.debugLineNum = 185;BA.debugLine="File.Copy2(job.GetInputStream, out)";
+anywheresoftware.b4a.keywords.Common.File.Copy2((java.io.InputStream)(_job._getinputstream /*anywheresoftware.b4a.objects.streams.File.InputStreamWrapper*/ ().getObject()),(java.io.OutputStream)(_out.getObject()));
+ //BA.debugLineNum = 186;BA.debugLine="out.Close";
 _out.Close();
-RDebugUtils.currentLine=9895950;
- //BA.debugLineNum = 9895950;BA.debugLine="current_down_name=\"\"";
+ //BA.debugLineNum = 188;BA.debugLine="current_down_name=\"\"";
 parent.mostCurrent._current_down_name = "";
  if (true) break;
 
@@ -654,11 +508,9 @@ case 7:
 //C
 this.state = 8;
 ;
-RDebugUtils.currentLine=9895952;
- //BA.debugLineNum = 9895952;BA.debugLine="job.Release";
-_job._release /*String*/ (null);
-RDebugUtils.currentLine=9895954;
- //BA.debugLineNum = 9895954;BA.debugLine="If(list_download.Size<>0)Then";
+ //BA.debugLineNum = 190;BA.debugLine="job.Release";
+_job._release /*String*/ ();
+ //BA.debugLineNum = 192;BA.debugLine="If(list_download.Size<>0)Then";
 if (true) break;
 
 case 8:
@@ -673,25 +525,20 @@ this.state = 12;
 case 10:
 //C
 this.state = 13;
-RDebugUtils.currentLine=9895955;
- //BA.debugLineNum = 9895955;BA.debugLine="current_down_name=list_download.Get(0)";
+ //BA.debugLineNum = 193;BA.debugLine="current_down_name=list_download.Get(0)";
 parent.mostCurrent._current_down_name = BA.ObjectToString(parent.mostCurrent._list_download.Get((int) (0)));
-RDebugUtils.currentLine=9895956;
- //BA.debugLineNum = 9895956;BA.debugLine="list_download.RemoveAt(0)";
+ //BA.debugLineNum = 194;BA.debugLine="list_download.RemoveAt(0)";
 parent.mostCurrent._list_download.RemoveAt((int) (0));
-RDebugUtils.currentLine=9895957;
- //BA.debugLineNum = 9895957;BA.debugLine="download_byName";
+ //BA.debugLineNum = 195;BA.debugLine="download_byName";
 _download_byname();
  if (true) break;
 
 case 12:
 //C
 this.state = 13;
-RDebugUtils.currentLine=9895959;
- //BA.debugLineNum = 9895959;BA.debugLine="fill_list";
+ //BA.debugLineNum = 197;BA.debugLine="fill_list";
 _fill_list();
-RDebugUtils.currentLine=9895960;
- //BA.debugLineNum = 9895960;BA.debugLine="ToastMessageShow(\"فایلهای صوتی دانلود شدند.\", F";
+ //BA.debugLineNum = 198;BA.debugLine="ToastMessageShow(\"فایلهای صوتی دانلود شدند.\", F";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("فایلهای صوتی دانلود شدند."),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -705,11 +552,9 @@ case 15:
 //C
 this.state = 16;
 this.catchState = 0;
-RDebugUtils.currentLine=9895965;
- //BA.debugLineNum = 9895965;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("49895965",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
-RDebugUtils.currentLine=9895966;
- //BA.debugLineNum = 9895966;BA.debugLine="ToastMessageShow(\"منتظر باشید ..\",False)";
+ //BA.debugLineNum = 203;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("010027037",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+ //BA.debugLineNum = 204;BA.debugLine="ToastMessageShow(\"منتظر باشید ..\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("منتظر باشید .."),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 if (true) break;
@@ -719,8 +564,7 @@ case 16:
 this.state = -1;
 this.catchState = 0;
 ;
-RDebugUtils.currentLine=9895969;
- //BA.debugLineNum = 9895969;BA.debugLine="End Sub";
+ //BA.debugLineNum = 207;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -734,10 +578,103 @@ processBA.setLastException(e0);}
         }
     }
 }
+public static void  _jobdone(ir.taravatgroup.shokrgozari.httpjob _job) throws Exception{
+}
+public static String  _fill_list() throws Exception{
+anywheresoftware.b4a.objects.collections.List _list_fehrest = null;
+int _i = 0;
+anywheresoftware.b4a.objects.collections.List _list_row = null;
+ //BA.debugLineNum = 127;BA.debugLine="Sub fill_list";
+ //BA.debugLineNum = 129;BA.debugLine="CustomListView1.Clear";
+mostCurrent._customlistview1._clear();
+ //BA.debugLineNum = 131;BA.debugLine="Dim list_fehrest As List";
+_list_fehrest = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 132;BA.debugLine="list_fehrest.Initialize";
+_list_fehrest.Initialize();
+ //BA.debugLineNum = 133;BA.debugLine="list_fehrest=myFunc.get_download_list";
+_list_fehrest = mostCurrent._myfunc._get_download_list /*anywheresoftware.b4a.objects.collections.List*/ (mostCurrent.activityBA);
+ //BA.debugLineNum = 136;BA.debugLine="For i=0 To list_fehrest.Size-1";
+{
+final int step5 = 1;
+final int limit5 = (int) (_list_fehrest.getSize()-1);
+_i = (int) (0) ;
+for (;_i <= limit5 ;_i = _i + step5 ) {
+ //BA.debugLineNum = 138;BA.debugLine="p = xui.CreatePanel(\"p\")";
+mostCurrent._p = mostCurrent._xui.CreatePanel(processBA,"p");
+ //BA.debugLineNum = 140;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, 100%x, 75dip)";
+mostCurrent._p.SetLayoutAnimated((int) (0),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (75)));
+ //BA.debugLineNum = 141;BA.debugLine="p.LoadLayout(\"item_list_downloads\")";
+mostCurrent._p.LoadLayout("item_list_downloads",mostCurrent.activityBA);
+ //BA.debugLineNum = 144;BA.debugLine="CustomListView1.Add(p,i)";
+mostCurrent._customlistview1._add(mostCurrent._p,(Object)(_i));
+ //BA.debugLineNum = 147;BA.debugLine="Dim list_row As List";
+_list_row = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 148;BA.debugLine="list_row.Initialize";
+_list_row.Initialize();
+ //BA.debugLineNum = 149;BA.debugLine="list_row=strFunc.Split(list_fehrest.Get(i) , \"@\"";
+_list_row = mostCurrent._strfunc._vvvvvv5(BA.ObjectToString(_list_fehrest.Get(_i)),"@");
+ //BA.debugLineNum = 152;BA.debugLine="lbl_donw_title.Text=\" \"&list_row.Get(1)";
+mostCurrent._lbl_donw_title.setText(BA.ObjectToCharSequence(" "+BA.ObjectToString(_list_row.Get((int) (1)))));
+ //BA.debugLineNum = 153;BA.debugLine="lbl_donw_detile.Text=\" \"&list_row.Get(2)";
+mostCurrent._lbl_donw_detile.setText(BA.ObjectToCharSequence(" "+BA.ObjectToString(_list_row.Get((int) (2)))));
+ //BA.debugLineNum = 155;BA.debugLine="pan_download.Tag=list_row.Get(0)";
+mostCurrent._pan_download.setTag(_list_row.Get((int) (0)));
+ //BA.debugLineNum = 157;BA.debugLine="If(File.Exists(File.DirInternal,list_row.Get(3))";
+if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),BA.ObjectToString(_list_row.Get((int) (3)))))) { 
+ //BA.debugLineNum = 158;BA.debugLine="lbl_down_del.Text=Chr(0xF014)  'delete icon";
+mostCurrent._lbl_down_del.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf014))));
+ //BA.debugLineNum = 159;BA.debugLine="lbl_down_del.textColor=0xFFFF5050";
+mostCurrent._lbl_down_del.setTextColor(((int)0xffff5050));
+ //BA.debugLineNum = 160;BA.debugLine="lbl_down_del.Tag=\"del@\"&list_row.Get(3)";
+mostCurrent._lbl_down_del.setTag((Object)("del@"+BA.ObjectToString(_list_row.Get((int) (3)))));
+ }else {
+ //BA.debugLineNum = 163;BA.debugLine="lbl_down_del.Text=Chr(0xF019)  'download icon";
+mostCurrent._lbl_down_del.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf019))));
+ //BA.debugLineNum = 164;BA.debugLine="lbl_down_del.textColor=0xFF0CA300";
+mostCurrent._lbl_down_del.setTextColor(((int)0xff0ca300));
+ //BA.debugLineNum = 165;BA.debugLine="lbl_down_del.Tag=\"down@\"&list_row.Get(3)";
+mostCurrent._lbl_down_del.setTag((Object)("down@"+BA.ObjectToString(_list_row.Get((int) (3)))));
+ };
+ }
+};
+ //BA.debugLineNum = 171;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 16;BA.debugLine="Private xui As XUI";
+mostCurrent._xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 17;BA.debugLine="Dim p As B4XView";
+mostCurrent._p = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="Private CustomListView1 As CustomListView";
+mostCurrent._customlistview1 = new b4a.example3.customlistview();
+ //BA.debugLineNum = 20;BA.debugLine="Private pan_download As Panel";
+mostCurrent._pan_download = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 21;BA.debugLine="Private lbl_down_del As Label";
+mostCurrent._lbl_down_del = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 23;BA.debugLine="Private lbl_donw_title As Label";
+mostCurrent._lbl_donw_title = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 24;BA.debugLine="Private lbl_donw_detile As Label";
+mostCurrent._lbl_donw_detile = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 25;BA.debugLine="Dim strFunc As StringFunctions";
+mostCurrent._strfunc = new adr.stringfunctions.stringfunctions();
+ //BA.debugLineNum = 26;BA.debugLine="Dim j As HttpJob";
+mostCurrent._j = new ir.taravatgroup.shokrgozari.httpjob();
+ //BA.debugLineNum = 27;BA.debugLine="Dim list_download As List";
+mostCurrent._list_download = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 28;BA.debugLine="Dim current_down_name As String=\"\"";
+mostCurrent._current_down_name = "";
+ //BA.debugLineNum = 30;BA.debugLine="End Sub";
+return "";
+}
+public static String  _lbl_back_click() throws Exception{
+ //BA.debugLineNum = 53;BA.debugLine="Private Sub lbl_back_Click";
+ //BA.debugLineNum = 54;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 55;BA.debugLine="End Sub";
+return "";
+}
 public static void  _lbl_down_del_click() throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_down_del_click", false))
-	 {Debug.delegate(mostCurrent.activityBA, "lbl_down_del_click", null); return;}
 ResumableSub_lbl_down_del_Click rsub = new ResumableSub_lbl_down_del_Click(null);
 rsub.resume(processBA, null);
 }
@@ -754,7 +691,6 @@ boolean _result = false;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="download_activity";
 
     while (true) {
         switch (state) {
@@ -764,21 +700,16 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=9699329;
- //BA.debugLineNum = 9699329;BA.debugLine="Dim func_del_down As Label=Sender";
+ //BA.debugLineNum = 70;BA.debugLine="Dim func_del_down As Label=Sender";
 _func_del_down = new anywheresoftware.b4a.objects.LabelWrapper();
 _func_del_down = (anywheresoftware.b4a.objects.LabelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.LabelWrapper(), (android.widget.TextView)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
-RDebugUtils.currentLine=9699332;
- //BA.debugLineNum = 9699332;BA.debugLine="Dim list_row_mod As List";
+ //BA.debugLineNum = 73;BA.debugLine="Dim list_row_mod As List";
 _list_row_mod = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=9699333;
- //BA.debugLineNum = 9699333;BA.debugLine="list_row_mod.Initialize";
+ //BA.debugLineNum = 74;BA.debugLine="list_row_mod.Initialize";
 _list_row_mod.Initialize();
-RDebugUtils.currentLine=9699334;
- //BA.debugLineNum = 9699334;BA.debugLine="list_row_mod=strFunc.Split(func_del_down.Tag , \"@";
+ //BA.debugLineNum = 75;BA.debugLine="list_row_mod=strFunc.Split(func_del_down.Tag , \"@";
 _list_row_mod = parent.mostCurrent._strfunc._vvvvvv5(BA.ObjectToString(_func_del_down.getTag()),"@");
-RDebugUtils.currentLine=9699336;
- //BA.debugLineNum = 9699336;BA.debugLine="If(list_row_mod.Get(0)=\"down\")Then";
+ //BA.debugLineNum = 77;BA.debugLine="If(list_row_mod.Get(0)=\"down\")Then";
 if (true) break;
 
 case 1:
@@ -793,15 +724,12 @@ this.state = 17;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=9699338;
- //BA.debugLineNum = 9699338;BA.debugLine="Dim rp As RuntimePermissions";
+ //BA.debugLineNum = 79;BA.debugLine="Dim rp As RuntimePermissions";
 _rp = new anywheresoftware.b4a.objects.RuntimePermissions();
-RDebugUtils.currentLine=9699339;
- //BA.debugLineNum = 9699339;BA.debugLine="rp.CheckAndRequest(rp.PERMISSION_WRITE_EXTERNAL_";
+ //BA.debugLineNum = 80;BA.debugLine="rp.CheckAndRequest(rp.PERMISSION_WRITE_EXTERNAL_";
 _rp.CheckAndRequest(processBA,_rp.PERMISSION_WRITE_EXTERNAL_STORAGE);
-RDebugUtils.currentLine=9699340;
- //BA.debugLineNum = 9699340;BA.debugLine="Wait For Activity_PermissionResult (Permission A";
-anywheresoftware.b4a.keywords.Common.WaitFor("activity_permissionresult", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "download_activity", "lbl_down_del_click"), null);
+ //BA.debugLineNum = 81;BA.debugLine="Wait For Activity_PermissionResult (Permission A";
+anywheresoftware.b4a.keywords.Common.WaitFor("activity_permissionresult", processBA, this, null);
 this.state = 19;
 return;
 case 19:
@@ -810,8 +738,7 @@ this.state = 4;
 _permission = (String) result[0];
 _result = (Boolean) result[1];
 ;
-RDebugUtils.currentLine=9699341;
- //BA.debugLineNum = 9699341;BA.debugLine="If Result Then";
+ //BA.debugLineNum = 82;BA.debugLine="If Result Then";
 if (true) break;
 
 case 4:
@@ -837,17 +764,13 @@ case 9:
 //C
 this.state = 10;
 ;
-RDebugUtils.currentLine=9699347;
- //BA.debugLineNum = 9699347;BA.debugLine="func_del_down.Text=Chr(0xF1CE)  'downloading";
+ //BA.debugLineNum = 88;BA.debugLine="func_del_down.Text=Chr(0xF1CE)  'downloading";
 _func_del_down.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf1ce))));
-RDebugUtils.currentLine=9699348;
- //BA.debugLineNum = 9699348;BA.debugLine="myFunc.setRotation(func_del_down,10000,360)";
+ //BA.debugLineNum = 89;BA.debugLine="myFunc.setRotation(func_del_down,10000,360)";
 parent.mostCurrent._myfunc._setrotation /*String*/ (mostCurrent.activityBA,(anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_func_del_down.getObject())),(int) (10000),(float) (360));
-RDebugUtils.currentLine=9699349;
- //BA.debugLineNum = 9699349;BA.debugLine="func_del_down.SetTextColorAnimated(300,Colors.Bl";
+ //BA.debugLineNum = 90;BA.debugLine="func_del_down.SetTextColorAnimated(300,Colors.Bl";
 _func_del_down.SetTextColorAnimated((int) (300),anywheresoftware.b4a.keywords.Common.Colors.Blue);
-RDebugUtils.currentLine=9699354;
- //BA.debugLineNum = 9699354;BA.debugLine="If (current_down_name=\"\")Then";
+ //BA.debugLineNum = 95;BA.debugLine="If (current_down_name=\"\")Then";
 if (true) break;
 
 case 10:
@@ -862,19 +785,16 @@ this.state = 14;
 case 12:
 //C
 this.state = 15;
-RDebugUtils.currentLine=9699355;
- //BA.debugLineNum = 9699355;BA.debugLine="current_down_name=list_row_mod.Get(1)";
+ //BA.debugLineNum = 96;BA.debugLine="current_down_name=list_row_mod.Get(1)";
 parent.mostCurrent._current_down_name = BA.ObjectToString(_list_row_mod.Get((int) (1)));
-RDebugUtils.currentLine=9699356;
- //BA.debugLineNum = 9699356;BA.debugLine="download_byName";
+ //BA.debugLineNum = 97;BA.debugLine="download_byName";
 _download_byname();
  if (true) break;
 
 case 14:
 //C
 this.state = 15;
-RDebugUtils.currentLine=9699358;
- //BA.debugLineNum = 9699358;BA.debugLine="list_download.Add(list_row_mod.Get(1))";
+ //BA.debugLineNum = 99;BA.debugLine="list_download.Add(list_row_mod.Get(1))";
 parent.mostCurrent._list_download.Add(_list_row_mod.Get((int) (1)));
  if (true) break;
 
@@ -887,8 +807,7 @@ this.state = 18;
 case 17:
 //C
 this.state = 18;
-RDebugUtils.currentLine=9699368;
- //BA.debugLineNum = 9699368;BA.debugLine="delete_fileByName(list_row_mod.Get(1))";
+ //BA.debugLineNum = 109;BA.debugLine="delete_fileByName(list_row_mod.Get(1))";
 _delete_filebyname(BA.ObjectToString(_list_row_mod.Get((int) (1))));
  if (true) break;
 
@@ -896,33 +815,31 @@ case 18:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=9699371;
- //BA.debugLineNum = 9699371;BA.debugLine="End Sub";
+ //BA.debugLineNum = 112;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
 }
+public static void  _activity_permissionresult(String _permission,boolean _result) throws Exception{
+}
 public static String  _pan_download_click() throws Exception{
-RDebugUtils.currentModule="download_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "pan_download_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "pan_download_click", null));}
 anywheresoftware.b4a.objects.PanelWrapper _go_to_readingbook = null;
-RDebugUtils.currentLine=9764864;
- //BA.debugLineNum = 9764864;BA.debugLine="Private Sub pan_download_Click";
-RDebugUtils.currentLine=9764865;
- //BA.debugLineNum = 9764865;BA.debugLine="Dim go_to_readingBook As Panel=Sender";
+ //BA.debugLineNum = 116;BA.debugLine="Private Sub pan_download_Click";
+ //BA.debugLineNum = 117;BA.debugLine="Dim go_to_readingBook As Panel=Sender";
 _go_to_readingbook = new anywheresoftware.b4a.objects.PanelWrapper();
 _go_to_readingbook = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
-RDebugUtils.currentLine=9764867;
- //BA.debugLineNum = 9764867;BA.debugLine="Main.current_book_content_id=go_to_readingBook.Ta";
+ //BA.debugLineNum = 119;BA.debugLine="Main.current_book_content_id=go_to_readingBook.Ta";
 mostCurrent._main._current_book_content_id /*int*/  = (int)(BA.ObjectToNumber(_go_to_readingbook.getTag()));
-RDebugUtils.currentLine=9764869;
- //BA.debugLineNum = 9764869;BA.debugLine="StartActivity(reagBook_activity)";
+ //BA.debugLineNum = 121;BA.debugLine="StartActivity(reagBook_activity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._reagbook_activity.getObject()));
-RDebugUtils.currentLine=9764871;
- //BA.debugLineNum = 9764871;BA.debugLine="End Sub";
+ //BA.debugLineNum = 123;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 }

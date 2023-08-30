@@ -62,7 +62,14 @@ Private Sub pan_roz_Click
 	
 	Main.current_roz_tamrin=this_roz.Tag
 	isfitest=False
-	StartActivity(tamrin_roz_activity)
+	
+	If(Main.current_roz_tamrin=29)Then
+		StartActivity(daftar_activity)
+	Else
+		StartActivity(tamrin_roz_activity)
+	End If
+	
+	
 	
 	
 End Sub
@@ -138,4 +145,15 @@ Sub tim_scroll_Tick
 	cusListV_data.ScrollToItem(pos_scroll)
 	
 	tim_scroll.Enabled=False
+End Sub
+
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+		
+			lbl_back_Click
+	
+		Return True
+	Else
+		Return False
+	End If
 End Sub

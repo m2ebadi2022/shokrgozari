@@ -34,7 +34,7 @@ public class book_activity extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "ir.taravatgroup.shokrgozari", "ir.taravatgroup.shokrgozari.book_activity");
+			processBA = new BA(this.getApplicationContext(), null, null, "ir.taravatgroup.shokrgozari", "ir.taravatgroup.shokrgozari.book_activity");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class book_activity extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.Timer _tim_scroll2 = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
@@ -360,8 +351,8 @@ public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
 public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
 public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
 public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
@@ -369,304 +360,244 @@ public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
 public ir.taravatgroup.shokrgozari.setting_activity _setting_activity = null;
 public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="book_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=5046272;
- //BA.debugLineNum = 5046272;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=5046278;
- //BA.debugLineNum = 5046278;BA.debugLine="Activity.LoadLayout(\"book_layout\")";
+ //BA.debugLineNum = 32;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 38;BA.debugLine="Activity.LoadLayout(\"book_layout\")";
 mostCurrent._activity.LoadLayout("book_layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=5046280;
- //BA.debugLineNum = 5046280;BA.debugLine="tim_scroll2.Initialize(\"tim_scroll2\",300)";
+ //BA.debugLineNum = 40;BA.debugLine="tim_scroll2.Initialize(\"tim_scroll2\",300)";
 _tim_scroll2.Initialize(processBA,"tim_scroll2",(long) (300));
-RDebugUtils.currentLine=5046284;
- //BA.debugLineNum = 5046284;BA.debugLine="End Sub";
+ //BA.debugLineNum = 44;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
-RDebugUtils.currentModule="book_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_keypress", false))
-	 {return ((Boolean) Debug.delegate(mostCurrent.activityBA, "activity_keypress", new Object[] {_keycode}));}
-RDebugUtils.currentLine=5308416;
- //BA.debugLineNum = 5308416;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
-RDebugUtils.currentLine=5308417;
- //BA.debugLineNum = 5308417;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 61;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 62;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
-RDebugUtils.currentLine=5308418;
- //BA.debugLineNum = 5308418;BA.debugLine="lbl_back_Click";
+ //BA.debugLineNum = 63;BA.debugLine="lbl_back_Click";
 _lbl_back_click();
-RDebugUtils.currentLine=5308419;
- //BA.debugLineNum = 5308419;BA.debugLine="Return True";
+ //BA.debugLineNum = 64;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  }else {
-RDebugUtils.currentLine=5308421;
- //BA.debugLineNum = 5308421;BA.debugLine="Return False";
+ //BA.debugLineNum = 66;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
-RDebugUtils.currentLine=5308423;
- //BA.debugLineNum = 5308423;BA.debugLine="End Sub";
+ //BA.debugLineNum = 68;BA.debugLine="End Sub";
 return false;
 }
-public static String  _lbl_back_click() throws Exception{
-RDebugUtils.currentModule="book_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_back_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_back_click", null));}
-RDebugUtils.currentLine=5242880;
- //BA.debugLineNum = 5242880;BA.debugLine="Private Sub lbl_back_Click";
-RDebugUtils.currentLine=5242881;
- //BA.debugLineNum = 5242881;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
-RDebugUtils.currentLine=5242882;
- //BA.debugLineNum = 5242882;BA.debugLine="End Sub";
-return "";
-}
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="book_activity";
-RDebugUtils.currentLine=5177344;
- //BA.debugLineNum = 5177344;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=5177346;
- //BA.debugLineNum = 5177346;BA.debugLine="End Sub";
+ //BA.debugLineNum = 50;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="book_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=5111808;
- //BA.debugLineNum = 5111808;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=5111809;
- //BA.debugLineNum = 5111809;BA.debugLine="fill_list";
+ //BA.debugLineNum = 46;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 47;BA.debugLine="fill_list";
 _fill_list();
-RDebugUtils.currentLine=5111810;
- //BA.debugLineNum = 5111810;BA.debugLine="End Sub";
+ //BA.debugLineNum = 48;BA.debugLine="End Sub";
 return "";
 }
 public static String  _fill_list() throws Exception{
-RDebugUtils.currentModule="book_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "fill_list", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "fill_list", null));}
 anywheresoftware.b4a.objects.collections.List _list_fehrest = null;
 adr.stringfunctions.stringfunctions _strfunc = null;
 int _i = 0;
 anywheresoftware.b4a.objects.collections.List _list_row = null;
 int _temp_red = 0;
 int _id_temp_read = 0;
-RDebugUtils.currentLine=5439488;
- //BA.debugLineNum = 5439488;BA.debugLine="Sub fill_list";
-RDebugUtils.currentLine=5439490;
- //BA.debugLineNum = 5439490;BA.debugLine="CustomListView1.Clear";
+ //BA.debugLineNum = 83;BA.debugLine="Sub fill_list";
+ //BA.debugLineNum = 85;BA.debugLine="CustomListView1.Clear";
 mostCurrent._customlistview1._clear();
-RDebugUtils.currentLine=5439492;
- //BA.debugLineNum = 5439492;BA.debugLine="Dim list_fehrest As List";
+ //BA.debugLineNum = 87;BA.debugLine="Dim list_fehrest As List";
 _list_fehrest = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=5439493;
- //BA.debugLineNum = 5439493;BA.debugLine="list_fehrest.Initialize";
+ //BA.debugLineNum = 88;BA.debugLine="list_fehrest.Initialize";
 _list_fehrest.Initialize();
-RDebugUtils.currentLine=5439494;
- //BA.debugLineNum = 5439494;BA.debugLine="list_fehrest=myFunc.get_fehrest";
+ //BA.debugLineNum = 89;BA.debugLine="list_fehrest=myFunc.get_fehrest";
 _list_fehrest = mostCurrent._myfunc._get_fehrest /*anywheresoftware.b4a.objects.collections.List*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=5439496;
- //BA.debugLineNum = 5439496;BA.debugLine="Dim strFunc As StringFunctions";
+ //BA.debugLineNum = 91;BA.debugLine="Dim strFunc As StringFunctions";
 _strfunc = new adr.stringfunctions.stringfunctions();
-RDebugUtils.currentLine=5439497;
- //BA.debugLineNum = 5439497;BA.debugLine="strFunc.Initialize";
+ //BA.debugLineNum = 92;BA.debugLine="strFunc.Initialize";
 _strfunc._initialize(processBA);
-RDebugUtils.currentLine=5439500;
- //BA.debugLineNum = 5439500;BA.debugLine="For i=0 To list_fehrest.Size-1";
+ //BA.debugLineNum = 95;BA.debugLine="For i=0 To list_fehrest.Size-1";
 {
 final int step7 = 1;
 final int limit7 = (int) (_list_fehrest.getSize()-1);
 _i = (int) (0) ;
 for (;_i <= limit7 ;_i = _i + step7 ) {
-RDebugUtils.currentLine=5439502;
- //BA.debugLineNum = 5439502;BA.debugLine="p = xui.CreatePanel(\"p\")";
+ //BA.debugLineNum = 97;BA.debugLine="p = xui.CreatePanel(\"p\")";
 mostCurrent._p = mostCurrent._xui.CreatePanel(processBA,"p");
-RDebugUtils.currentLine=5439504;
- //BA.debugLineNum = 5439504;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, 100%x, 75dip)";
+ //BA.debugLineNum = 99;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, 100%x, 75dip)";
 mostCurrent._p.SetLayoutAnimated((int) (0),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (75)));
-RDebugUtils.currentLine=5439505;
- //BA.debugLineNum = 5439505;BA.debugLine="p.LoadLayout(\"item_list_rozha_tamrin\")";
+ //BA.debugLineNum = 100;BA.debugLine="p.LoadLayout(\"item_list_rozha_tamrin\")";
 mostCurrent._p.LoadLayout("item_list_rozha_tamrin",mostCurrent.activityBA);
-RDebugUtils.currentLine=5439508;
- //BA.debugLineNum = 5439508;BA.debugLine="CustomListView1.Add(p,i)";
+ //BA.debugLineNum = 103;BA.debugLine="CustomListView1.Add(p,i)";
 mostCurrent._customlistview1._add(mostCurrent._p,(Object)(_i));
-RDebugUtils.currentLine=5439511;
- //BA.debugLineNum = 5439511;BA.debugLine="Dim list_row As List";
+ //BA.debugLineNum = 106;BA.debugLine="Dim list_row As List";
 _list_row = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=5439512;
- //BA.debugLineNum = 5439512;BA.debugLine="list_row.Initialize";
+ //BA.debugLineNum = 107;BA.debugLine="list_row.Initialize";
 _list_row.Initialize();
-RDebugUtils.currentLine=5439513;
- //BA.debugLineNum = 5439513;BA.debugLine="list_row=strFunc.Split(list_fehrest.Get(i) , \"@\"";
+ //BA.debugLineNum = 108;BA.debugLine="list_row=strFunc.Split(list_fehrest.Get(i) , \"@\"";
 _list_row = _strfunc._vvvvvv5(BA.ObjectToString(_list_fehrest.Get(_i)),"@");
-RDebugUtils.currentLine=5439517;
- //BA.debugLineNum = 5439517;BA.debugLine="lbl_roz.Text=list_row.Get(1)";
+ //BA.debugLineNum = 112;BA.debugLine="lbl_roz.Text=list_row.Get(1)";
 mostCurrent._lbl_roz.setText(BA.ObjectToCharSequence(_list_row.Get((int) (1))));
-RDebugUtils.currentLine=5439519;
- //BA.debugLineNum = 5439519;BA.debugLine="pan_roz.Tag=list_row.Get(0)";
+ //BA.debugLineNum = 114;BA.debugLine="pan_roz.Tag=list_row.Get(0)";
 mostCurrent._pan_roz.setTag(_list_row.Get((int) (0)));
-RDebugUtils.currentLine=5439523;
- //BA.debugLineNum = 5439523;BA.debugLine="pan_pic.Visible=True";
+ //BA.debugLineNum = 118;BA.debugLine="pan_pic.Visible=True";
 mostCurrent._pan_pic.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=5439525;
- //BA.debugLineNum = 5439525;BA.debugLine="pan_pic.SetBackgroundImage(LoadBitmap(File.DirAs";
+ //BA.debugLineNum = 120;BA.debugLine="pan_pic.SetBackgroundImage(LoadBitmap(File.DirAs";
 mostCurrent._pan_pic.SetBackgroundImageNew((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),BA.ObjectToString(_list_row.Get((int) (3)))).getObject()));
-RDebugUtils.currentLine=5439528;
- //BA.debugLineNum = 5439528;BA.debugLine="lbl_icon_fav.Visible=True";
+ //BA.debugLineNum = 123;BA.debugLine="lbl_icon_fav.Visible=True";
 mostCurrent._lbl_icon_fav.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=5439529;
- //BA.debugLineNum = 5439529;BA.debugLine="lbl_icon_fav.Tag=list_row.Get(0)";
+ //BA.debugLineNum = 124;BA.debugLine="lbl_icon_fav.Tag=list_row.Get(0)";
 mostCurrent._lbl_icon_fav.setTag(_list_row.Get((int) (0)));
-RDebugUtils.currentLine=5439530;
- //BA.debugLineNum = 5439530;BA.debugLine="If(list_row.Get(2).As(Int)=1)Then";
+ //BA.debugLineNum = 125;BA.debugLine="If(list_row.Get(2).As(Int)=1)Then";
 if ((((int)(BA.ObjectToNumber(_list_row.Get((int) (2)))))==1)) { 
-RDebugUtils.currentLine=5439531;
- //BA.debugLineNum = 5439531;BA.debugLine="lbl_icon_fav.Text=Chr(0xF004)";
+ //BA.debugLineNum = 126;BA.debugLine="lbl_icon_fav.Text=Chr(0xF004)";
 mostCurrent._lbl_icon_fav.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf004))));
-RDebugUtils.currentLine=5439532;
- //BA.debugLineNum = 5439532;BA.debugLine="lbl_icon_fav.TextColor=0xFFFF3838";
+ //BA.debugLineNum = 127;BA.debugLine="lbl_icon_fav.TextColor=0xFFFF3838";
 mostCurrent._lbl_icon_fav.setTextColor(((int)0xffff3838));
  }else {
-RDebugUtils.currentLine=5439534;
- //BA.debugLineNum = 5439534;BA.debugLine="lbl_icon_fav.Text=Chr(0xF08A)";
+ //BA.debugLineNum = 129;BA.debugLine="lbl_icon_fav.Text=Chr(0xF08A)";
 mostCurrent._lbl_icon_fav.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf08a))));
-RDebugUtils.currentLine=5439535;
- //BA.debugLineNum = 5439535;BA.debugLine="lbl_icon_fav.TextColor=0xFF686868";
+ //BA.debugLineNum = 130;BA.debugLine="lbl_icon_fav.TextColor=0xFF686868";
 mostCurrent._lbl_icon_fav.setTextColor(((int)0xff686868));
  };
-RDebugUtils.currentLine=5439541;
- //BA.debugLineNum = 5439541;BA.debugLine="If(File.Exists(File.DirInternal,\"temp_read.txt\")";
+ //BA.debugLineNum = 136;BA.debugLine="If(File.Exists(File.DirInternal,\"temp_read.txt\")";
 if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"temp_read.txt"))) { 
-RDebugUtils.currentLine=5439542;
- //BA.debugLineNum = 5439542;BA.debugLine="Dim temp_red As Int=File.ReadString(File.DirIn";
+ //BA.debugLineNum = 137;BA.debugLine="Dim temp_red As Int=File.ReadString(File.DirIn";
 _temp_red = (int)(Double.parseDouble(anywheresoftware.b4a.keywords.Common.File.ReadString(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"temp_read.txt")));
-RDebugUtils.currentLine=5439543;
- //BA.debugLineNum = 5439543;BA.debugLine="Dim id_temp_read As Int=pan_roz.Tag";
+ //BA.debugLineNum = 138;BA.debugLine="Dim id_temp_read As Int=pan_roz.Tag";
 _id_temp_read = (int)(BA.ObjectToNumber(mostCurrent._pan_roz.getTag()));
-RDebugUtils.currentLine=5439545;
- //BA.debugLineNum = 5439545;BA.debugLine="If((id_temp_read)=temp_red)Then";
+ //BA.debugLineNum = 140;BA.debugLine="If((id_temp_read)=temp_red)Then";
 if (((_id_temp_read)==_temp_red)) { 
-RDebugUtils.currentLine=5439546;
- //BA.debugLineNum = 5439546;BA.debugLine="lbl_icon_roz.Typeface=Typeface.MATERIALICONS";
+ //BA.debugLineNum = 141;BA.debugLine="lbl_icon_roz.Typeface=Typeface.MATERIALICONS";
 mostCurrent._lbl_icon_roz.setTypeface(anywheresoftware.b4a.keywords.Common.Typeface.getMATERIALICONS());
-RDebugUtils.currentLine=5439547;
- //BA.debugLineNum = 5439547;BA.debugLine="lbl_icon_roz.TextColor=0xFF0FA900";
+ //BA.debugLineNum = 142;BA.debugLine="lbl_icon_roz.TextColor=0xFF0FA900";
 mostCurrent._lbl_icon_roz.setTextColor(((int)0xff0fa900));
-RDebugUtils.currentLine=5439548;
- //BA.debugLineNum = 5439548;BA.debugLine="lbl_icon_roz.Text=Chr(0xE866)";
+ //BA.debugLineNum = 143;BA.debugLine="lbl_icon_roz.Text=Chr(0xE866)";
 mostCurrent._lbl_icon_roz.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xe866))));
-RDebugUtils.currentLine=5439550;
- //BA.debugLineNum = 5439550;BA.debugLine="lbl_icon_roz.Visible=True";
+ //BA.debugLineNum = 145;BA.debugLine="lbl_icon_roz.Visible=True";
 mostCurrent._lbl_icon_roz.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=5439551;
- //BA.debugLineNum = 5439551;BA.debugLine="pos_scroll=i";
+ //BA.debugLineNum = 146;BA.debugLine="pos_scroll=i";
 _pos_scroll = _i;
  }else {
-RDebugUtils.currentLine=5439553;
- //BA.debugLineNum = 5439553;BA.debugLine="lbl_icon_roz.Visible=False";
+ //BA.debugLineNum = 148;BA.debugLine="lbl_icon_roz.Visible=False";
 mostCurrent._lbl_icon_roz.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
  };
  }
 };
-RDebugUtils.currentLine=5439561;
- //BA.debugLineNum = 5439561;BA.debugLine="If (isfitest=True)Then";
+ //BA.debugLineNum = 156;BA.debugLine="If (isfitest=True)Then";
 if ((_isfitest==anywheresoftware.b4a.keywords.Common.True)) { 
-RDebugUtils.currentLine=5439562;
- //BA.debugLineNum = 5439562;BA.debugLine="tim_scroll2.Enabled=True";
+ //BA.debugLineNum = 157;BA.debugLine="tim_scroll2.Enabled=True";
 _tim_scroll2.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  };
-RDebugUtils.currentLine=5439568;
- //BA.debugLineNum = 5439568;BA.debugLine="End Sub";
+ //BA.debugLineNum = 163;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 16;BA.debugLine="Private xui As XUI";
+mostCurrent._xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 17;BA.debugLine="Dim p As B4XView";
+mostCurrent._p = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 20;BA.debugLine="Private CustomListView1 As CustomListView";
+mostCurrent._customlistview1 = new b4a.example3.customlistview();
+ //BA.debugLineNum = 21;BA.debugLine="Private lbl_roz As Label";
+mostCurrent._lbl_roz = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 22;BA.debugLine="Private lbl_icon_roz As Label";
+mostCurrent._lbl_icon_roz = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 23;BA.debugLine="Private pan_roz As Panel";
+mostCurrent._pan_roz = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 25;BA.debugLine="Private pan_pic As Panel";
+mostCurrent._pan_pic = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 26;BA.debugLine="Private lbl_icon_fav As Label";
+mostCurrent._lbl_icon_fav = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 28;BA.debugLine="Dim pos_scroll As Int=0";
+_pos_scroll = (int) (0);
+ //BA.debugLineNum = 29;BA.debugLine="Dim isfitest As Boolean=True";
+_isfitest = anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 30;BA.debugLine="End Sub";
+return "";
+}
+public static String  _lbl_back_click() throws Exception{
+ //BA.debugLineNum = 55;BA.debugLine="Private Sub lbl_back_Click";
+ //BA.debugLineNum = 56;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 57;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_icon_fav_click() throws Exception{
-RDebugUtils.currentModule="book_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_icon_fav_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_icon_fav_click", null));}
 anywheresoftware.b4a.objects.LabelWrapper _this_roz_fav = null;
 int _fav_state = 0;
-RDebugUtils.currentLine=5505024;
- //BA.debugLineNum = 5505024;BA.debugLine="Private Sub lbl_icon_fav_Click";
-RDebugUtils.currentLine=5505025;
- //BA.debugLineNum = 5505025;BA.debugLine="Dim this_roz_fav As Label=Sender";
+ //BA.debugLineNum = 165;BA.debugLine="Private Sub lbl_icon_fav_Click";
+ //BA.debugLineNum = 166;BA.debugLine="Dim this_roz_fav As Label=Sender";
 _this_roz_fav = new anywheresoftware.b4a.objects.LabelWrapper();
 _this_roz_fav = (anywheresoftware.b4a.objects.LabelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.LabelWrapper(), (android.widget.TextView)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
-RDebugUtils.currentLine=5505029;
- //BA.debugLineNum = 5505029;BA.debugLine="Dim fav_state As Int = myFunc.get_fav_byId(this_r";
+ //BA.debugLineNum = 170;BA.debugLine="Dim fav_state As Int = myFunc.get_fav_byId(this_r";
 _fav_state = mostCurrent._myfunc._get_fav_byid /*int*/ (mostCurrent.activityBA,(int)(BA.ObjectToNumber(_this_roz_fav.getTag())));
-RDebugUtils.currentLine=5505032;
- //BA.debugLineNum = 5505032;BA.debugLine="If(fav_state=1)Then";
+ //BA.debugLineNum = 173;BA.debugLine="If(fav_state=1)Then";
 if ((_fav_state==1)) { 
-RDebugUtils.currentLine=5505034;
- //BA.debugLineNum = 5505034;BA.debugLine="myFunc.set_fav_book(this_roz_fav.Tag,0)";
+ //BA.debugLineNum = 175;BA.debugLine="myFunc.set_fav_book(this_roz_fav.Tag,0)";
 mostCurrent._myfunc._set_fav_book /*String*/ (mostCurrent.activityBA,(int)(BA.ObjectToNumber(_this_roz_fav.getTag())),(int) (0));
-RDebugUtils.currentLine=5505035;
- //BA.debugLineNum = 5505035;BA.debugLine="this_roz_fav.Text=Chr(0xF08A)";
+ //BA.debugLineNum = 176;BA.debugLine="this_roz_fav.Text=Chr(0xF08A)";
 _this_roz_fav.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf08a))));
-RDebugUtils.currentLine=5505036;
- //BA.debugLineNum = 5505036;BA.debugLine="this_roz_fav.TextColor=0xFF686868";
+ //BA.debugLineNum = 177;BA.debugLine="this_roz_fav.TextColor=0xFF686868";
 _this_roz_fav.setTextColor(((int)0xff686868));
  }else {
-RDebugUtils.currentLine=5505038;
- //BA.debugLineNum = 5505038;BA.debugLine="myFunc.set_fav_book(this_roz_fav.Tag,1)";
+ //BA.debugLineNum = 179;BA.debugLine="myFunc.set_fav_book(this_roz_fav.Tag,1)";
 mostCurrent._myfunc._set_fav_book /*String*/ (mostCurrent.activityBA,(int)(BA.ObjectToNumber(_this_roz_fav.getTag())),(int) (1));
-RDebugUtils.currentLine=5505039;
- //BA.debugLineNum = 5505039;BA.debugLine="this_roz_fav.Text=Chr(0xF004)";
+ //BA.debugLineNum = 180;BA.debugLine="this_roz_fav.Text=Chr(0xF004)";
 _this_roz_fav.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf004))));
-RDebugUtils.currentLine=5505040;
- //BA.debugLineNum = 5505040;BA.debugLine="this_roz_fav.TextColor=0xFFFF3838";
+ //BA.debugLineNum = 181;BA.debugLine="this_roz_fav.TextColor=0xFFFF3838";
 _this_roz_fav.setTextColor(((int)0xffff3838));
  };
-RDebugUtils.currentLine=5505048;
- //BA.debugLineNum = 5505048;BA.debugLine="End Sub";
+ //BA.debugLineNum = 189;BA.debugLine="End Sub";
 return "";
 }
 public static String  _pan_roz_click() throws Exception{
-RDebugUtils.currentModule="book_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "pan_roz_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "pan_roz_click", null));}
 anywheresoftware.b4a.objects.PanelWrapper _this_roz = null;
-RDebugUtils.currentLine=5373952;
- //BA.debugLineNum = 5373952;BA.debugLine="Private Sub pan_roz_Click";
-RDebugUtils.currentLine=5373953;
- //BA.debugLineNum = 5373953;BA.debugLine="Dim this_roz As Panel=Sender";
+ //BA.debugLineNum = 71;BA.debugLine="Private Sub pan_roz_Click";
+ //BA.debugLineNum = 72;BA.debugLine="Dim this_roz As Panel=Sender";
 _this_roz = new anywheresoftware.b4a.objects.PanelWrapper();
 _this_roz = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
-RDebugUtils.currentLine=5373955;
- //BA.debugLineNum = 5373955;BA.debugLine="Main.current_book_content_id=this_roz.Tag";
+ //BA.debugLineNum = 74;BA.debugLine="Main.current_book_content_id=this_roz.Tag";
 mostCurrent._main._current_book_content_id /*int*/  = (int)(BA.ObjectToNumber(_this_roz.getTag()));
-RDebugUtils.currentLine=5373956;
- //BA.debugLineNum = 5373956;BA.debugLine="isfitest=False";
+ //BA.debugLineNum = 75;BA.debugLine="isfitest=False";
 _isfitest = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=5373957;
- //BA.debugLineNum = 5373957;BA.debugLine="StartActivity(reagBook_activity)";
+ //BA.debugLineNum = 76;BA.debugLine="StartActivity(reagBook_activity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._reagbook_activity.getObject()));
-RDebugUtils.currentLine=5373960;
- //BA.debugLineNum = 5373960;BA.debugLine="End Sub";
+ //BA.debugLineNum = 79;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 9;BA.debugLine="Dim tim_scroll2 As Timer";
+_tim_scroll2 = new anywheresoftware.b4a.objects.Timer();
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 public static String  _tim_scroll2_tick() throws Exception{
-RDebugUtils.currentModule="book_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "tim_scroll2_tick", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "tim_scroll2_tick", null));}
-RDebugUtils.currentLine=5570560;
- //BA.debugLineNum = 5570560;BA.debugLine="Sub tim_scroll2_Tick";
-RDebugUtils.currentLine=5570561;
- //BA.debugLineNum = 5570561;BA.debugLine="CustomListView1.ScrollToItem(pos_scroll)";
+ //BA.debugLineNum = 192;BA.debugLine="Sub tim_scroll2_Tick";
+ //BA.debugLineNum = 193;BA.debugLine="CustomListView1.ScrollToItem(pos_scroll)";
 mostCurrent._customlistview1._scrolltoitem(_pos_scroll);
-RDebugUtils.currentLine=5570562;
- //BA.debugLineNum = 5570562;BA.debugLine="tim_scroll2.Enabled=False";
+ //BA.debugLineNum = 194;BA.debugLine="tim_scroll2.Enabled=False";
 _tim_scroll2.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=5570563;
- //BA.debugLineNum = 5570563;BA.debugLine="End Sub";
+ //BA.debugLineNum = 195;BA.debugLine="End Sub";
 return "";
 }
 }

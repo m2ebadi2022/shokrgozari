@@ -34,7 +34,7 @@ public class setting_activity extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "ir.taravatgroup.shokrgozari", "ir.taravatgroup.shokrgozari.setting_activity");
+			processBA = new BA(this.getApplicationContext(), null, null, "ir.taravatgroup.shokrgozari", "ir.taravatgroup.shokrgozari.setting_activity");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,7 +335,30 @@ public class setting_activity extends Activity implements B4AActivity{
             
     }
 
-
+public anywheresoftware.b4a.keywords.Common __c = null;
+public anywheresoftware.b4a.objects.PanelWrapper _pan_off1 = null;
+public anywheresoftware.b4a.objects.PanelWrapper _pan_on1 = null;
+public ir.taravatgroup.shokrgozari.main _main = null;
+public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
+public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
+public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
+public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
+public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
+public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
+public ir.taravatgroup.shokrgozari.starter _starter = null;
+public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 
 public static void initializeProcessGlobals() {
              try {
@@ -344,167 +367,101 @@ public static void initializeProcessGlobals() {
                 throw new RuntimeException(e);
             }
 }
-public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.objects.PanelWrapper _pan_off1 = null;
-public anywheresoftware.b4a.objects.PanelWrapper _pan_on1 = null;
-public ir.taravatgroup.shokrgozari.main _main = null;
-public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
-public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
-public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
-public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
-public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
-public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
-public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
-public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
-public ir.taravatgroup.shokrgozari.starter _starter = null;
-public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
-public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="setting_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 int _darkmod = 0;
-RDebugUtils.currentLine=11796480;
- //BA.debugLineNum = 11796480;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=11796482;
- //BA.debugLineNum = 11796482;BA.debugLine="Activity.LoadLayout(\"setting_layout\")";
+ //BA.debugLineNum = 21;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 23;BA.debugLine="Activity.LoadLayout(\"setting_layout\")";
 mostCurrent._activity.LoadLayout("setting_layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=11796485;
- //BA.debugLineNum = 11796485;BA.debugLine="If(File.Exists(File.DirInternal,\"darkmod.txt\"))Th";
+ //BA.debugLineNum = 26;BA.debugLine="If(File.Exists(File.DirInternal,\"darkmod.txt\"))Th";
 if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"darkmod.txt"))) { 
-RDebugUtils.currentLine=11796486;
- //BA.debugLineNum = 11796486;BA.debugLine="Dim darkmod As Int = File.ReadString(File.DirInt";
+ //BA.debugLineNum = 27;BA.debugLine="Dim darkmod As Int = File.ReadString(File.DirInt";
 _darkmod = (int)(Double.parseDouble(anywheresoftware.b4a.keywords.Common.File.ReadString(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"darkmod.txt")));
-RDebugUtils.currentLine=11796487;
- //BA.debugLineNum = 11796487;BA.debugLine="If(darkmod=0)Then";
+ //BA.debugLineNum = 28;BA.debugLine="If(darkmod=0)Then";
 if ((_darkmod==0)) { 
-RDebugUtils.currentLine=11796489;
- //BA.debugLineNum = 11796489;BA.debugLine="pan_off1.Visible=True";
+ //BA.debugLineNum = 30;BA.debugLine="pan_off1.Visible=True";
 mostCurrent._pan_off1.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=11796490;
- //BA.debugLineNum = 11796490;BA.debugLine="pan_on1.Visible=False";
+ //BA.debugLineNum = 31;BA.debugLine="pan_on1.Visible=False";
 mostCurrent._pan_on1.setVisible(anywheresoftware.b4a.keywords.Common.False);
  }else {
-RDebugUtils.currentLine=11796493;
- //BA.debugLineNum = 11796493;BA.debugLine="pan_off1.Visible=False";
+ //BA.debugLineNum = 34;BA.debugLine="pan_off1.Visible=False";
 mostCurrent._pan_off1.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=11796494;
- //BA.debugLineNum = 11796494;BA.debugLine="pan_on1.Visible=True";
+ //BA.debugLineNum = 35;BA.debugLine="pan_on1.Visible=True";
 mostCurrent._pan_on1.setVisible(anywheresoftware.b4a.keywords.Common.True);
  };
  }else {
-RDebugUtils.currentLine=11796498;
- //BA.debugLineNum = 11796498;BA.debugLine="File.WriteString(File.DirInternal,\"darkmod.txt\",";
+ //BA.debugLineNum = 39;BA.debugLine="File.WriteString(File.DirInternal,\"darkmod.txt\",";
 anywheresoftware.b4a.keywords.Common.File.WriteString(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"darkmod.txt","0");
-RDebugUtils.currentLine=11796500;
- //BA.debugLineNum = 11796500;BA.debugLine="pan_off1.Visible=True";
+ //BA.debugLineNum = 41;BA.debugLine="pan_off1.Visible=True";
 mostCurrent._pan_off1.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=11796501;
- //BA.debugLineNum = 11796501;BA.debugLine="pan_on1.Visible=False";
+ //BA.debugLineNum = 42;BA.debugLine="pan_on1.Visible=False";
 mostCurrent._pan_on1.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=11796505;
- //BA.debugLineNum = 11796505;BA.debugLine="End Sub";
+ //BA.debugLineNum = 46;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
-RDebugUtils.currentModule="setting_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_keypress", false))
-	 {return ((Boolean) Debug.delegate(mostCurrent.activityBA, "activity_keypress", new Object[] {_keycode}));}
-RDebugUtils.currentLine=12255232;
- //BA.debugLineNum = 12255232;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
-RDebugUtils.currentLine=12255233;
- //BA.debugLineNum = 12255233;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 127;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 128;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
-RDebugUtils.currentLine=12255234;
- //BA.debugLineNum = 12255234;BA.debugLine="lbl_back_Click";
+ //BA.debugLineNum = 129;BA.debugLine="lbl_back_Click";
 _lbl_back_click();
-RDebugUtils.currentLine=12255235;
- //BA.debugLineNum = 12255235;BA.debugLine="Return True";
+ //BA.debugLineNum = 130;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  }else {
-RDebugUtils.currentLine=12255237;
- //BA.debugLineNum = 12255237;BA.debugLine="Return False";
+ //BA.debugLineNum = 132;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
-RDebugUtils.currentLine=12255239;
- //BA.debugLineNum = 12255239;BA.debugLine="End Sub";
+ //BA.debugLineNum = 134;BA.debugLine="End Sub";
 return false;
 }
-public static String  _lbl_back_click() throws Exception{
-RDebugUtils.currentModule="setting_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_back_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_back_click", null));}
-RDebugUtils.currentLine=12189696;
- //BA.debugLineNum = 12189696;BA.debugLine="Private Sub lbl_back_Click";
-RDebugUtils.currentLine=12189697;
- //BA.debugLineNum = 12189697;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
-RDebugUtils.currentLine=12189698;
- //BA.debugLineNum = 12189698;BA.debugLine="End Sub";
-return "";
-}
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="setting_activity";
-RDebugUtils.currentLine=11927552;
- //BA.debugLineNum = 11927552;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=11927554;
- //BA.debugLineNum = 11927554;BA.debugLine="End Sub";
+ //BA.debugLineNum = 52;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 54;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="setting_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=11862016;
- //BA.debugLineNum = 11862016;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=11862018;
- //BA.debugLineNum = 11862018;BA.debugLine="End Sub";
+ //BA.debugLineNum = 48;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 50;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 17;BA.debugLine="Private pan_off1 As Panel";
+mostCurrent._pan_off1 = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 18;BA.debugLine="Private pan_on1 As Panel";
+mostCurrent._pan_on1 = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="End Sub";
+return "";
+}
+public static String  _lbl_back_click() throws Exception{
+ //BA.debugLineNum = 122;BA.debugLine="Private Sub lbl_back_Click";
+ //BA.debugLineNum = 123;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 124;BA.debugLine="End Sub";
 return "";
 }
 public static String  _pan_darkmod_click() throws Exception{
-RDebugUtils.currentModule="setting_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "pan_darkmod_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "pan_darkmod_click", null));}
-RDebugUtils.currentLine=11993088;
- //BA.debugLineNum = 11993088;BA.debugLine="Private Sub pan_darkMod_Click";
-RDebugUtils.currentLine=11993090;
- //BA.debugLineNum = 11993090;BA.debugLine="If(pan_on1.Visible=False)Then";
+ //BA.debugLineNum = 61;BA.debugLine="Private Sub pan_darkMod_Click";
+ //BA.debugLineNum = 63;BA.debugLine="If(pan_on1.Visible=False)Then";
 if ((mostCurrent._pan_on1.getVisible()==anywheresoftware.b4a.keywords.Common.False)) { 
-RDebugUtils.currentLine=11993092;
- //BA.debugLineNum = 11993092;BA.debugLine="pan_off1.Visible=False";
+ //BA.debugLineNum = 65;BA.debugLine="pan_off1.Visible=False";
 mostCurrent._pan_off1.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=11993093;
- //BA.debugLineNum = 11993093;BA.debugLine="pan_on1.Visible=True";
+ //BA.debugLineNum = 66;BA.debugLine="pan_on1.Visible=True";
 mostCurrent._pan_on1.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=11993095;
- //BA.debugLineNum = 11993095;BA.debugLine="File.WriteString(File.DirInternal,\"darkmod.txt\",";
+ //BA.debugLineNum = 68;BA.debugLine="File.WriteString(File.DirInternal,\"darkmod.txt\",";
 anywheresoftware.b4a.keywords.Common.File.WriteString(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"darkmod.txt","1");
  }else {
-RDebugUtils.currentLine=11993098;
- //BA.debugLineNum = 11993098;BA.debugLine="pan_on1.Visible=False";
+ //BA.debugLineNum = 71;BA.debugLine="pan_on1.Visible=False";
 mostCurrent._pan_on1.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=11993099;
- //BA.debugLineNum = 11993099;BA.debugLine="pan_off1.Visible=True";
+ //BA.debugLineNum = 72;BA.debugLine="pan_off1.Visible=True";
 mostCurrent._pan_off1.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=11993100;
- //BA.debugLineNum = 11993100;BA.debugLine="File.WriteString(File.DirInternal,\"darkmod.txt\",";
+ //BA.debugLineNum = 73;BA.debugLine="File.WriteString(File.DirInternal,\"darkmod.txt\",";
 anywheresoftware.b4a.keywords.Common.File.WriteString(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"darkmod.txt","0");
  };
-RDebugUtils.currentLine=11993104;
- //BA.debugLineNum = 11993104;BA.debugLine="End Sub";
+ //BA.debugLineNum = 77;BA.debugLine="End Sub";
 return "";
 }
 public static void  _pan_remove_allsounds_click() throws Exception{
-RDebugUtils.currentModule="setting_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "pan_remove_allsounds_click", false))
-	 {Debug.delegate(mostCurrent.activityBA, "pan_remove_allsounds_click", null); return;}
 ResumableSub_pan_remove_allSounds_Click rsub = new ResumableSub_pan_remove_allSounds_Click(null);
 rsub.resume(processBA, null);
 }
@@ -521,7 +478,6 @@ int limit7;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="setting_activity";
 
     while (true) {
         switch (state) {
@@ -531,12 +487,10 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=12124162;
- //BA.debugLineNum = 12124162;BA.debugLine="Msgbox2Async(\"آیا همه فایلهای صوتی دانلود شده حذف";
+ //BA.debugLineNum = 94;BA.debugLine="Msgbox2Async(\"آیا همه فایلهای صوتی دانلود شده حذف";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("آیا همه فایلهای صوتی دانلود شده حذف شوند؟"),BA.ObjectToCharSequence("حذف"),"بله","","خیر",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=12124163;
- //BA.debugLineNum = 12124163;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
-anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "setting_activity", "pan_remove_allsounds_click"), null);
+ //BA.debugLineNum = 95;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
+anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
 this.state = 13;
 return;
 case 13:
@@ -544,8 +498,7 @@ case 13:
 this.state = 1;
 _result = (Integer) result[0];
 ;
-RDebugUtils.currentLine=12124164;
- //BA.debugLineNum = 12124164;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 96;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 1:
@@ -558,17 +511,13 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=12124166;
- //BA.debugLineNum = 12124166;BA.debugLine="Dim ls_removeAll As List";
+ //BA.debugLineNum = 98;BA.debugLine="Dim ls_removeAll As List";
 _ls_removeall = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=12124167;
- //BA.debugLineNum = 12124167;BA.debugLine="ls_removeAll.Initialize";
+ //BA.debugLineNum = 99;BA.debugLine="ls_removeAll.Initialize";
 _ls_removeall.Initialize();
-RDebugUtils.currentLine=12124168;
- //BA.debugLineNum = 12124168;BA.debugLine="ls_removeAll=myFunc.get_removeAll_list";
+ //BA.debugLineNum = 100;BA.debugLine="ls_removeAll=myFunc.get_removeAll_list";
 _ls_removeall = parent.mostCurrent._myfunc._get_removeall_list /*anywheresoftware.b4a.objects.collections.List*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=12124170;
- //BA.debugLineNum = 12124170;BA.debugLine="For i=0 To ls_removeAll.Size-1";
+ //BA.debugLineNum = 102;BA.debugLine="For i=0 To ls_removeAll.Size-1";
 if (true) break;
 
 case 4:
@@ -595,8 +544,7 @@ if (true) break;
 case 6:
 //C
 this.state = 7;
-RDebugUtils.currentLine=12124171;
- //BA.debugLineNum = 12124171;BA.debugLine="If(File.Exists(File.DirInternal,ls_removeAll.Get";
+ //BA.debugLineNum = 103;BA.debugLine="If(File.Exists(File.DirInternal,ls_removeAll.Get";
 if (true) break;
 
 case 7:
@@ -609,8 +557,7 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
-RDebugUtils.currentLine=12124172;
- //BA.debugLineNum = 12124172;BA.debugLine="File.Delete(File.DirInternal,ls_removeAll.Get(i";
+ //BA.debugLineNum = 104;BA.debugLine="File.Delete(File.DirInternal,ls_removeAll.Get(i";
 anywheresoftware.b4a.keywords.Common.File.Delete(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),BA.ObjectToString(_ls_removeall.Get(_i)));
  if (true) break;
 
@@ -625,8 +572,7 @@ case 11:
 //C
 this.state = 12;
 ;
-RDebugUtils.currentLine=12124175;
- //BA.debugLineNum = 12124175;BA.debugLine="ToastMessageShow(\"حذف شدند.\",False)";
+ //BA.debugLineNum = 107;BA.debugLine="ToastMessageShow(\"حذف شدند.\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("حذف شدند."),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -634,18 +580,16 @@ case 12:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=12124184;
- //BA.debugLineNum = 12124184;BA.debugLine="End Sub";
+ //BA.debugLineNum = 116;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
 }
+public static void  _msgbox_result(int _result) throws Exception{
+}
 public static void  _pan_remove_alltamrinat_click() throws Exception{
-RDebugUtils.currentModule="setting_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "pan_remove_alltamrinat_click", false))
-	 {Debug.delegate(mostCurrent.activityBA, "pan_remove_alltamrinat_click", null); return;}
 ResumableSub_pan_remove_AllTamrinat_Click rsub = new ResumableSub_pan_remove_AllTamrinat_Click(null);
 rsub.resume(processBA, null);
 }
@@ -658,7 +602,6 @@ int _result = 0;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="setting_activity";
 
     while (true) {
         switch (state) {
@@ -668,12 +611,10 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=12058626;
- //BA.debugLineNum = 12058626;BA.debugLine="Msgbox2Async(\"آیا همه تمرینات من حذف شوند؟\", \"حذف";
+ //BA.debugLineNum = 81;BA.debugLine="Msgbox2Async(\"آیا همه تمرینات من حذف شوند؟\", \"حذف";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("آیا همه تمرینات من حذف شوند؟"),BA.ObjectToCharSequence("حذف"),"بله","","خیر",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=12058627;
- //BA.debugLineNum = 12058627;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
-anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "setting_activity", "pan_remove_alltamrinat_click"), null);
+ //BA.debugLineNum = 82;BA.debugLine="Wait For Msgbox_Result (Result As Int)";
+anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
 this.state = 5;
 return;
 case 5:
@@ -681,8 +622,7 @@ case 5:
 this.state = 1;
 _result = (Integer) result[0];
 ;
-RDebugUtils.currentLine=12058628;
- //BA.debugLineNum = 12058628;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 83;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 1:
@@ -695,11 +635,9 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=12058629;
- //BA.debugLineNum = 12058629;BA.debugLine="myFunc.removeAll_tamrinat";
+ //BA.debugLineNum = 84;BA.debugLine="myFunc.removeAll_tamrinat";
 parent.mostCurrent._myfunc._removeall_tamrinat /*String*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=12058630;
- //BA.debugLineNum = 12058630;BA.debugLine="ToastMessageShow(\"حذف شدند.\",False)";
+ //BA.debugLineNum = 85;BA.debugLine="ToastMessageShow(\"حذف شدند.\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("حذف شدند."),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -707,12 +645,16 @@ case 4:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=12058635;
- //BA.debugLineNum = 12058635;BA.debugLine="End Sub";
+ //BA.debugLineNum = 90;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
+return "";
 }
 }

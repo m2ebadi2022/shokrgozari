@@ -34,7 +34,7 @@ public class tamrin19_activity extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "ir.taravatgroup.shokrgozari", "ir.taravatgroup.shokrgozari.tamrin19_activity");
+			processBA = new BA(this.getApplicationContext(), null, null, "ir.taravatgroup.shokrgozari", "ir.taravatgroup.shokrgozari.tamrin19_activity");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class tamrin19_activity extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public b4a.example3.customlistview _cuslistv_data = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
@@ -356,10 +347,10 @@ public anywheresoftware.b4a.objects.EditTextWrapper _et_new_item = null;
 public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
-public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
 public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
 public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
 public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
@@ -367,327 +358,243 @@ public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
 public ir.taravatgroup.shokrgozari.setting_activity _setting_activity = null;
 public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=19136512;
- //BA.debugLineNum = 19136512;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=19136514;
- //BA.debugLineNum = 19136514;BA.debugLine="Activity.LoadLayout(\"tamrin19_layout\")";
+ //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 32;BA.debugLine="Activity.LoadLayout(\"tamrin19_layout\")";
 mostCurrent._activity.LoadLayout("tamrin19_layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=19136516;
- //BA.debugLineNum = 19136516;BA.debugLine="fill_list";
+ //BA.debugLineNum = 34;BA.debugLine="fill_list";
 _fill_list();
-RDebugUtils.currentLine=19136519;
- //BA.debugLineNum = 19136519;BA.debugLine="End Sub";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
+return "";
+}
+public static boolean  _activity_keypress(int _keycode) throws Exception{
+ //BA.debugLineNum = 197;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 198;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
+ //BA.debugLineNum = 199;BA.debugLine="If(pan_all.Visible=True)Then";
+if ((mostCurrent._pan_all.getVisible()==anywheresoftware.b4a.keywords.Common.True)) { 
+ //BA.debugLineNum = 200;BA.debugLine="pan_all.Visible=False";
+mostCurrent._pan_all.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ }else {
+ //BA.debugLineNum = 202;BA.debugLine="lbl_back_Click";
+_lbl_back_click();
+ };
+ //BA.debugLineNum = 205;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ }else {
+ //BA.debugLineNum = 207;BA.debugLine="Return False";
+if (true) return anywheresoftware.b4a.keywords.Common.False;
+ };
+ //BA.debugLineNum = 209;BA.debugLine="End Sub";
+return false;
+}
+public static String  _activity_pause(boolean _userclosed) throws Exception{
+ //BA.debugLineNum = 43;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 45;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_resume() throws Exception{
+ //BA.debugLineNum = 39;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 41;BA.debugLine="End Sub";
 return "";
 }
 public static String  _fill_list() throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "fill_list", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "fill_list", null));}
-RDebugUtils.currentLine=19333120;
- //BA.debugLineNum = 19333120;BA.debugLine="Sub fill_list";
-RDebugUtils.currentLine=19333122;
- //BA.debugLineNum = 19333122;BA.debugLine="cusListV_data.Clear";
+ //BA.debugLineNum = 49;BA.debugLine="Sub fill_list";
+ //BA.debugLineNum = 51;BA.debugLine="cusListV_data.Clear";
 mostCurrent._cuslistv_data._clear();
-RDebugUtils.currentLine=19333125;
- //BA.debugLineNum = 19333125;BA.debugLine="myFunc.connection_sql";
+ //BA.debugLineNum = 54;BA.debugLine="myFunc.connection_sql";
 mostCurrent._myfunc._connection_sql /*String*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=19333126;
- //BA.debugLineNum = 19333126;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM tamrin";
+ //BA.debugLineNum = 55;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM tamrin";
 mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM tamrin19;")));
-RDebugUtils.currentLine=19333129;
- //BA.debugLineNum = 19333129;BA.debugLine="Do While Main.res.NextRow";
+ //BA.debugLineNum = 58;BA.debugLine="Do While Main.res.NextRow";
 while (mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .NextRow()) {
-RDebugUtils.currentLine=19333133;
- //BA.debugLineNum = 19333133;BA.debugLine="p = xui.CreatePanel(\"p\")";
+ //BA.debugLineNum = 62;BA.debugLine="p = xui.CreatePanel(\"p\")";
 mostCurrent._p = mostCurrent._xui.CreatePanel(processBA,"p");
-RDebugUtils.currentLine=19333134;
- //BA.debugLineNum = 19333134;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, 100%x, 85dip)";
+ //BA.debugLineNum = 63;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, 100%x, 85dip)";
 mostCurrent._p.SetLayoutAnimated((int) (0),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (85)));
-RDebugUtils.currentLine=19333135;
- //BA.debugLineNum = 19333135;BA.debugLine="p.LoadLayout(\"item_list_tamrin19\")";
+ //BA.debugLineNum = 64;BA.debugLine="p.LoadLayout(\"item_list_tamrin19\")";
 mostCurrent._p.LoadLayout("item_list_tamrin19",mostCurrent.activityBA);
-RDebugUtils.currentLine=19333136;
- //BA.debugLineNum = 19333136;BA.debugLine="cusListV_data.Add(p,Main.res.Position)";
+ //BA.debugLineNum = 65;BA.debugLine="cusListV_data.Add(p,Main.res.Position)";
 mostCurrent._cuslistv_data._add(mostCurrent._p,(Object)(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .getPosition()));
-RDebugUtils.currentLine=19333138;
- //BA.debugLineNum = 19333138;BA.debugLine="lbl_roz.Text=Main.res.GetString(\"matn\")";
+ //BA.debugLineNum = 67;BA.debugLine="lbl_roz.Text=Main.res.GetString(\"matn\")";
 mostCurrent._lbl_roz.setText(BA.ObjectToCharSequence(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("matn")));
-RDebugUtils.currentLine=19333139;
- //BA.debugLineNum = 19333139;BA.debugLine="lbl_delet.Tag=Main.res.Getint(\"id\")";
+ //BA.debugLineNum = 68;BA.debugLine="lbl_delet.Tag=Main.res.Getint(\"id\")";
 mostCurrent._lbl_delet.setTag((Object)(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id")));
-RDebugUtils.currentLine=19333140;
- //BA.debugLineNum = 19333140;BA.debugLine="lbl_import.Tag=Main.res.Getint(\"id\")";
+ //BA.debugLineNum = 69;BA.debugLine="lbl_import.Tag=Main.res.Getint(\"id\")";
 mostCurrent._lbl_import.setTag((Object)(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id")));
-RDebugUtils.currentLine=19333143;
- //BA.debugLineNum = 19333143;BA.debugLine="If(Main.res.Getint(\"state\").As(Int)=0)Then";
+ //BA.debugLineNum = 72;BA.debugLine="If(Main.res.Getint(\"state\").As(Int)=0)Then";
 if (((mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state"))==0)) { 
-RDebugUtils.currentLine=19333145;
- //BA.debugLineNum = 19333145;BA.debugLine="lbl_import.TextColor=Colors.Gray";
+ //BA.debugLineNum = 74;BA.debugLine="lbl_import.TextColor=Colors.Gray";
 mostCurrent._lbl_import.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Gray);
  }else {
-RDebugUtils.currentLine=19333148;
- //BA.debugLineNum = 19333148;BA.debugLine="lbl_import.TextColor=Colors.Green";
+ //BA.debugLineNum = 77;BA.debugLine="lbl_import.TextColor=Colors.Green";
 mostCurrent._lbl_import.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
  };
  }
 ;
-RDebugUtils.currentLine=19333158;
- //BA.debugLineNum = 19333158;BA.debugLine="Main.sql.Close";
+ //BA.debugLineNum = 87;BA.debugLine="Main.sql.Close";
 mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
-RDebugUtils.currentLine=19333159;
- //BA.debugLineNum = 19333159;BA.debugLine="Main.res.Close";
+ //BA.debugLineNum = 88;BA.debugLine="Main.res.Close";
 mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close();
-RDebugUtils.currentLine=19333164;
- //BA.debugLineNum = 19333164;BA.debugLine="End Sub";
-return "";
-}
-public static boolean  _activity_keypress(int _keycode) throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_keypress", false))
-	 {return ((Boolean) Debug.delegate(mostCurrent.activityBA, "activity_keypress", new Object[] {_keycode}));}
-RDebugUtils.currentLine=20840448;
- //BA.debugLineNum = 20840448;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
-RDebugUtils.currentLine=20840449;
- //BA.debugLineNum = 20840449;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
-if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
-RDebugUtils.currentLine=20840450;
- //BA.debugLineNum = 20840450;BA.debugLine="If(pan_all.Visible=True)Then";
-if ((mostCurrent._pan_all.getVisible()==anywheresoftware.b4a.keywords.Common.True)) { 
-RDebugUtils.currentLine=20840451;
- //BA.debugLineNum = 20840451;BA.debugLine="pan_all.Visible=False";
-mostCurrent._pan_all.setVisible(anywheresoftware.b4a.keywords.Common.False);
- }else {
-RDebugUtils.currentLine=20840453;
- //BA.debugLineNum = 20840453;BA.debugLine="lbl_back_Click";
-_lbl_back_click();
- };
-RDebugUtils.currentLine=20840456;
- //BA.debugLineNum = 20840456;BA.debugLine="Return True";
-if (true) return anywheresoftware.b4a.keywords.Common.True;
- }else {
-RDebugUtils.currentLine=20840458;
- //BA.debugLineNum = 20840458;BA.debugLine="Return False";
-if (true) return anywheresoftware.b4a.keywords.Common.False;
- };
-RDebugUtils.currentLine=20840460;
- //BA.debugLineNum = 20840460;BA.debugLine="End Sub";
-return false;
-}
-public static String  _lbl_back_click() throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_back_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_back_click", null));}
-RDebugUtils.currentLine=20905984;
- //BA.debugLineNum = 20905984;BA.debugLine="Private Sub lbl_back_Click";
-RDebugUtils.currentLine=20905985;
- //BA.debugLineNum = 20905985;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
-RDebugUtils.currentLine=20905986;
- //BA.debugLineNum = 20905986;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-RDebugUtils.currentLine=19267584;
- //BA.debugLineNum = 19267584;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=19267586;
- //BA.debugLineNum = 19267586;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=19202048;
- //BA.debugLineNum = 19202048;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=19202050;
- //BA.debugLineNum = 19202050;BA.debugLine="End Sub";
+ //BA.debugLineNum = 93;BA.debugLine="End Sub";
 return "";
 }
 public static int  _get_state_tamrin19_item(int _id) throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "get_state_tamrin19_item", false))
-	 {return ((Integer) Debug.delegate(mostCurrent.activityBA, "get_state_tamrin19_item", new Object[] {_id}));}
 int _result = 0;
-RDebugUtils.currentLine=22478848;
- //BA.debugLineNum = 22478848;BA.debugLine="Sub get_state_tamrin19_item (id As Int) As Int";
-RDebugUtils.currentLine=22478850;
- //BA.debugLineNum = 22478850;BA.debugLine="Dim result As Int=0";
+ //BA.debugLineNum = 144;BA.debugLine="Sub get_state_tamrin19_item (id As Int) As Int";
+ //BA.debugLineNum = 146;BA.debugLine="Dim result As Int=0";
 _result = (int) (0);
-RDebugUtils.currentLine=22478852;
- //BA.debugLineNum = 22478852;BA.debugLine="myFunc.connection_sql";
+ //BA.debugLineNum = 148;BA.debugLine="myFunc.connection_sql";
 mostCurrent._myfunc._connection_sql /*String*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=22478853;
- //BA.debugLineNum = 22478853;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM tamrin";
+ //BA.debugLineNum = 149;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM tamrin";
 mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM tamrin19 WHERE id="+BA.NumberToString(_id)+";")));
-RDebugUtils.currentLine=22478854;
- //BA.debugLineNum = 22478854;BA.debugLine="Main.res.Position=0";
+ //BA.debugLineNum = 150;BA.debugLine="Main.res.Position=0";
 mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .setPosition((int) (0));
-RDebugUtils.currentLine=22478857;
- //BA.debugLineNum = 22478857;BA.debugLine="result=Main.res.Getint(\"state\")";
+ //BA.debugLineNum = 153;BA.debugLine="result=Main.res.Getint(\"state\")";
 _result = mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state");
-RDebugUtils.currentLine=22478860;
- //BA.debugLineNum = 22478860;BA.debugLine="Main.sql.Close";
+ //BA.debugLineNum = 156;BA.debugLine="Main.sql.Close";
 mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
-RDebugUtils.currentLine=22478861;
- //BA.debugLineNum = 22478861;BA.debugLine="Main.res.Close";
+ //BA.debugLineNum = 157;BA.debugLine="Main.res.Close";
 mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close();
-RDebugUtils.currentLine=22478863;
- //BA.debugLineNum = 22478863;BA.debugLine="Return result";
+ //BA.debugLineNum = 159;BA.debugLine="Return result";
 if (true) return _result;
-RDebugUtils.currentLine=22478865;
- //BA.debugLineNum = 22478865;BA.debugLine="End Sub";
+ //BA.debugLineNum = 161;BA.debugLine="End Sub";
 return 0;
 }
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 15;BA.debugLine="Private cusListV_data As CustomListView";
+mostCurrent._cuslistv_data = new b4a.example3.customlistview();
+ //BA.debugLineNum = 16;BA.debugLine="Private xui As XUI";
+mostCurrent._xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 17;BA.debugLine="Dim p As B4XView";
+mostCurrent._p = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 21;BA.debugLine="Private lbl_roz As Label";
+mostCurrent._lbl_roz = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 24;BA.debugLine="Private lbl_delet As Label";
+mostCurrent._lbl_delet = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 25;BA.debugLine="Private lbl_import As Label";
+mostCurrent._lbl_import = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 26;BA.debugLine="Private pan_all As Panel";
+mostCurrent._pan_all = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 27;BA.debugLine="Private et_new_item As EditText";
+mostCurrent._et_new_item = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 28;BA.debugLine="End Sub";
+return "";
+}
 public static String  _lbl_add_click() throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_add_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_add_click", null));}
-RDebugUtils.currentLine=20774912;
- //BA.debugLineNum = 20774912;BA.debugLine="Private Sub lbl_add_Click";
-RDebugUtils.currentLine=20774913;
- //BA.debugLineNum = 20774913;BA.debugLine="pan_all.Visible=True";
+ //BA.debugLineNum = 191;BA.debugLine="Private Sub lbl_add_Click";
+ //BA.debugLineNum = 192;BA.debugLine="pan_all.Visible=True";
 mostCurrent._pan_all.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=20774914;
- //BA.debugLineNum = 20774914;BA.debugLine="End Sub";
+ //BA.debugLineNum = 193;BA.debugLine="End Sub";
+return "";
+}
+public static String  _lbl_back_click() throws Exception{
+ //BA.debugLineNum = 211;BA.debugLine="Private Sub lbl_back_Click";
+ //BA.debugLineNum = 212;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 213;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_delet_click() throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_delet_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_delet_click", null));}
 anywheresoftware.b4a.objects.LabelWrapper _this_lbl = null;
-RDebugUtils.currentLine=19529728;
- //BA.debugLineNum = 19529728;BA.debugLine="Private Sub lbl_delet_Click";
-RDebugUtils.currentLine=19529729;
- //BA.debugLineNum = 19529729;BA.debugLine="Dim this_lbl As Label=Sender";
+ //BA.debugLineNum = 96;BA.debugLine="Private Sub lbl_delet_Click";
+ //BA.debugLineNum = 97;BA.debugLine="Dim this_lbl As Label=Sender";
 _this_lbl = new anywheresoftware.b4a.objects.LabelWrapper();
 _this_lbl = (anywheresoftware.b4a.objects.LabelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.LabelWrapper(), (android.widget.TextView)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
-RDebugUtils.currentLine=19529732;
- //BA.debugLineNum = 19529732;BA.debugLine="myFunc.connection_sql";
+ //BA.debugLineNum = 100;BA.debugLine="myFunc.connection_sql";
 mostCurrent._myfunc._connection_sql /*String*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=19529733;
- //BA.debugLineNum = 19529733;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM tamrin19 WHERE";
+ //BA.debugLineNum = 101;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM tamrin19 WHERE";
 mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM tamrin19 WHERE id="+BA.ObjectToString(_this_lbl.getTag())+";");
-RDebugUtils.currentLine=19529734;
- //BA.debugLineNum = 19529734;BA.debugLine="Main.sql.Close";
+ //BA.debugLineNum = 102;BA.debugLine="Main.sql.Close";
 mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
-RDebugUtils.currentLine=19529735;
- //BA.debugLineNum = 19529735;BA.debugLine="ToastMessageShow(\"حذف شد\",False)";
+ //BA.debugLineNum = 103;BA.debugLine="ToastMessageShow(\"حذف شد\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("حذف شد"),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=19529738;
- //BA.debugLineNum = 19529738;BA.debugLine="fill_list";
+ //BA.debugLineNum = 106;BA.debugLine="fill_list";
 _fill_list();
-RDebugUtils.currentLine=19529742;
- //BA.debugLineNum = 19529742;BA.debugLine="End Sub";
+ //BA.debugLineNum = 110;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_import_click() throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_import_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_import_click", null));}
 anywheresoftware.b4a.objects.LabelWrapper _this_lbl = null;
-RDebugUtils.currentLine=20512768;
- //BA.debugLineNum = 20512768;BA.debugLine="Private Sub lbl_import_Click";
-RDebugUtils.currentLine=20512770;
- //BA.debugLineNum = 20512770;BA.debugLine="Dim this_lbl As Label=Sender";
+ //BA.debugLineNum = 117;BA.debugLine="Private Sub lbl_import_Click";
+ //BA.debugLineNum = 119;BA.debugLine="Dim this_lbl As Label=Sender";
 _this_lbl = new anywheresoftware.b4a.objects.LabelWrapper();
 _this_lbl = (anywheresoftware.b4a.objects.LabelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.LabelWrapper(), (android.widget.TextView)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
-RDebugUtils.currentLine=20512773;
- //BA.debugLineNum = 20512773;BA.debugLine="If(get_state_tamrin19_item(this_lbl.Tag)=0)Then";
+ //BA.debugLineNum = 122;BA.debugLine="If(get_state_tamrin19_item(this_lbl.Tag)=0)Then";
 if ((_get_state_tamrin19_item((int)(BA.ObjectToNumber(_this_lbl.getTag())))==0)) { 
-RDebugUtils.currentLine=20512774;
- //BA.debugLineNum = 20512774;BA.debugLine="this_lbl.TextColor=Colors.Green";
+ //BA.debugLineNum = 123;BA.debugLine="this_lbl.TextColor=Colors.Green";
 _this_lbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Green);
-RDebugUtils.currentLine=20512775;
- //BA.debugLineNum = 20512775;BA.debugLine="update_stateById(this_lbl.Tag,1)";
+ //BA.debugLineNum = 124;BA.debugLine="update_stateById(this_lbl.Tag,1)";
 _update_statebyid((int)(BA.ObjectToNumber(_this_lbl.getTag())),(int) (1));
  }else {
-RDebugUtils.currentLine=20512778;
- //BA.debugLineNum = 20512778;BA.debugLine="this_lbl.TextColor=Colors.Gray";
+ //BA.debugLineNum = 127;BA.debugLine="this_lbl.TextColor=Colors.Gray";
 _this_lbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Gray);
-RDebugUtils.currentLine=20512779;
- //BA.debugLineNum = 20512779;BA.debugLine="update_stateById(this_lbl.Tag,0)";
+ //BA.debugLineNum = 128;BA.debugLine="update_stateById(this_lbl.Tag,0)";
 _update_statebyid((int)(BA.ObjectToNumber(_this_lbl.getTag())),(int) (0));
  };
-RDebugUtils.currentLine=20512787;
- //BA.debugLineNum = 20512787;BA.debugLine="End Sub";
-return "";
-}
-public static String  _update_statebyid(int _id,int _state) throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "update_statebyid", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "update_statebyid", new Object[] {_id,_state}));}
-RDebugUtils.currentLine=23527424;
- //BA.debugLineNum = 23527424;BA.debugLine="Sub update_stateById(id As Int,state As Int)";
-RDebugUtils.currentLine=23527425;
- //BA.debugLineNum = 23527425;BA.debugLine="myFunc.connection_sql";
-mostCurrent._myfunc._connection_sql /*String*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=23527426;
- //BA.debugLineNum = 23527426;BA.debugLine="Main.sql.ExecNonQuery2(\"UPDATE tamrin19 SET state";
-mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("UPDATE tamrin19 SET state=? WHERE id=? ;",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_state),(Object)(_id)}));
-RDebugUtils.currentLine=23527427;
- //BA.debugLineNum = 23527427;BA.debugLine="Main.sql.Close";
-mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
-RDebugUtils.currentLine=23527429;
- //BA.debugLineNum = 23527429;BA.debugLine="End Sub";
+ //BA.debugLineNum = 136;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_save_new_click() throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_save_new_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_save_new_click", null));}
-RDebugUtils.currentLine=20709376;
- //BA.debugLineNum = 20709376;BA.debugLine="Private Sub lbl_save_new_Click";
-RDebugUtils.currentLine=20709379;
- //BA.debugLineNum = 20709379;BA.debugLine="If(et_new_item.Text<>\"\" And et_new_item.Text<>Nul";
+ //BA.debugLineNum = 169;BA.debugLine="Private Sub lbl_save_new_Click";
+ //BA.debugLineNum = 172;BA.debugLine="If(et_new_item.Text<>\"\" And et_new_item.Text<>Nul";
 if (((mostCurrent._et_new_item.getText()).equals("") == false && mostCurrent._et_new_item.getText()!= null)) { 
-RDebugUtils.currentLine=20709380;
- //BA.debugLineNum = 20709380;BA.debugLine="myFunc.connection_sql";
+ //BA.debugLineNum = 173;BA.debugLine="myFunc.connection_sql";
 mostCurrent._myfunc._connection_sql /*String*/ (mostCurrent.activityBA);
-RDebugUtils.currentLine=20709381;
- //BA.debugLineNum = 20709381;BA.debugLine="Main.sql.ExecNonQuery(\"INSERT INTO tamrin19 ('ma";
+ //BA.debugLineNum = 174;BA.debugLine="Main.sql.ExecNonQuery(\"INSERT INTO tamrin19 ('ma";
 mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("INSERT INTO tamrin19 ('matn') VALUES ('"+mostCurrent._et_new_item.getText()+"');");
-RDebugUtils.currentLine=20709382;
- //BA.debugLineNum = 20709382;BA.debugLine="Main.sql.Close";
+ //BA.debugLineNum = 175;BA.debugLine="Main.sql.Close";
 mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
-RDebugUtils.currentLine=20709383;
- //BA.debugLineNum = 20709383;BA.debugLine="ToastMessageShow(\"اضافه شد\",False)";
+ //BA.debugLineNum = 176;BA.debugLine="ToastMessageShow(\"اضافه شد\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("اضافه شد"),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=20709385;
- //BA.debugLineNum = 20709385;BA.debugLine="pan_all_Click";
+ //BA.debugLineNum = 178;BA.debugLine="pan_all_Click";
 _pan_all_click();
-RDebugUtils.currentLine=20709386;
- //BA.debugLineNum = 20709386;BA.debugLine="fill_list";
+ //BA.debugLineNum = 179;BA.debugLine="fill_list";
 _fill_list();
  }else {
-RDebugUtils.currentLine=20709389;
- //BA.debugLineNum = 20709389;BA.debugLine="MsgboxAsync(\"متن خالی است!\", \"توجه\")";
+ //BA.debugLineNum = 182;BA.debugLine="MsgboxAsync(\"متن خالی است!\", \"توجه\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("متن خالی است!"),BA.ObjectToCharSequence("توجه"),processBA);
  };
-RDebugUtils.currentLine=20709396;
- //BA.debugLineNum = 20709396;BA.debugLine="End Sub";
+ //BA.debugLineNum = 189;BA.debugLine="End Sub";
 return "";
 }
 public static String  _pan_all_click() throws Exception{
-RDebugUtils.currentModule="tamrin19_activity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "pan_all_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "pan_all_click", null));}
-RDebugUtils.currentLine=20643840;
- //BA.debugLineNum = 20643840;BA.debugLine="Private Sub pan_all_Click";
-RDebugUtils.currentLine=20643841;
- //BA.debugLineNum = 20643841;BA.debugLine="pan_all.Visible=False";
+ //BA.debugLineNum = 165;BA.debugLine="Private Sub pan_all_Click";
+ //BA.debugLineNum = 166;BA.debugLine="pan_all.Visible=False";
 mostCurrent._pan_all.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=20643842;
- //BA.debugLineNum = 20643842;BA.debugLine="End Sub";
+ //BA.debugLineNum = 167;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
+return "";
+}
+public static String  _update_statebyid(int _id,int _state) throws Exception{
+ //BA.debugLineNum = 137;BA.debugLine="Sub update_stateById(id As Int,state As Int)";
+ //BA.debugLineNum = 138;BA.debugLine="myFunc.connection_sql";
+mostCurrent._myfunc._connection_sql /*String*/ (mostCurrent.activityBA);
+ //BA.debugLineNum = 139;BA.debugLine="Main.sql.ExecNonQuery2(\"UPDATE tamrin19 SET state";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("UPDATE tamrin19 SET state=? WHERE id=? ;",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_state),(Object)(_id)}));
+ //BA.debugLineNum = 140;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 142;BA.debugLine="End Sub";
 return "";
 }
 }
