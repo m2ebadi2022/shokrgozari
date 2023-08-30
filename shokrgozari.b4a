@@ -1,0 +1,644 @@
+﻿Build1=Default,ir.taravatgroup.shokrgozari
+File1=all_tamrin_layout.bal
+File10=dashboard_layout.bal
+File11=db.db
+File12=do_tamrin_roz_layout.bal
+File13=Donate.png
+File14=download.png
+File15=download_layout.bal
+File16=home.png
+File17=home_layout.bal
+File18=icon.png
+File19=Info.png
+File2=bg1.jpg
+File20=intro_layout.bal
+File21=item_clv_tamrinat.bal
+File22=item_dashboard.bal
+File23=item_list_downloads.bal
+File24=item_list_rozha_tamrin.bal
+File25=item_list_tamrin1.bal
+File26=item_list_tamrin19.bal
+File27=loading.gif
+File28=main_layout.bal
+File29=Mj_Rashid.ttf
+File3=bg2.jpg
+File30=Open Book Emoji.png
+File31=other.png
+File32=pic1.jpg
+File33=pic2.jpg
+File34=pic3.jpg
+File35=pic4.jpg
+File36=pic5.jpg
+File37=radius_all.png
+File38=radius_botton.png
+File39=radius_circler.png
+File4=bg3.jpg
+File40=radius_LeftTop.png
+File41=readBook_layout.bal
+File42=setting.png
+File43=setting_layout.bal
+File44=setting2.png
+File45=share.png
+File46=Smiling Face With Hearts.png
+File47=sp_bg.jpg
+File48=sp_bg2.jpg
+File49=tamrin_roz_layout.bal
+File5=bg4.jpg
+File50=tamrin13_layout.bal
+File51=tamrin14_layout.bal
+File52=tamrin16_layout.bal
+File53=tamrin19_layout.bal
+File54=tamrin25_layout.bal
+File55=tamrin3_layout.bal
+File56=tamrin8_items.bal
+File57=tamrin8_layout.bal
+File58=tamrinat_layout.bal
+File59=tick.png
+File6=bg5.jpg
+File60=upload_pic.jpg
+File7=BMitra.ttf
+File8=book_layout.bal
+File9=comment.png
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup18=Default Group
+FileGroup19=Default Group
+FileGroup2=Default Group
+FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group
+FileGroup23=Default Group
+FileGroup24=Default Group
+FileGroup25=Default Group
+FileGroup26=Default Group
+FileGroup27=Default Group
+FileGroup28=Default Group
+FileGroup29=Default Group
+FileGroup3=Default Group
+FileGroup30=Default Group
+FileGroup31=Default Group
+FileGroup32=Default Group
+FileGroup33=Default Group
+FileGroup34=Default Group
+FileGroup35=Default Group
+FileGroup36=Default Group
+FileGroup37=Default Group
+FileGroup38=Default Group
+FileGroup39=Default Group
+FileGroup4=Default Group
+FileGroup40=Default Group
+FileGroup41=Default Group
+FileGroup42=Default Group
+FileGroup43=Default Group
+FileGroup44=Default Group
+FileGroup45=Default Group
+FileGroup46=Default Group
+FileGroup47=Default Group
+FileGroup48=Default Group
+FileGroup49=Default Group
+FileGroup5=Default Group
+FileGroup50=Default Group
+FileGroup51=Default Group
+FileGroup52=Default Group
+FileGroup53=Default Group
+FileGroup54=Default Group
+FileGroup55=Default Group
+FileGroup56=Default Group
+FileGroup57=Default Group
+FileGroup58=Default Group
+FileGroup59=Default Group
+FileGroup6=Default Group
+FileGroup60=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=core
+Library2=fileprovider
+Library3=okhttputils2
+Library4=sql
+Library5=stringfunctions
+Library6=webviewsettings
+Library7=xcustomlistview
+Library8=xui
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>~\n~	 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />~\n~                            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />~\n~	)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~~\n~~\n~~\n~SetApplicationAttribute(android:requestLegacyExternalStorage, true)
+Module1=book_activity
+Module10=tamrin13_activity
+Module11=tamrin14_activity
+Module12=tamrin16_activity
+Module13=tamrin19_activity
+Module14=tamrin25_activity
+Module15=tamrin3_activity
+Module16=tamrin8_activity
+Module17=tamrinat_activity
+Module2=do_tamrin_roz_layout
+Module3=download_activity
+Module4=intro_activity
+Module5=myFunc
+Module6=reagBook_activity
+Module7=setting_activity
+Module8=Starter
+Module9=tamrin_roz_activity
+NumberOfFiles=60
+NumberOfLibraries=8
+NumberOfModules=17
+Version=12.5
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: شکرگزاری
+	#VersionCode: 1
+	#VersionName: 1
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: false
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Dim current_roz_tamrin As Int =0
+	Dim current_tamrin As Int =0
+	Dim current_book_content_id As Int =0
+	
+	
+	Dim sql As SQL
+	Dim res As ResultSet
+Dim tim_splash As Timer
+	
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private btn_all_tamrin As Button
+	Private btn_dashboard As Button
+	Private pan_main As Panel
+	Private btn_home As Button
+	Private clv_tamrinat_tagvim As CustomListView
+	Private xui As XUI
+	Dim p As B4XView
+	Private r1 As Panel
+	Private r2 As Panel
+	Private r3 As Panel
+	Private r4 As Panel
+	Private r5 As Panel
+	Private L1 As Label
+	Private L2 As Label
+	Private L3 As Label
+	Private L4 As Label
+	Private L5 As Label
+	Private lbl_roz_lsv As Label
+	Private lsv_roz As ListView
+	Private pan_all_lsv As Panel
+	Dim current_indexPage As Int=1
+	
+	Private pan_splash As Panel
+	Private ScrollView_dashboard As ScrollView
+	Private ImageView1 As ImageView
+	Private Label1 As Label
+	Private lbl_show_tamrin_roz As Label
+	Dim this_day As Int=0
+	Private pan_circle As Panel
+	Private pan_main3 As Panel
+	Private pan_main2 As Panel
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	
+	
+	
+	
+
+		
+		Activity.LoadLayout("main_layout")
+		
+		
+		
+		tim_splash.Initialize("tim_splash",100)
+		
+		tim_splash.Enabled=True
+		
+		Dim viewimg_splash As B4XView=ImageView1
+		viewimg_splash.SetVisibleAnimated(500,True)
+		viewimg_splash.SetLayoutAnimated(1000,viewimg_splash.Left-40,viewimg_splash.Top-40,110dip,110dip)
+		
+		Dim viewlbl1_splash As B4XView=Label1
+		viewlbl1_splash.SetTextSizeAnimated(1000,30)
+		
+	
+	
+	pan_main.LoadLayout("home_layout")
+	pan_main2.LoadLayout("all_tamrin_layout")
+	pan_main3.LoadLayout("dashboard_layout")
+	ScrollView_dashboard.Panel.LoadLayout("item_dashboard")
+	fill_list_tamrinat
+	
+	pan_main2.Visible=False
+	pan_main3.Visible=False
+	
+			btn_home_Click
+	
+	
+	
+	If(File.Exists(File.DirInternal,"intro_pley")=False)Then
+		StartActivity(intro_activity)
+	End If
+
+	
+	
+	
+End Sub
+
+Sub tim_splash_Tick
+	
+	
+	
+	btn_home_Click
+	pan_splash.Visible=False
+	tim_splash.Enabled=False
+	
+	
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+
+Private Sub pan_tamrinat_Click
+	StartActivity(tamrinat_activity)
+End Sub
+
+Private Sub pan_book_Click
+	StartActivity(book_activity)
+	
+End Sub
+
+
+
+
+
+Private Sub btn_all_tamrin_Click
+	'pan_main.RemoveAllViews
+	def_color_menu
+	btn_all_tamrin.TextColor=0xFFFF4B4B
+	
+	If(pan_all_lsv.Visible=True)Then
+		pan_all_lsv.Visible=False
+	End If
+	
+	
+	pan_main2.Visible=True
+	'pan_main.Left=100%x
+	pan_main2.SetLayoutAnimated(100,0,0,100%x,pan_main3.Height)
+	pan_main3.Visible=False
+	
+	
+	current_indexPage=2
+	
+	
+	
+End Sub
+
+Private Sub btn_dashboard_Click
+	'pan_main.RemoveAllViews
+	def_color_menu
+	btn_dashboard.TextColor=0xFFFF4B4B
+	
+	pan_main3.Visible=True
+	'pan_main.Left=-(100%x)
+	pan_main3.SetLayoutAnimated(100,0,0,100%x,pan_main3.Height)
+	pan_main2.Visible=False
+	
+	
+	
+	
+	
+	current_indexPage=0
+	
+End Sub
+
+Private Sub btn_home_Click
+	'pan_main.RemoveAllViews
+	def_color_menu
+	btn_home.TextColor=0xFFFF4B4B
+	
+	
+	If(current_indexPage=2)Then
+		pan_main2.SetLayoutAnimated(100,100%x,0,100%x,pan_main3.Height)
+	Else If (current_indexPage=0) Then
+		pan_main3.SetLayoutAnimated(100,-(100%x),0,100%x,pan_main3.Height)
+	End If
+	
+	
+	current_indexPage=1
+	
+
+
+
+	For i=1 To 28
+		
+		If(myFunc.get_State_tamrin1_byRoz(i).As(Int)<10)Then
+			this_day=i
+			lbl_show_tamrin_roz.Text=i&"/28"
+			Return
+		End If
+		
+	Next
+	
+	
+	
+End Sub
+
+
+
+Private Sub pan_download_Click
+	StartActivity(download_activity)
+End Sub
+
+Private Sub pan_setting_Click
+	'myFunc.get_all_tamrin1
+	StartActivity(setting_activity)
+	
+End Sub
+
+
+
+
+Sub def_color_menu
+	btn_home.TextColor=Colors.Gray
+	btn_all_tamrin.TextColor=Colors.Gray
+	btn_dashboard.TextColor=Colors.Gray
+	
+End Sub
+
+Sub fill_list_tamrinat
+	Dim counter_id As Int=0
+	For i=1 To 6
+		
+		p = xui.CreatePanel("p")
+		
+		p.SetLayoutAnimated(0, 0, 0, 100%x, 80dip)
+		p.LoadLayout("item_clv_tamrinat")
+		
+		
+		clv_tamrinat_tagvim.Add(p,i)
+		
+			counter_id=counter_id+1
+			L1.Text=counter_id
+			r1.Tag=counter_id
+			r1.Color=chek_state(counter_id)
+			
+			counter_id=counter_id+1
+			L2.Text=counter_id
+			r2.Tag=counter_id
+			r2.Color=chek_state(counter_id)
+		
+			counter_id=counter_id+1
+			L3.Text=counter_id
+			r3.Tag=counter_id
+			r3.Color=chek_state(counter_id)
+		
+			counter_id=counter_id+1
+			L4.Text=counter_id
+			r4.Tag=counter_id
+			r4.Color=chek_state(counter_id)
+		
+			counter_id=counter_id+1
+			L5.Text=counter_id
+			r5.Tag=counter_id
+			r5.Color=chek_state(counter_id)
+		
+		If(i=6)Then
+			r4.Visible=False
+			r5.Visible=False
+		End If
+	
+	
+	
+	
+	
+	
+		
+	Next
+	
+	
+	
+End Sub
+
+
+Sub chek_state (id_roz As Int) As String
+	Dim color_str As String=""
+	Dim code_state As Int = myFunc.get_State_tamrin1_byRoz(id_roz)
+	
+	If(code_state=10)Then
+		color_str=0xFF66DF64
+	Else If(code_state = 0 )Then
+		color_str=0xFF919191
+	Else
+		color_str=0xFFDFCE64
+	End If
+	
+	Return color_str
+End Sub
+
+
+Sub get_tamrin1_for_lsv(id As Int)
+	lsv_roz.Clear
+	lsv_roz.TwoLinesLayout.Label.Width=90%x
+	lsv_roz.TwoLinesLayout.Label.TextColor=Colors.Green
+	
+	lsv_roz.TwoLinesLayout.SecondLabel.Width=90%x
+	
+	lbl_roz_lsv.Text="روز "&id
+	Dim strFunc As StringFunctions
+	strFunc.Initialize
+
+
+	Dim ls_tamrin1_Roz As List
+	ls_tamrin1_Roz.Initialize
+	ls_tamrin1_Roz=myFunc.get_tamrin1_byRoz(id)
+	
+	For i=0 To ls_tamrin1_Roz.Size-1
+		
+		Dim list_num As List
+		list_num.Initialize
+		list_num=strFunc.Split(ls_tamrin1_Roz.Get(i) , "@")
+		
+		If(list_num.Get(2)<>"null"  And list_num.Get(2)<>"" )Then
+		
+			lsv_roz.AddTwoLines((i+1)&" : "&list_num.Get(2),list_num.Get(3))
+		End If
+		
+	Next
+	
+	If(lsv_roz.Size=0)Then
+	
+		lbl_back_lsv_Click
+		
+		Msgbox2Async("اطلاعاتی ثبت نشده است!", "", "باشه", "", "", Null, False)
+		Wait For Msgbox_Result (result As Int)
+		If result = DialogResponse.POSITIVE Then
+			
+		End If
+		
+		
+		
+	End If
+	
+	
+End Sub
+
+Private Sub r5_Click
+	Dim pan_r As Panel=Sender
+	
+	pan_all_lsv.Visible=True
+	get_tamrin1_for_lsv(pan_r.Tag)
+	
+End Sub
+
+Private Sub r4_Click
+	Dim pan_r As Panel=Sender
+	
+	pan_all_lsv.Visible=True
+	get_tamrin1_for_lsv(pan_r.Tag)
+	
+	
+End Sub
+
+Private Sub r3_Click
+	Dim pan_r As Panel=Sender
+	
+	pan_all_lsv.Visible=True
+	get_tamrin1_for_lsv(pan_r.Tag)
+End Sub
+
+Private Sub r2_Click
+	Dim pan_r As Panel=Sender
+	
+	pan_all_lsv.Visible=True
+	get_tamrin1_for_lsv(pan_r.Tag)
+End Sub
+
+Private Sub r1_Click
+	
+	Dim pan_r As Panel=Sender
+	
+	pan_all_lsv.Visible=True
+	get_tamrin1_for_lsv(pan_r.Tag)
+	
+	
+End Sub
+
+Private Sub pan_all_lsv_Click
+	
+End Sub
+
+Private Sub lbl_back_lsv_Click
+	pan_all_lsv.Visible=False
+End Sub
+
+
+
+
+
+Sub Activity_KeyPress (KeyCode As Int) 
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+		
+		
+		If(current_indexPage<>1)Then
+			btn_home_Click
+		Else
+			
+			Msgbox2Async("آیا از برنامه خارج میشوید!", "", "بله", "نه", "", Null, False)
+			Wait For Msgbox_Result (result As Int)
+			If result = DialogResponse.POSITIVE Then
+				ExitApplication
+			End If
+			
+				
+		End If
+		
+		
+		
+	Else
+		
+	End If
+	
+End Sub
+
+
+
+Private Sub pan_splash_Click
+	
+End Sub
+
+Private Sub pan_otherMyApps_Click
+	Try
+		Dim market As Intent
+		Dim url As String
+		url="bazaar://collection?slug=by_author&aid=407437645137"
+		market.Initialize(market.ACTION_VIEW,url)
+		StartActivity(market)
+		
+		
+	Catch
+		Log(LastException)
+	End Try
+	
+	
+	
+	
+End Sub
+
+Private Sub pan_comment_Click
+	Try
+		Dim market As Intent
+		Dim url As String
+		url="bazaar://details?id=ir.taravatgroup.ezafekari2"
+		market.Initialize(market.ACTION_EDIT,url)
+		StartActivity(market)
+		
+		
+	Catch
+		Log(LastException)
+	End Try
+	
+
+	
+	
+End Sub
+
+Private Sub pan_info_Click
+	Msgbox("گروه برنامه نویسی طراوت"&CRLF&"v1.0"&CRLF&"1402-05","درباره ما")
+End Sub
+
+Private Sub pan_donate_Click
+	Dim i As Intent
+	Dim url As String="https://zarinp.al/taravatgroup"
+	i.Initialize(i.ACTION_VIEW, url)
+	StartActivity(i)
+End Sub
+
+Private Sub pan_tamrin_roz_Click
+	
+	current_roz_tamrin=this_day
+	StartActivity(tamrin_roz_activity)
+End Sub
