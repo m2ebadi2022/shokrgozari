@@ -336,7 +336,6 @@ public class tamrin3_activity extends Activity implements B4AActivity{
     }
 
 public anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4a.phone.Phone.ContentChooser _chooser = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _et_matn1 = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _et_matn2 = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _et_matn3 = null;
@@ -350,8 +349,8 @@ public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
 public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
 public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
 public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
@@ -362,10 +361,13 @@ public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 
 public static void initializeProcessGlobals() {
@@ -380,8 +382,8 @@ anywheresoftware.b4a.objects.collections.List _ls_content = null;
  //BA.debugLineNum = 28;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
  //BA.debugLineNum = 30;BA.debugLine="Activity.LoadLayout(\"tamrin3_layout\")";
 mostCurrent._activity.LoadLayout("tamrin3_layout",mostCurrent.activityBA);
- //BA.debugLineNum = 32;BA.debugLine="Chooser.Initialize(\"chooser\")";
-_chooser.Initialize("chooser");
+ //BA.debugLineNum = 32;BA.debugLine="Main.Chooser.Initialize(\"chooser\")";
+mostCurrent._main._chooser /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Initialize("chooser");
  //BA.debugLineNum = 33;BA.debugLine="et_matn1.Color=0xABFFFFFF";
 mostCurrent._et_matn1.setColor(((int)0xabffffff));
  //BA.debugLineNum = 34;BA.debugLine="et_matn2.Color=0xABFFFFFF";
@@ -485,24 +487,24 @@ anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("N
 return "";
 }
 public static String  _et_matn1_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 161;BA.debugLine="Private Sub et_matn1_TextChanged (Old As String, N";
- //BA.debugLineNum = 162;BA.debugLine="myFunc.update_tamrinat_saved(Main.current_roz_tam";
-mostCurrent._myfunc._update_tamrinat_saved /*boolean*/ (mostCurrent.activityBA,mostCurrent._main._current_roz_tamrin /*int*/ ,mostCurrent._main._current_tamrin /*int*/ ,(int) (1),_new,(int) (1));
- //BA.debugLineNum = 163;BA.debugLine="End Sub";
-return "";
-}
-public static String  _et_matn2_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 157;BA.debugLine="Private Sub et_matn2_TextChanged (Old As String, N";
+ //BA.debugLineNum = 157;BA.debugLine="Private Sub et_matn1_TextChanged (Old As String, N";
  //BA.debugLineNum = 158;BA.debugLine="myFunc.update_tamrinat_saved(Main.current_roz_tam";
-mostCurrent._myfunc._update_tamrinat_saved /*boolean*/ (mostCurrent.activityBA,mostCurrent._main._current_roz_tamrin /*int*/ ,mostCurrent._main._current_tamrin /*int*/ ,(int) (2),_new,(int) (1));
+mostCurrent._myfunc._update_tamrinat_saved /*boolean*/ (mostCurrent.activityBA,mostCurrent._main._current_roz_tamrin /*int*/ ,mostCurrent._main._current_tamrin /*int*/ ,(int) (1),_new,(int) (1));
  //BA.debugLineNum = 159;BA.debugLine="End Sub";
 return "";
 }
-public static String  _et_matn3_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 153;BA.debugLine="Private Sub et_matn3_TextChanged (Old As String, N";
+public static String  _et_matn2_textchanged(String _old,String _new) throws Exception{
+ //BA.debugLineNum = 153;BA.debugLine="Private Sub et_matn2_TextChanged (Old As String, N";
  //BA.debugLineNum = 154;BA.debugLine="myFunc.update_tamrinat_saved(Main.current_roz_tam";
-mostCurrent._myfunc._update_tamrinat_saved /*boolean*/ (mostCurrent.activityBA,mostCurrent._main._current_roz_tamrin /*int*/ ,mostCurrent._main._current_tamrin /*int*/ ,(int) (3),_new,(int) (1));
+mostCurrent._myfunc._update_tamrinat_saved /*boolean*/ (mostCurrent.activityBA,mostCurrent._main._current_roz_tamrin /*int*/ ,mostCurrent._main._current_tamrin /*int*/ ,(int) (2),_new,(int) (1));
  //BA.debugLineNum = 155;BA.debugLine="End Sub";
+return "";
+}
+public static String  _et_matn3_textchanged(String _old,String _new) throws Exception{
+ //BA.debugLineNum = 149;BA.debugLine="Private Sub et_matn3_TextChanged (Old As String, N";
+ //BA.debugLineNum = 150;BA.debugLine="myFunc.update_tamrinat_saved(Main.current_roz_tam";
+mostCurrent._myfunc._update_tamrinat_saved /*boolean*/ (mostCurrent.activityBA,mostCurrent._main._current_roz_tamrin /*int*/ ,mostCurrent._main._current_tamrin /*int*/ ,(int) (3),_new,(int) (1));
+ //BA.debugLineNum = 151;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -535,80 +537,73 @@ mostCurrent._activity.Finish();
  //BA.debugLineNum = 93;BA.debugLine="End Sub";
 return "";
 }
-public static String  _lbl_open_help_click() throws Exception{
- //BA.debugLineNum = 113;BA.debugLine="Private Sub lbl_open_help_Click";
- //BA.debugLineNum = 115;BA.debugLine="End Sub";
-return "";
-}
 public static String  _pan_all_showpic_click() throws Exception{
- //BA.debugLineNum = 169;BA.debugLine="Private Sub pan_all_showPic_Click";
- //BA.debugLineNum = 170;BA.debugLine="pan_all_showPic.Visible=False";
+ //BA.debugLineNum = 165;BA.debugLine="Private Sub pan_all_showPic_Click";
+ //BA.debugLineNum = 166;BA.debugLine="pan_all_showPic.Visible=False";
 mostCurrent._pan_all_showpic.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 171;BA.debugLine="End Sub";
-return "";
-}
-public static String  _pan_showpic_click() throws Exception{
- //BA.debugLineNum = 165;BA.debugLine="Private Sub pan_showPic_Click";
- //BA.debugLineNum = 166;BA.debugLine="Chooser.Show(\"image/*\", \"Select an image\")";
-_chooser.Show(processBA,"image/*","Select an image");
  //BA.debugLineNum = 167;BA.debugLine="End Sub";
 return "";
 }
+public static String  _pan_showpic_click() throws Exception{
+ //BA.debugLineNum = 161;BA.debugLine="Private Sub pan_showPic_Click";
+ //BA.debugLineNum = 162;BA.debugLine="Main.Chooser.Show(\"image/*\", \"Select an image\")";
+mostCurrent._main._chooser /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Show(processBA,"image/*","Select an image");
+ //BA.debugLineNum = 163;BA.debugLine="End Sub";
+return "";
+}
 public static String  _pan_upload_pic1_click() throws Exception{
- //BA.debugLineNum = 141;BA.debugLine="Private Sub pan_upload_pic1_Click";
- //BA.debugLineNum = 142;BA.debugLine="pic_upload_index=1";
+ //BA.debugLineNum = 137;BA.debugLine="Private Sub pan_upload_pic1_Click";
+ //BA.debugLineNum = 138;BA.debugLine="pic_upload_index=1";
 _pic_upload_index = (int) (1);
- //BA.debugLineNum = 144;BA.debugLine="If(File.Exists(File.DirInternal,\"pic_tamrin1.jpg\"";
+ //BA.debugLineNum = 140;BA.debugLine="If(File.Exists(File.DirInternal,\"pic_tamrin1.jpg\"";
 if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"pic_tamrin1.jpg"))) { 
- //BA.debugLineNum = 145;BA.debugLine="pan_all_showPic.Visible=True";
+ //BA.debugLineNum = 141;BA.debugLine="pan_all_showPic.Visible=True";
 mostCurrent._pan_all_showpic.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 146;BA.debugLine="pan_showPic.SetBackgroundImage(LoadBitmapSample(";
+ //BA.debugLineNum = 142;BA.debugLine="pan_showPic.SetBackgroundImage(LoadBitmapSample(";
 mostCurrent._pan_showpic.SetBackgroundImageNew((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapSample(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"pic_tamrin1.jpg",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120))).getObject()));
  }else {
- //BA.debugLineNum = 148;BA.debugLine="Chooser.Show(\"image/*\", \"Select an image\")";
-_chooser.Show(processBA,"image/*","Select an image");
+ //BA.debugLineNum = 144;BA.debugLine="Main.Chooser.Show(\"image/*\", \"Select an image\")";
+mostCurrent._main._chooser /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Show(processBA,"image/*","Select an image");
  };
- //BA.debugLineNum = 151;BA.debugLine="End Sub";
+ //BA.debugLineNum = 147;BA.debugLine="End Sub";
 return "";
 }
 public static String  _pan_upload_pic2_click() throws Exception{
- //BA.debugLineNum = 129;BA.debugLine="Private Sub pan_upload_pic2_Click";
- //BA.debugLineNum = 130;BA.debugLine="pic_upload_index=2";
+ //BA.debugLineNum = 125;BA.debugLine="Private Sub pan_upload_pic2_Click";
+ //BA.debugLineNum = 126;BA.debugLine="pic_upload_index=2";
 _pic_upload_index = (int) (2);
- //BA.debugLineNum = 132;BA.debugLine="If(File.Exists(File.DirInternal,\"pic_tamrin2.jpg\"";
+ //BA.debugLineNum = 128;BA.debugLine="If(File.Exists(File.DirInternal,\"pic_tamrin2.jpg\"";
 if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"pic_tamrin2.jpg"))) { 
- //BA.debugLineNum = 133;BA.debugLine="pan_all_showPic.Visible=True";
+ //BA.debugLineNum = 129;BA.debugLine="pan_all_showPic.Visible=True";
 mostCurrent._pan_all_showpic.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 134;BA.debugLine="pan_showPic.SetBackgroundImage(LoadBitmapSample(";
+ //BA.debugLineNum = 130;BA.debugLine="pan_showPic.SetBackgroundImage(LoadBitmapSample(";
 mostCurrent._pan_showpic.SetBackgroundImageNew((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapSample(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"pic_tamrin2.jpg",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120))).getObject()));
  }else {
- //BA.debugLineNum = 136;BA.debugLine="Chooser.Show(\"image/*\", \"Select an image\")";
-_chooser.Show(processBA,"image/*","Select an image");
+ //BA.debugLineNum = 132;BA.debugLine="Main.Chooser.Show(\"image/*\", \"Select an image\")";
+mostCurrent._main._chooser /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Show(processBA,"image/*","Select an image");
  };
- //BA.debugLineNum = 139;BA.debugLine="End Sub";
+ //BA.debugLineNum = 135;BA.debugLine="End Sub";
 return "";
 }
 public static String  _pan_upload_pic3_click() throws Exception{
- //BA.debugLineNum = 117;BA.debugLine="Private Sub pan_upload_pic3_Click";
- //BA.debugLineNum = 118;BA.debugLine="pic_upload_index=3";
+ //BA.debugLineNum = 113;BA.debugLine="Private Sub pan_upload_pic3_Click";
+ //BA.debugLineNum = 114;BA.debugLine="pic_upload_index=3";
 _pic_upload_index = (int) (3);
- //BA.debugLineNum = 120;BA.debugLine="If(File.Exists(File.DirInternal,\"pic_tamrin3.jpg\"";
+ //BA.debugLineNum = 116;BA.debugLine="If(File.Exists(File.DirInternal,\"pic_tamrin3.jpg\"";
 if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"pic_tamrin3.jpg"))) { 
- //BA.debugLineNum = 121;BA.debugLine="pan_all_showPic.Visible=True";
+ //BA.debugLineNum = 117;BA.debugLine="pan_all_showPic.Visible=True";
 mostCurrent._pan_all_showpic.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 122;BA.debugLine="pan_showPic.SetBackgroundImage(LoadBitmapSample(";
+ //BA.debugLineNum = 118;BA.debugLine="pan_showPic.SetBackgroundImage(LoadBitmapSample(";
 mostCurrent._pan_showpic.SetBackgroundImageNew((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapSample(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"pic_tamrin3.jpg",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120))).getObject()));
  }else {
- //BA.debugLineNum = 124;BA.debugLine="Chooser.Show(\"image/*\", \"Select an image\")";
-_chooser.Show(processBA,"image/*","Select an image");
+ //BA.debugLineNum = 120;BA.debugLine="Main.Chooser.Show(\"image/*\", \"Select an image\")";
+mostCurrent._main._chooser /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Show(processBA,"image/*","Select an image");
  };
- //BA.debugLineNum = 127;BA.debugLine="End Sub";
+ //BA.debugLineNum = 123;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 9;BA.debugLine="Dim Chooser As ContentChooser";
-_chooser = new anywheresoftware.b4a.phone.Phone.ContentChooser();
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }

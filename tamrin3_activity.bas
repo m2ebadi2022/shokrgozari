@@ -12,7 +12,7 @@ Version=12.5
 Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
-	Dim Chooser As ContentChooser
+	
 End Sub
 
 Sub Globals
@@ -35,7 +35,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	Activity.LoadLayout("tamrin3_layout")
 	'pan_upload_pic1.Background=LoadBitmap(File.DirInternal,"pic_tamrin3.jpg")
-	Chooser.Initialize("chooser")
+	Main.Chooser.Initialize("chooser")
 	et_matn1.Color=0xABFFFFFF
 	et_matn2.Color=0xABFFFFFF
 	et_matn3.Color=0xABFFFFFF
@@ -116,10 +116,6 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 End Sub
 
 
-Private Sub lbl_open_help_Click
-	
-End Sub
-
 Private Sub pan_upload_pic3_Click
 	pic_upload_index=3
 	
@@ -127,7 +123,7 @@ Private Sub pan_upload_pic3_Click
 		pan_all_showPic.Visible=True
 		pan_showPic.SetBackgroundImage(LoadBitmapSample(File.DirInternal,"pic_tamrin3.jpg",120dip,120dip))
 	Else
-		Chooser.Show("image/*", "Select an image")
+		Main.Chooser.Show("image/*", "Select an image")
 	End If
 	
 End Sub
@@ -139,7 +135,7 @@ Private Sub pan_upload_pic2_Click
 		pan_all_showPic.Visible=True
 		pan_showPic.SetBackgroundImage(LoadBitmapSample(File.DirInternal,"pic_tamrin2.jpg",120dip,120dip))
 	Else
-		Chooser.Show("image/*", "Select an image")
+		Main.Chooser.Show("image/*", "Select an image")
 	End If
 	
 End Sub
@@ -151,7 +147,7 @@ Private Sub pan_upload_pic1_Click
 		pan_all_showPic.Visible=True
 		pan_showPic.SetBackgroundImage(LoadBitmapSample(File.DirInternal,"pic_tamrin1.jpg",120dip,120dip))
 	Else
-			Chooser.Show("image/*", "Select an image")
+		Main.Chooser.Show("image/*", "Select an image")
 	End If
 	
 End Sub
@@ -169,7 +165,7 @@ Private Sub et_matn1_TextChanged (Old As String, New As String)
 End Sub
 
 Private Sub pan_showPic_Click
-	Chooser.Show("image/*", "Select an image")
+	Main.Chooser.Show("image/*", "Select an image")
 End Sub
 
 Private Sub pan_all_showPic_Click

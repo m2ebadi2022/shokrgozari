@@ -14,8 +14,8 @@ public static Object getObject() {
 public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
 public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
 public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
 public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
@@ -26,11 +26,14 @@ public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 public static String  _connection_sql(anywheresoftware.b4a.BA _ba) throws Exception{
  //BA.debugLineNum = 10;BA.debugLine="Sub connection_sql";
@@ -47,6 +50,78 @@ mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Initialize(anywheresoft
  //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }
+public static String  _delet_daftar_khastebyid(anywheresoftware.b4a.BA _ba,int _id) throws Exception{
+ //BA.debugLineNum = 885;BA.debugLine="Sub delet_daftar_khasteById (id As Int)";
+ //BA.debugLineNum = 887;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 888;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM daftar_khasteh";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM daftar_khasteha WHERE id="+BA.NumberToString(_id)+";");
+ //BA.debugLineNum = 889;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 890;BA.debugLine="ToastMessageShow(\"حذف شد\",False)";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("حذف شد"),anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 893;BA.debugLine="End Sub";
+return "";
+}
+public static String  _delet_daftar_ravabetbyid(anywheresoftware.b4a.BA _ba,int _id) throws Exception{
+ //BA.debugLineNum = 950;BA.debugLine="Sub delet_daftar_ravabetById (id As Int)";
+ //BA.debugLineNum = 952;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 953;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM daftar_ravabet";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM daftar_ravabet WHERE id="+BA.NumberToString(_id)+";");
+ //BA.debugLineNum = 954;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 955;BA.debugLine="ToastMessageShow(\"حذف شد\",False)";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("حذف شد"),anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 958;BA.debugLine="End Sub";
+return "";
+}
+public static String  _delet_daftar_shenase(anywheresoftware.b4a.BA _ba,String _shenase,int _model) throws Exception{
+ //BA.debugLineNum = 750;BA.debugLine="Sub delet_daftar_shenase (shenase As String, model";
+ //BA.debugLineNum = 752;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 753;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM daftar_shenase";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM daftar_shenase WHERE shenase='"+_shenase+"';");
+ //BA.debugLineNum = 754;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 758;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 759;BA.debugLine="Select model";
+switch (_model) {
+case 0: {
+ //BA.debugLineNum = 761;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM daftar_shokr";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM daftar_shokrgozari WHERE shenase='"+_shenase+"';");
+ break; }
+case 1: {
+ //BA.debugLineNum = 763;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM daftar_ravab";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM daftar_ravabet WHERE shenase='"+_shenase+"';");
+ break; }
+case 2: {
+ //BA.debugLineNum = 765;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM daftar_khast";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM daftar_khasteha WHERE shenase='"+_shenase+"';");
+ break; }
+}
+;
+ //BA.debugLineNum = 769;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 772;BA.debugLine="ToastMessageShow(\"حذف شد\",False)";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("حذف شد"),anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 777;BA.debugLine="End Sub";
+return "";
+}
+public static String  _delet_daftar_shokrgozaribyid(anywheresoftware.b4a.BA _ba,int _id) throws Exception{
+ //BA.debugLineNum = 832;BA.debugLine="Sub delet_daftar_shokrgozariById (id As Int)";
+ //BA.debugLineNum = 834;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 835;BA.debugLine="Main.sql.ExecNonQuery(\"DELETE FROM daftar_shokrgo";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM daftar_shokrgozari WHERE id="+BA.NumberToString(_id)+";");
+ //BA.debugLineNum = 836;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 837;BA.debugLine="ToastMessageShow(\"حذف شد\",False)";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("حذف شد"),anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 840;BA.debugLine="End Sub";
+return "";
+}
 public static String  _get_all_tamrin1(anywheresoftware.b4a.BA _ba) throws Exception{
  //BA.debugLineNum = 332;BA.debugLine="Sub get_all_tamrin1";
  //BA.debugLineNum = 334;BA.debugLine="connection_sql";
@@ -56,7 +131,7 @@ mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (any
  //BA.debugLineNum = 337;BA.debugLine="Do While Main.res.NextRow";
 while (mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .NextRow()) {
  //BA.debugLineNum = 338;BA.debugLine="Log(Main.res.Getint(\"id\")&\"	\"&Main.res.Getint(\"r";
-anywheresoftware.b4a.keywords.Common.LogImpl("03211270",BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id"))+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("roz"))+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("num"))+"	"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("mohebat")+"	"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("elat")+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state")),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("51507334",BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id"))+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("roz"))+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("num"))+"	"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("mohebat")+"	"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("elat")+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state")),0);
  }
 ;
  //BA.debugLineNum = 342;BA.debugLine="Main.sql.Close";
@@ -220,6 +295,106 @@ if (true) return _list_result;
  //BA.debugLineNum = 228;BA.debugLine="End Sub";
 return null;
 }
+public static anywheresoftware.b4a.objects.collections.List  _get_daftar_khasteha_byshenase(anywheresoftware.b4a.BA _ba,String _shenase) throws Exception{
+anywheresoftware.b4a.objects.collections.List _list_result = null;
+ //BA.debugLineNum = 846;BA.debugLine="Sub get_daftar_khasteha_byShenase (shenase As Stri";
+ //BA.debugLineNum = 848;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 849;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM daftar";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM daftar_khasteha WHERE shenase='"+_shenase+"' ;")));
+ //BA.debugLineNum = 852;BA.debugLine="Dim list_result As List";
+_list_result = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 853;BA.debugLine="list_result.Initialize";
+_list_result.Initialize();
+ //BA.debugLineNum = 855;BA.debugLine="Do While Main.res.NextRow";
+while (mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .NextRow()) {
+ //BA.debugLineNum = 857;BA.debugLine="list_result.Add(Main.res.Getint(\"id\")&\"@\"&Main.r";
+_list_result.Add((Object)(BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id"))+"@"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("num"))+"@"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("matn")+"@"+"@"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state"))));
+ }
+;
+ //BA.debugLineNum = 861;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 862;BA.debugLine="Main.res.Close";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close();
+ //BA.debugLineNum = 864;BA.debugLine="Return list_result";
+if (true) return _list_result;
+ //BA.debugLineNum = 866;BA.debugLine="End Sub";
+return null;
+}
+public static anywheresoftware.b4a.objects.collections.List  _get_daftar_ravabet_byshenase(anywheresoftware.b4a.BA _ba,String _shenase) throws Exception{
+anywheresoftware.b4a.objects.collections.List _list_result = null;
+ //BA.debugLineNum = 899;BA.debugLine="Sub get_daftar_ravabet_byShenase (shenase As Strin";
+ //BA.debugLineNum = 901;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 902;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM daftar";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM daftar_ravabet WHERE shenase='"+_shenase+"' ;")));
+ //BA.debugLineNum = 905;BA.debugLine="Dim list_result As List";
+_list_result = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 906;BA.debugLine="list_result.Initialize";
+_list_result.Initialize();
+ //BA.debugLineNum = 908;BA.debugLine="Do While Main.res.NextRow";
+while (mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .NextRow()) {
+ //BA.debugLineNum = 910;BA.debugLine="list_result.Add(Main.res.Getint(\"id\")&\"@\"&Main.r";
+_list_result.Add((Object)(BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id"))+"@"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("num"))+"@"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("pic")+"@"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("matn")+"@"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state"))));
+ }
+;
+ //BA.debugLineNum = 914;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 915;BA.debugLine="Main.res.Close";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close();
+ //BA.debugLineNum = 917;BA.debugLine="Return list_result";
+if (true) return _list_result;
+ //BA.debugLineNum = 919;BA.debugLine="End Sub";
+return null;
+}
+public static String  _get_daftar_shenase_titel(anywheresoftware.b4a.BA _ba,String _shenase) throws Exception{
+String _res_str = "";
+ //BA.debugLineNum = 961;BA.debugLine="Sub get_daftar_shenase_titel (shenase As String) A";
+ //BA.debugLineNum = 963;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 964;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM daftar";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM daftar_shenase WHERE shenase='"+_shenase+"' ;")));
+ //BA.debugLineNum = 966;BA.debugLine="Dim res_str As String=\"\"";
+_res_str = "";
+ //BA.debugLineNum = 968;BA.debugLine="Main.res.Position=0";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .setPosition((int) (0));
+ //BA.debugLineNum = 969;BA.debugLine="res_str=Main.res.GetString(\"title\")";
+_res_str = mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("title");
+ //BA.debugLineNum = 972;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 973;BA.debugLine="Main.res.Close";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close();
+ //BA.debugLineNum = 975;BA.debugLine="Return res_str";
+if (true) return _res_str;
+ //BA.debugLineNum = 977;BA.debugLine="End Sub";
+return "";
+}
+public static anywheresoftware.b4a.objects.collections.List  _get_daftar_shokrgozari_byshenase(anywheresoftware.b4a.BA _ba,String _shenase) throws Exception{
+anywheresoftware.b4a.objects.collections.List _list_result = null;
+ //BA.debugLineNum = 783;BA.debugLine="Sub get_daftar_shokrgozari_byShenase (shenase As S";
+ //BA.debugLineNum = 785;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 786;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM daftar";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM daftar_shokrgozari WHERE shenase='"+_shenase+"' ;")));
+ //BA.debugLineNum = 789;BA.debugLine="Dim list_result As List";
+_list_result = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 790;BA.debugLine="list_result.Initialize";
+_list_result.Initialize();
+ //BA.debugLineNum = 792;BA.debugLine="Do While Main.res.NextRow";
+while (mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .NextRow()) {
+ //BA.debugLineNum = 794;BA.debugLine="list_result.Add(Main.res.Getint(\"id\")&\"@\"&Main.r";
+_list_result.Add((Object)(BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id"))+"@"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("num"))+"@"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("mohebat")+"@"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("elat")+"@"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state"))));
+ }
+;
+ //BA.debugLineNum = 798;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 799;BA.debugLine="Main.res.Close";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close();
+ //BA.debugLineNum = 801;BA.debugLine="Return list_result";
+if (true) return _list_result;
+ //BA.debugLineNum = 803;BA.debugLine="End Sub";
+return null;
+}
 public static anywheresoftware.b4a.objects.collections.List  _get_download_list(anywheresoftware.b4a.BA _ba) throws Exception{
 anywheresoftware.b4a.objects.collections.List _list_result = null;
  //BA.debugLineNum = 75;BA.debugLine="Sub get_download_list As List";
@@ -290,6 +465,37 @@ mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close(
  //BA.debugLineNum = 70;BA.debugLine="Return list_result";
 if (true) return _list_result;
  //BA.debugLineNum = 72;BA.debugLine="End Sub";
+return null;
+}
+public static anywheresoftware.b4a.objects.collections.List  _get_name_date_daftar(anywheresoftware.b4a.BA _ba,String _shenase) throws Exception{
+String _sql_str = "";
+anywheresoftware.b4a.objects.collections.List _ls_res = null;
+ //BA.debugLineNum = 702;BA.debugLine="Sub get_name_date_daftar(shenase As String) As Lis";
+ //BA.debugLineNum = 703;BA.debugLine="Dim sql_str As String=\"\"";
+_sql_str = "";
+ //BA.debugLineNum = 704;BA.debugLine="Dim ls_res As List";
+_ls_res = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 705;BA.debugLine="ls_res.Initialize";
+_ls_res.Initialize();
+ //BA.debugLineNum = 707;BA.debugLine="sql_str=\"SELECT * FROM daftar_shenase WHERE shena";
+_sql_str = "SELECT * FROM daftar_shenase WHERE shenase='"+_shenase+"';";
+ //BA.debugLineNum = 712;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 713;BA.debugLine="Main.res=Main.sql.ExecQuery(sql_str)";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery(_sql_str)));
+ //BA.debugLineNum = 715;BA.debugLine="Main.res.Position=0";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .setPosition((int) (0));
+ //BA.debugLineNum = 716;BA.debugLine="ls_res.Add(Main.res.GetString(\"title\"))";
+_ls_res.Add((Object)(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("title")));
+ //BA.debugLineNum = 717;BA.debugLine="ls_res.Add(Main.res.GetString(\"date\"))";
+_ls_res.Add((Object)(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("date")));
+ //BA.debugLineNum = 722;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 723;BA.debugLine="Main.res.Close";
+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close();
+ //BA.debugLineNum = 725;BA.debugLine="Return ls_res";
+if (true) return _ls_res;
+ //BA.debugLineNum = 729;BA.debugLine="End Sub";
 return null;
 }
 public static anywheresoftware.b4a.objects.collections.List  _get_removeall_list(anywheresoftware.b4a.BA _ba) throws Exception{
@@ -515,26 +721,26 @@ return 0;
 }
 public static int  _get_state_tamrin27(anywheresoftware.b4a.BA _ba) throws Exception{
 int _res_state = 0;
- //BA.debugLineNum = 677;BA.debugLine="Sub get_state_tamrin27 As Int";
- //BA.debugLineNum = 678;BA.debugLine="Dim res_state As Int=0";
+ //BA.debugLineNum = 683;BA.debugLine="Sub get_state_tamrin27 As Int";
+ //BA.debugLineNum = 684;BA.debugLine="Dim res_state As Int=0";
 _res_state = (int) (0);
- //BA.debugLineNum = 680;BA.debugLine="connection_sql";
+ //BA.debugLineNum = 686;BA.debugLine="connection_sql";
 _connection_sql(_ba);
- //BA.debugLineNum = 681;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM tamrin";
+ //BA.debugLineNum = 687;BA.debugLine="Main.res=Main.sql.ExecQuery(\"SELECT * FROM tamrin";
 mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (anywheresoftware.b4a.sql.SQL.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.ResultSetWrapper(), (android.database.Cursor)(mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM tamrin27 ")));
- //BA.debugLineNum = 683;BA.debugLine="Do While Main.res.NextRow";
+ //BA.debugLineNum = 689;BA.debugLine="Do While Main.res.NextRow";
 while (mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .NextRow()) {
- //BA.debugLineNum = 684;BA.debugLine="res_state=res_state+Main.res.Getint(\"state\")";
+ //BA.debugLineNum = 690;BA.debugLine="res_state=res_state+Main.res.Getint(\"state\")";
 _res_state = (int) (_res_state+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state"));
  }
 ;
- //BA.debugLineNum = 687;BA.debugLine="Main.sql.Close";
+ //BA.debugLineNum = 693;BA.debugLine="Main.sql.Close";
 mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
- //BA.debugLineNum = 688;BA.debugLine="Main.res.Close";
+ //BA.debugLineNum = 694;BA.debugLine="Main.res.Close";
 mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .Close();
- //BA.debugLineNum = 690;BA.debugLine="Return res_state";
+ //BA.debugLineNum = 696;BA.debugLine="Return res_state";
 if (true) return _res_state;
- //BA.debugLineNum = 692;BA.debugLine="End Sub";
+ //BA.debugLineNum = 698;BA.debugLine="End Sub";
 return 0;
 }
 public static int  _get_state_tamrin8(anywheresoftware.b4a.BA _ba) throws Exception{
@@ -663,6 +869,29 @@ if (true) return _ls_result;
  //BA.debugLineNum = 207;BA.debugLine="End Sub";
 return null;
 }
+public static String  _getrandomstring(anywheresoftware.b4a.BA _ba,String _source,int _count) throws Exception{
+anywheresoftware.b4a.keywords.StringBuilderWrapper _str = null;
+int _i = 0;
+ //BA.debugLineNum = 732;BA.debugLine="Public Sub GetRandomString(Source As String,Count";
+ //BA.debugLineNum = 733;BA.debugLine="Dim Str As StringBuilder";
+_str = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
+ //BA.debugLineNum = 734;BA.debugLine="Str.Initialize";
+_str.Initialize();
+ //BA.debugLineNum = 735;BA.debugLine="For i = 0 To Count -1";
+{
+final int step3 = 1;
+final int limit3 = (int) (_count-1);
+_i = (int) (0) ;
+for (;_i <= limit3 ;_i = _i + step3 ) {
+ //BA.debugLineNum = 736;BA.debugLine="Str.Append(Source.CharAt(Rnd(0,Source.Length)))";
+_str.Append(BA.ObjectToString(_source.charAt(anywheresoftware.b4a.keywords.Common.Rnd((int) (0),_source.length()))));
+ }
+};
+ //BA.debugLineNum = 738;BA.debugLine="Return Str.ToString";
+if (true) return _str.ToString();
+ //BA.debugLineNum = 739;BA.debugLine="End Sub";
+return "";
+}
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 3;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 7;BA.debugLine="End Sub";
@@ -707,6 +936,99 @@ mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("INSERT I
 mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
  //BA.debugLineNum = 175;BA.debugLine="End Sub";
 return "";
+}
+public static boolean  _update_daftar_khasteha(anywheresoftware.b4a.BA _ba,int _id,String _khaste,int _state) throws Exception{
+ //BA.debugLineNum = 870;BA.debugLine="Sub update_daftar_khasteha(id As Int,khaste As Str";
+ //BA.debugLineNum = 872;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 874;BA.debugLine="If(khaste=\"\")Then";
+if (((_khaste).equals(""))) { 
+ //BA.debugLineNum = 875;BA.debugLine="state=0";
+_state = (int) (0);
+ };
+ //BA.debugLineNum = 878;BA.debugLine="Main.sql.ExecNonQuery2(\"UPDATE daftar_khasteha SE";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("UPDATE daftar_khasteha SET matn=? , state=? WHERE id=?;",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_khaste),(Object)(_state),(Object)(_id)}));
+ //BA.debugLineNum = 879;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 881;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 882;BA.debugLine="End Sub";
+return false;
+}
+public static boolean  _update_daftar_ravabet(anywheresoftware.b4a.BA _ba,int _id,String _ravabet,int _state) throws Exception{
+ //BA.debugLineNum = 923;BA.debugLine="Sub update_daftar_ravabet(id As Int,ravabet As Str";
+ //BA.debugLineNum = 925;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 927;BA.debugLine="If(ravabet=\"\")Then";
+if (((_ravabet).equals(""))) { 
+ //BA.debugLineNum = 928;BA.debugLine="state=0";
+_state = (int) (0);
+ };
+ //BA.debugLineNum = 931;BA.debugLine="Main.sql.ExecNonQuery2(\"UPDATE daftar_ravabet SET";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("UPDATE daftar_ravabet SET matn=? , state=? WHERE id=?;",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_ravabet),(Object)(_state),(Object)(_id)}));
+ //BA.debugLineNum = 932;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 934;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 935;BA.debugLine="End Sub";
+return false;
+}
+public static boolean  _update_daftar_ravabet_pic(anywheresoftware.b4a.BA _ba,int _id,String _pic_name) throws Exception{
+ //BA.debugLineNum = 938;BA.debugLine="Sub update_daftar_ravabet_pic(id As Int,pic_name A";
+ //BA.debugLineNum = 940;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 942;BA.debugLine="Main.sql.ExecNonQuery2(\"UPDATE daftar_ravabet SET";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("UPDATE daftar_ravabet SET pic=? WHERE id=?;",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_pic_name),(Object)(_id)}));
+ //BA.debugLineNum = 943;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 945;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 946;BA.debugLine="End Sub";
+return false;
+}
+public static boolean  _update_daftar_shenase(anywheresoftware.b4a.BA _ba,String _shenase,String _title,String _date) throws Exception{
+ //BA.debugLineNum = 741;BA.debugLine="Sub update_daftar_shenase (shenase As String,title";
+ //BA.debugLineNum = 743;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 744;BA.debugLine="Main.sql.ExecNonQuery2(\"UPDATE daftar_shenase SET";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("UPDATE daftar_shenase SET title=?, date=? WHERE shenase=?;",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_title),(Object)(_date),(Object)(_shenase)}));
+ //BA.debugLineNum = 745;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 747;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 748;BA.debugLine="End Sub";
+return false;
+}
+public static boolean  _update_daftar_shokrgozari_elat(anywheresoftware.b4a.BA _ba,int _id,String _elat,int _state) throws Exception{
+ //BA.debugLineNum = 822;BA.debugLine="Sub update_daftar_shokrgozari_elat(id As Int,elat";
+ //BA.debugLineNum = 824;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 825;BA.debugLine="Main.sql.ExecNonQuery2(\"UPDATE daftar_shokrgozari";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("UPDATE daftar_shokrgozari SET elat=?, state=? WHERE id=?;",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_elat),(Object)(_state),(Object)(_id)}));
+ //BA.debugLineNum = 826;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 828;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 829;BA.debugLine="End Sub";
+return false;
+}
+public static boolean  _update_daftar_shokrgozari_mohebat(anywheresoftware.b4a.BA _ba,int _id,String _mohebat,int _state) throws Exception{
+ //BA.debugLineNum = 807;BA.debugLine="Sub update_daftar_shokrgozari_mohebat(id As Int,mo";
+ //BA.debugLineNum = 809;BA.debugLine="connection_sql";
+_connection_sql(_ba);
+ //BA.debugLineNum = 811;BA.debugLine="If(mohebat=\"\")Then";
+if (((_mohebat).equals(""))) { 
+ //BA.debugLineNum = 812;BA.debugLine="state=0";
+_state = (int) (0);
+ };
+ //BA.debugLineNum = 815;BA.debugLine="Main.sql.ExecNonQuery2(\"UPDATE daftar_shokrgozari";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery2("UPDATE daftar_shokrgozari SET mohebat=? , state=? WHERE id=?;",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_mohebat),(Object)(_state),(Object)(_id)}));
+ //BA.debugLineNum = 816;BA.debugLine="Main.sql.Close";
+mostCurrent._main._sql /*anywheresoftware.b4a.sql.SQL*/ .Close();
+ //BA.debugLineNum = 818;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 819;BA.debugLine="End Sub";
+return false;
 }
 public static boolean  _update_tamrin1_elat(anywheresoftware.b4a.BA _ba,int _id,String _elat,int _state) throws Exception{
  //BA.debugLineNum = 300;BA.debugLine="Sub update_tamrin1_elat(id As Int,elat As String,s";

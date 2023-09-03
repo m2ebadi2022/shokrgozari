@@ -64,6 +64,7 @@ Private Sub pan_roz_Click
 	isfitest=False
 	
 	If(Main.current_roz_tamrin=29)Then
+		'Msgbox("در حال تکمیل ...","")
 		StartActivity(daftar_activity)
 	Else
 		StartActivity(tamrin_roz_activity)
@@ -118,7 +119,7 @@ Sub fill_list
 			
 			If(pos_scroll= 0)Then
 				pos_scroll=i
-			
+				
 			End If
 			
 			

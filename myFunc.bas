@@ -680,6 +680,12 @@ End Sub
 	Return True
 End Sub
 
+
+
+
+
+
+
 Sub get_state_tamrin27 As Int
 	Dim res_state As Int=0
 	
@@ -694,5 +700,284 @@ Sub get_state_tamrin27 As Int
 	Main.res.Close
 	
 	Return res_state
+	
+End Sub
+
+
+
+Sub get_name_date_daftar(shenase As String) As List
+	Dim sql_str As String=""
+	Dim ls_res As List
+	ls_res.Initialize
+	
+	sql_str="SELECT * FROM daftar_shenase WHERE shenase='"&shenase&"';"
+			
+	
+	
+	
+	connection_sql
+	Main.res=Main.sql.ExecQuery(sql_str)
+	
+	Main.res.Position=0
+	ls_res.Add(Main.res.GetString("title"))
+	ls_res.Add(Main.res.GetString("date"))
+		
+	
+	
+	
+	Main.sql.Close
+	Main.res.Close
+	
+	Return ls_res
+	
+	
+	
+End Sub
+
+
+Public Sub GetRandomString(Source As String,Count As Int) As String
+	Dim Str As StringBuilder
+	Str.Initialize
+	For i = 0 To Count -1
+		Str.Append(Source.CharAt(Rnd(0,Source.Length)))
+	Next
+	Return Str.ToString
+End Sub
+
+Sub update_daftar_shenase (shenase As String,title As String ,date As String) As Boolean
+ 
+	connection_sql
+	Main.sql.ExecNonQuery2("UPDATE daftar_shenase SET title=?, date=? WHERE shenase=?;", Array As Object(title, date,shenase))
+	Main.sql.Close
+	
+	Return True
+End Sub
+
+Sub delet_daftar_shenase (shenase As String, model As Int)
+	
+	connection_sql
+	Main.sql.ExecNonQuery("DELETE FROM daftar_shenase WHERE shenase='"&shenase&"';")
+	Main.sql.Close
+	
+	
+	
+	connection_sql
+	Select model
+		Case 0
+			Main.sql.ExecNonQuery("DELETE FROM daftar_shokrgozari WHERE shenase='"&shenase&"';")
+		Case 1
+			Main.sql.ExecNonQuery("DELETE FROM daftar_ravabet WHERE shenase='"&shenase&"';")
+		Case 2
+			Main.sql.ExecNonQuery("DELETE FROM daftar_khasteha WHERE shenase='"&shenase&"';")
+		
+	End Select
+	
+	Main.sql.Close
+	
+	
+	ToastMessageShow("حذف شد",False)
+		
+		
+		
+	
+End Sub
+
+
+
+
+
+Sub get_daftar_shokrgozari_byShenase (shenase As String) As List
+	
+	connection_sql
+	Main.res=Main.sql.ExecQuery("SELECT * FROM daftar_shokrgozari WHERE shenase='"&shenase&"' ;")
+	
+	
+	Dim list_result As List
+	list_result.Initialize
+	
+	Do While Main.res.NextRow
+		
+		list_result.Add(Main.res.Getint("id")&"@"&Main.res.Getint("num")&"@"&Main.res.GetString("mohebat")&"@"&Main.res.GetString("elat")&"@"&Main.res.Getint("state"))
+		
+	Loop
+	
+	Main.sql.Close
+	Main.res.Close
+	
+	Return list_result
+	
+End Sub
+
+
+
+Sub update_daftar_shokrgozari_mohebat(id As Int,mohebat As String,state As Int) As Boolean
+	
+	connection_sql
+	
+	If(mohebat="")Then
+		state=0
+	End If
+	
+	Main.sql.ExecNonQuery2("UPDATE daftar_shokrgozari SET mohebat=? , state=? WHERE id=?;", Array As Object(mohebat, state,id))
+	Main.sql.Close
+	
+	Return True
+End Sub
+
+
+Sub update_daftar_shokrgozari_elat(id As Int,elat As String,state As Int) As Boolean
+	
+	connection_sql
+	Main.sql.ExecNonQuery2("UPDATE daftar_shokrgozari SET elat=?, state=? WHERE id=?;", Array As Object(elat, state,id))
+	Main.sql.Close
+	
+	Return True
+End Sub
+
+
+Sub delet_daftar_shokrgozariById (id As Int)
+	
+	connection_sql
+	Main.sql.ExecNonQuery("DELETE FROM daftar_shokrgozari WHERE id="&id&";")
+	Main.sql.Close
+	ToastMessageShow("حذف شد",False)
+		
+	
+End Sub
+
+
+
+
+
+Sub get_daftar_khasteha_byShenase (shenase As String) As List
+	
+	connection_sql
+	Main.res=Main.sql.ExecQuery("SELECT * FROM daftar_khasteha WHERE shenase='"&shenase&"' ;")
+	
+	
+	Dim list_result As List
+	list_result.Initialize
+	
+	Do While Main.res.NextRow
+		
+		list_result.Add(Main.res.Getint("id")&"@"&Main.res.Getint("num")&"@"&Main.res.GetString("matn")&"@"&"@"&Main.res.Getint("state"))
+		
+	Loop
+	
+	Main.sql.Close
+	Main.res.Close
+	
+	Return list_result
+	
+End Sub
+
+
+
+Sub update_daftar_khasteha(id As Int,khaste As String,state As Int) As Boolean
+	
+	connection_sql
+	
+	If(khaste="")Then
+		state=0
+	End If
+	
+	Main.sql.ExecNonQuery2("UPDATE daftar_khasteha SET matn=? , state=? WHERE id=?;", Array As Object(khaste, state,id))
+	Main.sql.Close
+	
+	Return True
+End Sub
+
+
+Sub delet_daftar_khasteById (id As Int)
+	
+	connection_sql
+	Main.sql.ExecNonQuery("DELETE FROM daftar_khasteha WHERE id="&id&";")
+	Main.sql.Close
+	ToastMessageShow("حذف شد",False)
+		
+	
+End Sub
+
+
+
+
+
+Sub get_daftar_ravabet_byShenase (shenase As String) As List
+	
+	connection_sql
+	Main.res=Main.sql.ExecQuery("SELECT * FROM daftar_ravabet WHERE shenase='"&shenase&"' ;")
+	
+	
+	Dim list_result As List
+	list_result.Initialize
+	
+	Do While Main.res.NextRow
+		
+		list_result.Add(Main.res.Getint("id")&"@"&Main.res.Getint("num")&"@"&Main.res.GetString("pic")&"@"&Main.res.GetString("matn")&"@"&Main.res.Getint("state"))
+		
+	Loop
+	
+	Main.sql.Close
+	Main.res.Close
+	
+	Return list_result
+	
+End Sub
+
+
+
+Sub update_daftar_ravabet(id As Int,ravabet As String,state As Int) As Boolean
+	
+	connection_sql
+	
+	If(ravabet="")Then
+		state=0
+	End If
+	
+	Main.sql.ExecNonQuery2("UPDATE daftar_ravabet SET matn=? , state=? WHERE id=?;", Array As Object(ravabet, state,id))
+	Main.sql.Close
+	
+	Return True
+End Sub
+
+
+Sub update_daftar_ravabet_pic(id As Int,pic_name As String) As Boolean
+	
+	connection_sql
+	
+	Main.sql.ExecNonQuery2("UPDATE daftar_ravabet SET pic=? WHERE id=?;", Array As Object(pic_name,id))
+	Main.sql.Close
+	
+	Return True
+End Sub
+
+
+
+Sub delet_daftar_ravabetById (id As Int)
+	
+	connection_sql
+	Main.sql.ExecNonQuery("DELETE FROM daftar_ravabet WHERE id="&id&";")
+	Main.sql.Close
+	ToastMessageShow("حذف شد",False)
+		
+	
+End Sub
+
+
+Sub get_daftar_shenase_titel (shenase As String) As String
+	
+	connection_sql
+	Main.res=Main.sql.ExecQuery("SELECT * FROM daftar_shenase WHERE shenase='"&shenase&"' ;")
+	
+	Dim res_str As String=""
+	
+	Main.res.Position=0
+	res_str=Main.res.GetString("title")
+		
+
+	Main.sql.Close
+	Main.res.Close
+	
+	Return res_str
 	
 End Sub

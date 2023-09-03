@@ -348,8 +348,8 @@ public static boolean _isfitest = false;
 public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
 public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
 public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
@@ -360,11 +360,14 @@ public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 
 public static void initializeProcessGlobals() {
@@ -384,18 +387,18 @@ _tim_scroll.Initialize(processBA,"tim_scroll",(long) (300));
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
- //BA.debugLineNum = 144;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 145;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 145;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 146;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
- //BA.debugLineNum = 147;BA.debugLine="lbl_back_Click";
+ //BA.debugLineNum = 148;BA.debugLine="lbl_back_Click";
 _lbl_back_click();
- //BA.debugLineNum = 149;BA.debugLine="Return True";
+ //BA.debugLineNum = 150;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  }else {
- //BA.debugLineNum = 151;BA.debugLine="Return False";
+ //BA.debugLineNum = 152;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
- //BA.debugLineNum = 153;BA.debugLine="End Sub";
+ //BA.debugLineNum = 154;BA.debugLine="End Sub";
 return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -416,77 +419,77 @@ adr.stringfunctions.stringfunctions _strfunc = null;
 anywheresoftware.b4a.objects.collections.List _list_roz = null;
 int _i = 0;
 int _code_state = 0;
- //BA.debugLineNum = 71;BA.debugLine="Sub fill_list";
- //BA.debugLineNum = 73;BA.debugLine="cusListV_data.Clear";
+ //BA.debugLineNum = 72;BA.debugLine="Sub fill_list";
+ //BA.debugLineNum = 74;BA.debugLine="cusListV_data.Clear";
 mostCurrent._cuslistv_data._clear();
- //BA.debugLineNum = 75;BA.debugLine="Dim list_rozha As List";
+ //BA.debugLineNum = 76;BA.debugLine="Dim list_rozha As List";
 _list_rozha = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 76;BA.debugLine="list_rozha.Initialize";
+ //BA.debugLineNum = 77;BA.debugLine="list_rozha.Initialize";
 _list_rozha.Initialize();
- //BA.debugLineNum = 77;BA.debugLine="list_rozha=myFunc.get_rozha";
+ //BA.debugLineNum = 78;BA.debugLine="list_rozha=myFunc.get_rozha";
 _list_rozha = mostCurrent._myfunc._get_rozha /*anywheresoftware.b4a.objects.collections.List*/ (mostCurrent.activityBA);
- //BA.debugLineNum = 79;BA.debugLine="Dim strFunc As StringFunctions";
+ //BA.debugLineNum = 80;BA.debugLine="Dim strFunc As StringFunctions";
 _strfunc = new adr.stringfunctions.stringfunctions();
- //BA.debugLineNum = 80;BA.debugLine="strFunc.Initialize";
+ //BA.debugLineNum = 81;BA.debugLine="strFunc.Initialize";
 _strfunc._initialize(processBA);
- //BA.debugLineNum = 81;BA.debugLine="Dim list_roz As List";
+ //BA.debugLineNum = 82;BA.debugLine="Dim list_roz As List";
 _list_roz = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 82;BA.debugLine="list_roz.Initialize";
+ //BA.debugLineNum = 83;BA.debugLine="list_roz.Initialize";
 _list_roz.Initialize();
- //BA.debugLineNum = 85;BA.debugLine="For i=0 To list_rozha.Size-1";
+ //BA.debugLineNum = 86;BA.debugLine="For i=0 To list_rozha.Size-1";
 {
 final int step9 = 1;
 final int limit9 = (int) (_list_rozha.getSize()-1);
 _i = (int) (0) ;
 for (;_i <= limit9 ;_i = _i + step9 ) {
- //BA.debugLineNum = 87;BA.debugLine="p = xui.CreatePanel(\"p\")";
+ //BA.debugLineNum = 88;BA.debugLine="p = xui.CreatePanel(\"p\")";
 mostCurrent._p = mostCurrent._xui.CreatePanel(processBA,"p");
- //BA.debugLineNum = 89;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, 100%x, 75dip)";
+ //BA.debugLineNum = 90;BA.debugLine="p.SetLayoutAnimated(0, 0, 0, 100%x, 75dip)";
 mostCurrent._p.SetLayoutAnimated((int) (0),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (75)));
- //BA.debugLineNum = 90;BA.debugLine="p.LoadLayout(\"item_list_rozha_tamrin\")";
+ //BA.debugLineNum = 91;BA.debugLine="p.LoadLayout(\"item_list_rozha_tamrin\")";
 mostCurrent._p.LoadLayout("item_list_rozha_tamrin",mostCurrent.activityBA);
- //BA.debugLineNum = 93;BA.debugLine="cusListV_data.Add(p,i)";
+ //BA.debugLineNum = 94;BA.debugLine="cusListV_data.Add(p,i)";
 mostCurrent._cuslistv_data._add(mostCurrent._p,(Object)(_i));
- //BA.debugLineNum = 96;BA.debugLine="Dim list_roz As List";
+ //BA.debugLineNum = 97;BA.debugLine="Dim list_roz As List";
 _list_roz = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 97;BA.debugLine="list_roz.Initialize";
+ //BA.debugLineNum = 98;BA.debugLine="list_roz.Initialize";
 _list_roz.Initialize();
- //BA.debugLineNum = 98;BA.debugLine="list_roz=strFunc.Split(list_rozha.Get(i) , \"@\")";
+ //BA.debugLineNum = 99;BA.debugLine="list_roz=strFunc.Split(list_rozha.Get(i) , \"@\")";
 _list_roz = _strfunc._vvvvvv5(BA.ObjectToString(_list_rozha.Get(_i)),"@");
- //BA.debugLineNum = 101;BA.debugLine="lbl_roz.Text=list_roz.Get(0)";
+ //BA.debugLineNum = 102;BA.debugLine="lbl_roz.Text=list_roz.Get(0)";
 mostCurrent._lbl_roz.setText(BA.ObjectToCharSequence(_list_roz.Get((int) (0))));
- //BA.debugLineNum = 103;BA.debugLine="pan_roz.Tag=i+1";
+ //BA.debugLineNum = 104;BA.debugLine="pan_roz.Tag=i+1";
 mostCurrent._pan_roz.setTag((Object)(_i+1));
- //BA.debugLineNum = 105;BA.debugLine="Dim code_state As Int = myFunc.get_State_tamrin1";
+ //BA.debugLineNum = 106;BA.debugLine="Dim code_state As Int = myFunc.get_State_tamrin1";
 _code_state = mostCurrent._myfunc._get_state_tamrin1_byroz /*int*/ (mostCurrent.activityBA,(int) (_i+1));
- //BA.debugLineNum = 106;BA.debugLine="If(code_state=10)Then";
+ //BA.debugLineNum = 107;BA.debugLine="If(code_state=10)Then";
 if ((_code_state==10)) { 
- //BA.debugLineNum = 107;BA.debugLine="lbl_icon_roz.TextColor=0xFF0FA900";
+ //BA.debugLineNum = 108;BA.debugLine="lbl_icon_roz.TextColor=0xFF0FA900";
 mostCurrent._lbl_icon_roz.setTextColor(((int)0xff0fa900));
- //BA.debugLineNum = 108;BA.debugLine="lbl_icon_roz.Visible=True";
+ //BA.debugLineNum = 109;BA.debugLine="lbl_icon_roz.Visible=True";
 mostCurrent._lbl_icon_roz.setVisible(anywheresoftware.b4a.keywords.Common.True);
  }else if((_code_state==0)) { 
- //BA.debugLineNum = 111;BA.debugLine="lbl_icon_roz.TextColor=0xFFFF211F";
+ //BA.debugLineNum = 112;BA.debugLine="lbl_icon_roz.TextColor=0xFFFF211F";
 mostCurrent._lbl_icon_roz.setTextColor(((int)0xffff211f));
- //BA.debugLineNum = 113;BA.debugLine="If(pos_scroll= 0)Then";
+ //BA.debugLineNum = 114;BA.debugLine="If(pos_scroll= 0)Then";
 if ((_pos_scroll==0)) { 
- //BA.debugLineNum = 114;BA.debugLine="pos_scroll=i";
+ //BA.debugLineNum = 115;BA.debugLine="pos_scroll=i";
 _pos_scroll = _i;
  };
  }else {
- //BA.debugLineNum = 121;BA.debugLine="lbl_icon_roz.Visible=True";
+ //BA.debugLineNum = 122;BA.debugLine="lbl_icon_roz.Visible=True";
 mostCurrent._lbl_icon_roz.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 122;BA.debugLine="lbl_icon_roz.TextColor=0xFFFF9900";
+ //BA.debugLineNum = 123;BA.debugLine="lbl_icon_roz.TextColor=0xFFFF9900";
 mostCurrent._lbl_icon_roz.setTextColor(((int)0xffff9900));
  };
  }
 };
- //BA.debugLineNum = 128;BA.debugLine="If (isfitest=True)Then";
+ //BA.debugLineNum = 129;BA.debugLine="If (isfitest=True)Then";
 if ((_isfitest==anywheresoftware.b4a.keywords.Common.True)) { 
- //BA.debugLineNum = 129;BA.debugLine="tim_scroll.Enabled=True";
+ //BA.debugLineNum = 130;BA.debugLine="tim_scroll.Enabled=True";
 _tim_scroll.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 134;BA.debugLine="End Sub";
+ //BA.debugLineNum = 135;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -529,13 +532,13 @@ mostCurrent._main._current_roz_tamrin /*int*/  = (int)(BA.ObjectToNumber(_this_r
 _isfitest = anywheresoftware.b4a.keywords.Common.False;
  //BA.debugLineNum = 60;BA.debugLine="If(Main.current_roz_tamrin=29)Then";
 if ((mostCurrent._main._current_roz_tamrin /*int*/ ==29)) { 
- //BA.debugLineNum = 61;BA.debugLine="StartActivity(daftar_activity)";
+ //BA.debugLineNum = 62;BA.debugLine="StartActivity(daftar_activity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._daftar_activity.getObject()));
  }else {
- //BA.debugLineNum = 63;BA.debugLine="StartActivity(tamrin_roz_activity)";
+ //BA.debugLineNum = 64;BA.debugLine="StartActivity(tamrin_roz_activity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._tamrin_roz_activity.getObject()));
  };
- //BA.debugLineNum = 69;BA.debugLine="End Sub";
+ //BA.debugLineNum = 70;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
@@ -546,12 +549,12 @@ _tim_scroll = new anywheresoftware.b4a.objects.Timer();
 return "";
 }
 public static String  _tim_scroll_tick() throws Exception{
- //BA.debugLineNum = 137;BA.debugLine="Sub tim_scroll_Tick";
- //BA.debugLineNum = 139;BA.debugLine="cusListV_data.ScrollToItem(pos_scroll)";
+ //BA.debugLineNum = 138;BA.debugLine="Sub tim_scroll_Tick";
+ //BA.debugLineNum = 140;BA.debugLine="cusListV_data.ScrollToItem(pos_scroll)";
 mostCurrent._cuslistv_data._scrolltoitem(_pos_scroll);
- //BA.debugLineNum = 141;BA.debugLine="tim_scroll.Enabled=False";
+ //BA.debugLineNum = 142;BA.debugLine="tim_scroll.Enabled=False";
 _tim_scroll.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 142;BA.debugLine="End Sub";
+ //BA.debugLineNum = 143;BA.debugLine="End Sub";
 return "";
 }
 }

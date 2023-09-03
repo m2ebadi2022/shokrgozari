@@ -53,7 +53,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".tamrin22_activity"
+			android:name=".daftar_activity"
 			android:label="شکرگزاری"
 			android:screenOrientation="unspecified"
 			android:exported="true">
@@ -61,7 +61,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".tamrin25_activity"
+			android:name=".tamrin19_activity"
 			android:label="شکرگزاری"
 			android:screenOrientation="unspecified"
 			android:exported="true">
@@ -149,7 +149,23 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".tamrin19_activity"
+			android:name=".tamrin22_activity"
+			android:label="شکرگزاری"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".tamrin25_activity"
+			android:label="شکرگزاری"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".tamrin27_activity"
 			android:label="شکرگزاری"
 			android:screenOrientation="unspecified"
 			android:exported="true">
@@ -173,7 +189,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".tamrin27_activity"
+			android:name=".daftar_shokrgozari_activity"
 			android:label="شکرگزاری"
 			android:screenOrientation="unspecified"
 			android:exported="true">
@@ -181,7 +197,15 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".daftar_activity"
+			android:name=".daftar_khasteha_activity"
+			android:label="شکرگزاری"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".daftar_ravabet_activity"
 			android:label="شکرگزاری"
 			android:screenOrientation="unspecified"
 			android:exported="true">
