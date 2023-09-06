@@ -18,14 +18,14 @@
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 	<application
 		android:icon="@drawable/icon"
-		android:label="شکرگزاری"
+		android:label="شکرگزاری من"
 		android:theme="@style/LightTheme"
 		android:requestLegacyExternalStorage="true">
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".main"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 			<intent-filter>
@@ -37,8 +37,32 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".tamrin_roz_activity"
-			android:label="شکرگزاری"
+			android:name=".daftar_activity"
+			android:label="شکرگزاری من"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".daftar_shokrgozari_activity"
+			android:label="شکرگزاری من"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".daftar_ravabet_activity"
+			android:label="شکرگزاری من"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".daftar_khasteha_activity"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -46,23 +70,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".tamrinat_activity"
-			android:label="شکرگزاری"
-			android:screenOrientation="unspecified"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".daftar_activity"
-			android:label="شکرگزاری"
-			android:screenOrientation="unspecified"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".tamrin19_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -70,7 +78,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".book_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -78,7 +86,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".do_tamrin_roz_layout"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -86,7 +94,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".download_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -94,7 +102,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".intro_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -102,7 +110,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".reagbook_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -110,7 +118,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".setting_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -125,8 +133,16 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".tamrin_roz_activity"
+			android:label="شکرگزاری من"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".tamrin13_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -134,7 +150,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".tamrin14_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -142,7 +158,15 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".tamrin16_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".tamrin19_activity"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -150,7 +174,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".tamrin22_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -158,7 +182,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".tamrin25_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -166,7 +190,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".tamrin27_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -174,7 +198,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".tamrin3_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>
@@ -182,31 +206,7 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".tamrin8_activity"
-			android:label="شکرگزاری"
-			android:screenOrientation="unspecified"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".daftar_shokrgozari_activity"
-			android:label="شکرگزاری"
-			android:screenOrientation="unspecified"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".daftar_khasteha_activity"
-			android:label="شکرگزاری"
-			android:screenOrientation="unspecified"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".daftar_ravabet_activity"
-			android:label="شکرگزاری"
+			android:label="شکرگزاری من"
 			android:screenOrientation="unspecified"
 			android:exported="true">
 		</activity>

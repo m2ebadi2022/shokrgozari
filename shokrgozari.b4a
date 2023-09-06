@@ -1,73 +1,75 @@
 ﻿Build1=Default,ir.taravatgroup.shokrgozari
-File1=all_tamrin_layout.bal
-File10=daftar_layout.bal
-File11=dashboard_layout.bal
-File12=db.db
-File13=do_tamrin_roz_layout.bal
-File14=Donate.png
-File15=download.png
-File16=download_layout.bal
-File17=home.png
-File18=home_layout.bal
-File19=icon.png
-File2=bg1.jpg
-File20=Info.png
-File21=intro_layout.bal
-File22=item_clv_tamrinat.bal
-File23=item_dashboard.bal
-File24=item_list_daftar.bal
-File25=item_list_daftar_khasteha.bal
-File26=item_list_daftar_ravabet.bal
-File27=item_list_downloads.bal
-File28=item_list_rozha_tamrin.bal
-File29=item_list_tamrin1.bal
-File3=bg2.jpg
-File30=item_list_tamrin19.bal
-File31=item_tamrin22.bal
-File32=loading.gif
-File33=main_layout.bal
-File34=Mj_Rashid.ttf
-File35=note_icon.png
-File36=Open Book Emoji.png
-File37=other.png
-File38=pic1.jpg
-File39=pic2.jpg
-File4=bg3.jpg
-File40=pic3.jpg
-File41=pic4.jpg
-File42=pic5.jpg
-File43=radius_all.png
-File44=radius_botton.png
-File45=radius_circler.png
-File46=radius_LeftTop.png
-File47=readBook_layout.bal
-File48=setting.png
-File49=setting_layout.bal
-File5=bg4.jpg
-File50=setting2.png
-File51=share.png
-File52=Smiling Face With Hearts.png
-File53=sp_bg.jpg
-File54=sp_bg2.jpg
-File55=tamrin_roz_layout.bal
-File56=tamrin13_layout.bal
-File57=tamrin14_layout.bal
-File58=tamrin16_layout.bal
-File59=tamrin19_layout.bal
-File6=bg5.jpg
-File60=tamrin22_layout.bal
-File61=tamrin25_layout.bal
-File62=tamrin27_layout.bal
-File63=tamrin3_layout.bal
-File64=tamrin8_items.bal
-File65=tamrin8_layout.bal
-File66=tamrinat_layout.bal
-File67=tick.png
-File68=upload_pic.jpg
-File69=Vazir.ttf
-File7=BMitra.ttf
-File8=book_layout.bal
-File9=comment.png
+File1=@digifonts Shoko Bold.ttf
+File10=comment.png
+File11=daftar_layout.bal
+File12=dashboard_layout.bal
+File13=db.db
+File14=do_tamrin_roz_layout.bal
+File15=Donate.png
+File16=download.png
+File17=download_layout.bal
+File18=home.png
+File19=home_layout.bal
+File2=all_tamrin_layout.bal
+File20=icon.png
+File21=Info.png
+File22=intro_layout.bal
+File23=intro_pic1.png
+File24=item_clv_tamrinat.bal
+File25=item_dashboard.bal
+File26=item_list_daftar.bal
+File27=item_list_daftar_khasteha.bal
+File28=item_list_daftar_ravabet.bal
+File29=item_list_downloads.bal
+File3=bg1.jpg
+File30=item_list_rozha_tamrin.bal
+File31=item_list_tamrin1.bal
+File32=item_list_tamrin19.bal
+File33=item_tamrin22.bal
+File34=loading.gif
+File35=main_layout.bal
+File36=Mj_Rashid.ttf
+File37=note_icon.png
+File38=Open Book Emoji.png
+File39=other.png
+File4=bg2.jpg
+File40=pic1.jpg
+File41=pic2.jpg
+File42=pic3.jpg
+File43=pic4.jpg
+File44=pic5.jpg
+File45=radius_all.png
+File46=radius_botton.png
+File47=radius_circler.png
+File48=radius_LeftTop.png
+File49=readBook_layout.bal
+File5=bg3.jpg
+File50=setting.png
+File51=setting_layout.bal
+File52=setting2.png
+File53=share.png
+File54=Smiling Face With Hearts.png
+File55=sp_bg.jpg
+File56=sp_bg2.jpg
+File57=tamrin_roz_layout.bal
+File58=tamrin13_layout.bal
+File59=tamrin14_layout.bal
+File6=bg4.jpg
+File60=tamrin16_layout.bal
+File61=tamrin19_layout.bal
+File62=tamrin22_layout.bal
+File63=tamrin25_layout.bal
+File64=tamrin27_layout.bal
+File65=tamrin3_layout.bal
+File66=tamrin8_items.bal
+File67=tamrin8_layout.bal
+File68=tamrinat_layout.bal
+File69=tick.png
+File7=bg5.jpg
+File70=upload_pic.jpg
+File71=Vazir.ttf
+File8=BMitra.ttf
+File9=book_layout.bal
 FileGroup1=Default Group
 FileGroup10=Default Group
 FileGroup11=Default Group
@@ -135,6 +137,8 @@ FileGroup67=Default Group
 FileGroup68=Default Group
 FileGroup69=Default Group
 FileGroup7=Default Group
+FileGroup70=Default Group
+FileGroup71=Default Group
 FileGroup8=Default Group
 FileGroup9=Default Group
 Group=Default Group
@@ -170,13 +174,13 @@ Module6=do_tamrin_roz_layout
 Module7=download_activity
 Module8=intro_activity
 Module9=myFunc
-NumberOfFiles=69
+NumberOfFiles=71
 NumberOfLibraries=8
 NumberOfModules=23
 Version=12.5
 @EndOfDesignText@
 #Region  Project Attributes 
-	#ApplicationLabel: شکرگزاری
+	#ApplicationLabel: شکرگزاری من
 	#VersionCode: 1
 	#VersionName: 1
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
@@ -243,15 +247,8 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	
-	
-	
-	
-
-		
 		Activity.LoadLayout("main_layout")
-		
-		
-		
+	
 		tim_splash.Initialize("tim_splash",100)
 		
 		tim_splash.Enabled=True
@@ -263,8 +260,7 @@ Sub Activity_Create(FirstTime As Boolean)
 		Dim viewlbl1_splash As B4XView=Label1
 		viewlbl1_splash.SetTextSizeAnimated(1000,30)
 		
-	
-	
+
 	pan_main.LoadLayout("home_layout")
 	pan_main2.LoadLayout("all_tamrin_layout")
 	pan_main3.LoadLayout("dashboard_layout")
@@ -278,25 +274,20 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	
 	
-	If(File.Exists(File.DirInternal,"intro_pley")=False)Then
+	'If(File.Exists(File.DirInternal,"intro_pley")=False)Then
 		StartActivity(intro_activity)
-	End If
+	'End If
 
-	
-	
-	
+
 End Sub
 
 Sub tim_splash_Tick
-	
-	
-	
+
 	btn_home_Click
 	pan_splash.Visible=False
 	tim_splash.Enabled=False
 	
-	
-	
+
 End Sub
 
 Sub Activity_Resume

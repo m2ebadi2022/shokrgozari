@@ -50,10 +50,11 @@ public static String _tempfolder = "";
 public static int _taskcounter = 0;
 public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
-public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
-public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
 public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
-public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
+public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
 public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
 public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
@@ -61,17 +62,16 @@ public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
 public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
 public ir.taravatgroup.shokrgozari.setting_activity _setting_activity = null;
 public ir.taravatgroup.shokrgozari.starter _starter = null;
+public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin13_activity _tamrin13_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin14_activity _tamrin14_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin16_activity _tamrin16_activity = null;
+public ir.taravatgroup.shokrgozari.tamrin19_activity _tamrin19_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin22_activity _tamrin22_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
 public static String  _completejob(int _taskid,boolean _success,String _errormessage) throws Exception{
 ir.taravatgroup.shokrgozari.httpjob _job = null;
  //BA.debugLineNum = 152;BA.debugLine="Sub CompleteJob(TaskId As Int, success As Boolean,";
@@ -80,7 +80,7 @@ _job = (ir.taravatgroup.shokrgozari.httpjob)(_taskidtojob.Get((Object)(_taskid))
  //BA.debugLineNum = 157;BA.debugLine="If job = Null Then";
 if (_job== null) { 
  //BA.debugLineNum = 158;BA.debugLine="Log(\"HttpUtils2Service: job completed multiple t";
-anywheresoftware.b4a.keywords.Common.LogImpl("56881286","HttpUtils2Service: job completed multiple times - "+BA.NumberToString(_taskid),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("115859718","HttpUtils2Service: job completed multiple times - "+BA.NumberToString(_taskid),0);
  //BA.debugLineNum = 159;BA.debugLine="Return";
 if (true) return "";
  };
@@ -99,7 +99,7 @@ public static String  _hc_responseerror(anywheresoftware.b4h.okhttp.OkHttpClient
 ir.taravatgroup.shokrgozari.httpjob _job = null;
  //BA.debugLineNum = 115;BA.debugLine="Sub hc_ResponseError (Response As OkHttpResponse,";
  //BA.debugLineNum = 117;BA.debugLine="Log($\"ResponseError. Reason: ${Reason}, Response:";
-anywheresoftware.b4a.keywords.Common.LogImpl("56815746",("ResponseError. Reason: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_reason))+", Response: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_response.getErrorResponse()))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("115794178",("ResponseError. Reason: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_reason))+", Response: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_response.getErrorResponse()))+""),0);
  //BA.debugLineNum = 119;BA.debugLine="Response.Release";
 _response.Release();
  //BA.debugLineNum = 120;BA.debugLine="Dim job As HttpJob = TaskIdToJob.Get(TaskId)";
@@ -107,7 +107,7 @@ _job = (ir.taravatgroup.shokrgozari.httpjob)(_taskidtojob.Get((Object)(_taskid))
  //BA.debugLineNum = 121;BA.debugLine="If job = Null Then";
 if (_job== null) { 
  //BA.debugLineNum = 122;BA.debugLine="Log(\"HttpUtils2Service (hc_ResponseError): job c";
-anywheresoftware.b4a.keywords.Common.LogImpl("56815751","HttpUtils2Service (hc_ResponseError): job completed multiple times - "+BA.NumberToString(_taskid),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("115794183","HttpUtils2Service (hc_ResponseError): job completed multiple times - "+BA.NumberToString(_taskid),0);
  //BA.debugLineNum = 123;BA.debugLine="Return";
 if (true) return "";
  };
@@ -133,7 +133,7 @@ _job = (ir.taravatgroup.shokrgozari.httpjob)(_taskidtojob.Get((Object)(_taskid))
  //BA.debugLineNum = 94;BA.debugLine="If job = Null Then";
 if (_job== null) { 
  //BA.debugLineNum = 95;BA.debugLine="Log(\"HttpUtils2Service (hc_ResponseSuccess): job";
-anywheresoftware.b4a.keywords.Common.LogImpl("56684675","HttpUtils2Service (hc_ResponseSuccess): job completed multiple times - "+BA.NumberToString(_taskid),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("115663107","HttpUtils2Service (hc_ResponseSuccess): job completed multiple times - "+BA.NumberToString(_taskid),0);
  //BA.debugLineNum = 96;BA.debugLine="Return";
 if (true) return "";
  };
@@ -195,9 +195,9 @@ anywheresoftware.b4a.keywords.Common.File.Delete(_tempfolder,"~test.test");
  } 
        catch (Exception e6) {
 			processBA.setLastException(e6); //BA.debugLineNum = 34;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("56356999",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("115335431",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
  //BA.debugLineNum = 35;BA.debugLine="Log(\"Switching to File.DirInternal\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("56357000","Switching to File.DirInternal",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("115335432","Switching to File.DirInternal",0);
  //BA.debugLineNum = 36;BA.debugLine="TempFolder = File.DirInternal";
 _tempfolder = anywheresoftware.b4a.keywords.Common.File.getDirInternal();
  };
