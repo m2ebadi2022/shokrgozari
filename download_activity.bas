@@ -181,7 +181,7 @@ Sub download_byName
 	Try
 	
 		
-		j.Download("https://m2ebadi.whi.ir/shokrgozari/sounds/"&current_down_name)
+		j.Download("https://m2ebadi.iapp.ir/shokrgozari/sounds/"&current_down_name)
 '	
 			'Wait For (job) JobDone(job As HttpJob)
 			Wait For JobDone(job As HttpJob)

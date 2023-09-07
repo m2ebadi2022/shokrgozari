@@ -15,6 +15,7 @@ C:\Android\tools\..\extras\b4a_local\unpacked-stringfunctions-63530416118000\dex
 C:\Android\tools\..\extras\b4a_local\unpacked-webviewsettings-63472733258000\dex_v1\webviewsettings.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-xcustomlistview-63822317164000\dex_v1\xcustomlistview.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-xui-63822317164000\dex_v1\xui.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-json-63822317162000\dex_v1\json.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-stringutils-63822317164000\dex_v1\stringutils.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-javaobject-63822317162000\dex_v1\javaobject.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-phone-63822317162000\dex_v1\phone.zip
@@ -170,6 +171,13 @@ E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\starter$1
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\starter$2.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\starter$starter_BR.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\starter.dex
+E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tajrobiat_activity$1.dex
+E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tajrobiat_activity$B4AMenuItemsClickListener.dex
+E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tajrobiat_activity$HandleKeyDelayed.dex
+E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tajrobiat_activity$ResumableSub_lbl_addComment_send_Click.dex
+E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tajrobiat_activity$ResumeMessage.dex
+E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tajrobiat_activity$WaitForLayout.dex
+E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tajrobiat_activity.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tamrin13_activity$1.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tamrin13_activity$B4AMenuItemsClickListener.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\tamrin13_activity$HandleKeyDelayed.dex
@@ -245,6 +253,7 @@ E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\designers
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\designerscripts\LS_item_list_tamrin1.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\designerscripts\LS_item_tamrin22.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\designerscripts\LS_main_layout.dex
+E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\designerscripts\LS_tajrobiat_layout.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\designerscripts\LS_tamrin13_layout.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\designerscripts\LS_tamrin19_layout.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\designerscripts\LS_tamrin25_layout.dex

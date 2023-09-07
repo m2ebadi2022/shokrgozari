@@ -336,7 +336,6 @@ public class intro_activity extends Activity implements B4AActivity{
     }
 
 public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.objects.PanelWrapper _panel1 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _panel2 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _panel3 = null;
 public static float _startx = 0f;
@@ -345,15 +344,15 @@ public static int _current_page = 0;
 public anywheresoftware.b4a.objects.PanelWrapper _panel4 = null;
 public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
-public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
-public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.tajrobiat_activity _tajrobiat_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
-public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
 public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
+public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
+public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
 public ir.taravatgroup.shokrgozari.setting_activity _setting_activity = null;
 public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
@@ -366,6 +365,7 @@ public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 
 public static void initializeProcessGlobals() {
@@ -435,8 +435,6 @@ return "";
 }
 public static String  _globals() throws Exception{
  //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 16;BA.debugLine="Private Panel1 As Panel";
-mostCurrent._panel1 = new anywheresoftware.b4a.objects.PanelWrapper();
  //BA.debugLineNum = 17;BA.debugLine="Private Panel2 As Panel";
 mostCurrent._panel2 = new anywheresoftware.b4a.objects.PanelWrapper();
  //BA.debugLineNum = 18;BA.debugLine="Private Panel3 As Panel";
@@ -485,10 +483,10 @@ public static String  _next_btn() throws Exception{
  //BA.debugLineNum = 54;BA.debugLine="Sub next_btn";
  //BA.debugLineNum = 55;BA.debugLine="current_page=current_page+1";
 _current_page = (int) (_current_page+1);
- //BA.debugLineNum = 56;BA.debugLine="If(current_page=4)Then";
-if ((_current_page==4)) { 
- //BA.debugLineNum = 57;BA.debugLine="current_page=4";
-_current_page = (int) (4);
+ //BA.debugLineNum = 56;BA.debugLine="If(current_page=3)Then";
+if ((_current_page==3)) { 
+ //BA.debugLineNum = 57;BA.debugLine="current_page=3";
+_current_page = (int) (3);
  //BA.debugLineNum = 58;BA.debugLine="lbl_next4_Click";
 _lbl_next4_click();
  };
@@ -518,8 +516,6 @@ return "";
 }
 public static String  _show_only_page(int _pageid) throws Exception{
  //BA.debugLineNum = 80;BA.debugLine="Sub show_only_page(pageID As Int)";
- //BA.debugLineNum = 81;BA.debugLine="Panel1.Visible=False";
-mostCurrent._panel1.setVisible(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 82;BA.debugLine="Panel2.Visible=False";
 mostCurrent._panel2.setVisible(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 83;BA.debugLine="Panel3.Visible=False";
@@ -527,18 +523,6 @@ mostCurrent._panel3.setVisible(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 84;BA.debugLine="Select pageID";
 switch (_pageid) {
 case 0: {
- //BA.debugLineNum = 86;BA.debugLine="Panel1.Visible=True";
-mostCurrent._panel1.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 87;BA.debugLine="Panel2.Visible=False";
-mostCurrent._panel2.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 88;BA.debugLine="Panel3.Visible=False";
-mostCurrent._panel3.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 89;BA.debugLine="Panel4.Visible=False";
-mostCurrent._panel4.setVisible(anywheresoftware.b4a.keywords.Common.False);
- break; }
-case 1: {
- //BA.debugLineNum = 91;BA.debugLine="Panel1.Visible=False";
-mostCurrent._panel1.setVisible(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 92;BA.debugLine="Panel2.Visible=True";
 mostCurrent._panel2.setVisible(anywheresoftware.b4a.keywords.Common.True);
  //BA.debugLineNum = 93;BA.debugLine="Panel3.Visible=False";
@@ -546,9 +530,7 @@ mostCurrent._panel3.setVisible(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 94;BA.debugLine="Panel4.Visible=False";
 mostCurrent._panel4.setVisible(anywheresoftware.b4a.keywords.Common.False);
  break; }
-case 2: {
- //BA.debugLineNum = 97;BA.debugLine="Panel1.Visible=False";
-mostCurrent._panel1.setVisible(anywheresoftware.b4a.keywords.Common.False);
+case 1: {
  //BA.debugLineNum = 98;BA.debugLine="Panel2.Visible=False";
 mostCurrent._panel2.setVisible(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 99;BA.debugLine="Panel3.Visible=True";
@@ -556,9 +538,7 @@ mostCurrent._panel3.setVisible(anywheresoftware.b4a.keywords.Common.True);
  //BA.debugLineNum = 100;BA.debugLine="Panel4.Visible=False";
 mostCurrent._panel4.setVisible(anywheresoftware.b4a.keywords.Common.False);
  break; }
-case 3: {
- //BA.debugLineNum = 102;BA.debugLine="Panel1.Visible=False";
-mostCurrent._panel1.setVisible(anywheresoftware.b4a.keywords.Common.False);
+case 2: {
  //BA.debugLineNum = 103;BA.debugLine="Panel2.Visible=False";
 mostCurrent._panel2.setVisible(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 104;BA.debugLine="Panel3.Visible=False";

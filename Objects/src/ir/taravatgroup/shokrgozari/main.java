@@ -375,16 +375,16 @@ public anywheresoftware.b4a.objects.PanelWrapper _pan_circle = null;
 public anywheresoftware.b4a.objects.PanelWrapper _pan_main3 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _pan_main2 = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
-public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
-public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.tajrobiat_activity _tajrobiat_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
-public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
-public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
 public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
+public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
+public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
+public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
 public ir.taravatgroup.shokrgozari.setting_activity _setting_activity = null;
 public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
@@ -397,21 +397,22 @@ public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
-vis = vis | (daftar_activity.mostCurrent != null);
-vis = vis | (daftar_shokrgozari_activity.mostCurrent != null);
-vis = vis | (daftar_ravabet_activity.mostCurrent != null);
-vis = vis | (daftar_khasteha_activity.mostCurrent != null);
-vis = vis | (tamrinat_activity.mostCurrent != null);
-vis = vis | (book_activity.mostCurrent != null);
+vis = vis | (tajrobiat_activity.mostCurrent != null);
 vis = vis | (do_tamrin_roz_layout.mostCurrent != null);
-vis = vis | (download_activity.mostCurrent != null);
-vis = vis | (intro_activity.mostCurrent != null);
 vis = vis | (reagbook_activity.mostCurrent != null);
+vis = vis | (download_activity.mostCurrent != null);
+vis = vis | (book_activity.mostCurrent != null);
+vis = vis | (daftar_activity.mostCurrent != null);
+vis = vis | (daftar_khasteha_activity.mostCurrent != null);
+vis = vis | (daftar_ravabet_activity.mostCurrent != null);
+vis = vis | (daftar_shokrgozari_activity.mostCurrent != null);
+vis = vis | (intro_activity.mostCurrent != null);
 vis = vis | (setting_activity.mostCurrent != null);
 vis = vis | (tamrin_roz_activity.mostCurrent != null);
 vis = vis | (tamrin13_activity.mostCurrent != null);
@@ -423,6 +424,7 @@ vis = vis | (tamrin25_activity.mostCurrent != null);
 vis = vis | (tamrin27_activity.mostCurrent != null);
 vis = vis | (tamrin3_activity.mostCurrent != null);
 vis = vis | (tamrin8_activity.mostCurrent != null);
+vis = vis | (tamrinat_activity.mostCurrent != null);
 return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
 anywheresoftware.b4a.objects.B4XViewWrapper _viewimg_splash = null;
@@ -430,8 +432,8 @@ anywheresoftware.b4a.objects.B4XViewWrapper _viewlbl1_splash = null;
  //BA.debugLineNum = 67;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
  //BA.debugLineNum = 69;BA.debugLine="Activity.LoadLayout(\"main_layout\")";
 mostCurrent._activity.LoadLayout("main_layout",mostCurrent.activityBA);
- //BA.debugLineNum = 71;BA.debugLine="tim_splash.Initialize(\"tim_splash\",100)";
-_tim_splash.Initialize(processBA,"tim_splash",(long) (100));
+ //BA.debugLineNum = 71;BA.debugLine="tim_splash.Initialize(\"tim_splash\",300)";
+_tim_splash.Initialize(processBA,"tim_splash",(long) (300));
  //BA.debugLineNum = 73;BA.debugLine="tim_splash.Enabled=True";
 _tim_splash.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  //BA.debugLineNum = 75;BA.debugLine="Dim viewimg_splash As B4XView=ImageView1";
@@ -462,8 +464,11 @@ mostCurrent._pan_main2.setVisible(anywheresoftware.b4a.keywords.Common.False);
 mostCurrent._pan_main3.setVisible(anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 92;BA.debugLine="btn_home_Click";
 _btn_home_click();
+ //BA.debugLineNum = 96;BA.debugLine="If(File.Exists(File.DirInternal,\"intro_pley\")=Fal";
+if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"intro_pley")==anywheresoftware.b4a.keywords.Common.False)) { 
  //BA.debugLineNum = 97;BA.debugLine="StartActivity(intro_activity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._intro_activity.getObject()));
+ };
  //BA.debugLineNum = 101;BA.debugLine="End Sub";
 return "";
 }
@@ -1052,7 +1057,7 @@ anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_market.ge
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 462;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("119136522",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("21769482",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 468;BA.debugLine="End Sub";
 return "";
@@ -1104,7 +1109,7 @@ anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_market.ge
  } 
        catch (Exception e8) {
 			processBA.setLastException(e8); //BA.debugLineNum = 444;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("119070986",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("21703946",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  };
  //BA.debugLineNum = 450;BA.debugLine="End Sub";
 return "";
@@ -1119,6 +1124,13 @@ return "";
 public static String  _pan_splash_click() throws Exception{
  //BA.debugLineNum = 430;BA.debugLine="Private Sub pan_splash_Click";
  //BA.debugLineNum = 432;BA.debugLine="End Sub";
+return "";
+}
+public static String  _pan_tajrobiat_click() throws Exception{
+ //BA.debugLineNum = 497;BA.debugLine="Private Sub pan_tajrobiat_Click";
+ //BA.debugLineNum = 498;BA.debugLine="StartActivity(tajrobiat_activity)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._tajrobiat_activity.getObject()));
+ //BA.debugLineNum = 499;BA.debugLine="End Sub";
 return "";
 }
 public static String  _pan_tamrin_roz_click() throws Exception{
@@ -1151,16 +1163,16 @@ public static void initializeProcessGlobals() {
 		try {
 		        main._process_globals();
 myfunc._process_globals();
-daftar_activity._process_globals();
-daftar_shokrgozari_activity._process_globals();
-daftar_ravabet_activity._process_globals();
-daftar_khasteha_activity._process_globals();
-tamrinat_activity._process_globals();
-book_activity._process_globals();
+tajrobiat_activity._process_globals();
 do_tamrin_roz_layout._process_globals();
-download_activity._process_globals();
-intro_activity._process_globals();
 reagbook_activity._process_globals();
+download_activity._process_globals();
+book_activity._process_globals();
+daftar_activity._process_globals();
+daftar_khasteha_activity._process_globals();
+daftar_ravabet_activity._process_globals();
+daftar_shokrgozari_activity._process_globals();
+intro_activity._process_globals();
 setting_activity._process_globals();
 starter._process_globals();
 tamrin_roz_activity._process_globals();
@@ -1173,6 +1185,7 @@ tamrin25_activity._process_globals();
 tamrin27_activity._process_globals();
 tamrin3_activity._process_globals();
 tamrin8_activity._process_globals();
+tamrinat_activity._process_globals();
 httputils2service._process_globals();
 		
         } catch (Exception e) {

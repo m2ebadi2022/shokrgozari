@@ -19,7 +19,7 @@ Sub Globals
 	'These global variables will be redeclared each time the activity is created.
 	'These variables can only be accessed from this module.
 
-	Private Panel1 As Panel
+	
 	Private Panel2 As Panel
 	Private Panel3 As Panel
 	Dim startX, startY As Float '<-new global variables
@@ -59,8 +59,8 @@ End Sub
 
 Sub next_btn
 	current_page=current_page+1
-	If(current_page=4)Then
-		current_page=4
+	If(current_page=3)Then
+		current_page=3
 		lbl_next4_Click
 	End If
 	
@@ -84,28 +84,28 @@ Sub previos_btn
 End Sub
 
 Sub show_only_page(pageID As Int)
-	Panel1.Visible=False
+	
 	Panel2.Visible=False
 	Panel3.Visible=False
 	Select pageID
+'		Case 0
+'			Panel1.Visible=True
+'			Panel2.Visible=False
+'			Panel3.Visible=False
+'			Panel4.Visible=False
 		Case 0
-			Panel1.Visible=True
-			Panel2.Visible=False
-			Panel3.Visible=False
-			Panel4.Visible=False
-		Case 1
-			Panel1.Visible=False
+			
 			Panel2.Visible=True
 			Panel3.Visible=False
 			Panel4.Visible=False
 			
-		Case 2
-			Panel1.Visible=False
+		Case 1
+			
 			Panel2.Visible=False
 			Panel3.Visible=True
 			Panel4.Visible=False
-		Case 3
-			Panel1.Visible=False
+		Case 2
+			
 			Panel2.Visible=False
 			Panel3.Visible=False
 			Panel4.Visible=True

@@ -80,7 +80,7 @@ Sub Activity_Create(FirstTime As Boolean)
 		
 		
 	Else
-		Dim str_html_pleyer As String="<html><head><meta name='viewport' content='width=device-width, initial-scale=1'></head><audio style='width:100%;' controls><source src='https://m2ebadi.whi.ir/shokrgozari/sounds/"&sound_addres&"' type='audio/mpeg' ></audio></html>"
+		Dim str_html_pleyer As String="<html><head><meta name='viewport' content='width=device-width, initial-scale=1'></head><audio style='width:100%;' controls><source src='https://m2ebadi.iapp.ir/shokrgozari/sounds/"&sound_addres&"' type='audio/mpeg' ></audio></html>"
 		
 		
 			

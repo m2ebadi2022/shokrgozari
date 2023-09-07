@@ -349,15 +349,15 @@ public anywheresoftware.b4a.objects.collections.List _list_download = null;
 public static String _current_down_name = "";
 public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
-public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
-public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.tajrobiat_activity _tajrobiat_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
-public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
 public ir.taravatgroup.shokrgozari.reagbook_activity _reagbook_activity = null;
+public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
+public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
 public ir.taravatgroup.shokrgozari.setting_activity _setting_activity = null;
 public ir.taravatgroup.shokrgozari.starter _starter = null;
 public ir.taravatgroup.shokrgozari.tamrin_roz_activity _tamrin_roz_activity = null;
@@ -370,6 +370,7 @@ public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 
 public static void initializeProcessGlobals() {
@@ -472,8 +473,8 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 15;
- //BA.debugLineNum = 178;BA.debugLine="j.Download(\"https://m2ebadi.whi.ir/shokrgozari/s";
-parent.mostCurrent._j._download /*String*/ ("https://m2ebadi.whi.ir/shokrgozari/sounds/"+parent.mostCurrent._current_down_name);
+ //BA.debugLineNum = 178;BA.debugLine="j.Download(\"https://m2ebadi.iapp.ir/shokrgozari/";
+parent.mostCurrent._j._download /*String*/ ("https://m2ebadi.iapp.ir/shokrgozari/sounds/"+parent.mostCurrent._current_down_name);
  //BA.debugLineNum = 181;BA.debugLine="Wait For JobDone(job As HttpJob)";
 anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, this, null);
 this.state = 17;
@@ -556,7 +557,7 @@ case 15:
 this.state = 16;
 this.catchState = 0;
  //BA.debugLineNum = 203;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("110420253",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("28585245",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 204;BA.debugLine="ToastMessageShow(\"منتظر باشید ..\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("منتظر باشید .."),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;

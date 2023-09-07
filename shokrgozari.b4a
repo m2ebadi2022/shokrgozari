@@ -14,60 +14,65 @@ File2=all_tamrin_layout.bal
 File20=icon.png
 File21=Info.png
 File22=intro_layout.bal
-File23=intro_pic1.png
-File24=item_clv_tamrinat.bal
-File25=item_dashboard.bal
-File26=item_list_daftar.bal
-File27=item_list_daftar_khasteha.bal
-File28=item_list_daftar_ravabet.bal
-File29=item_list_downloads.bal
+File23=intro_p1.png
+File24=intro_p2.png
+File25=intro_p3.png
+File26=intro_pic1.png
+File27=item_clv_tamrinat.bal
+File28=item_dashboard.bal
+File29=item_list_daftar.bal
 File3=bg1.jpg
-File30=item_list_rozha_tamrin.bal
-File31=item_list_tamrin1.bal
-File32=item_list_tamrin19.bal
-File33=item_tamrin22.bal
-File34=loading.gif
-File35=main_layout.bal
-File36=Mj_Rashid.ttf
-File37=note_icon.png
-File38=Open Book Emoji.png
-File39=other.png
+File30=item_list_daftar_khasteha.bal
+File31=item_list_daftar_ravabet.bal
+File32=item_list_downloads.bal
+File33=item_list_rozha_tamrin.bal
+File34=item_list_tamrin1.bal
+File35=item_list_tamrin19.bal
+File36=item_tamrin22.bal
+File37=Lalezar-Regular.ttf
+File38=loading.gif
+File39=main_layout.bal
 File4=bg2.jpg
-File40=pic1.jpg
-File41=pic2.jpg
-File42=pic3.jpg
-File43=pic4.jpg
-File44=pic5.jpg
-File45=radius_all.png
-File46=radius_botton.png
-File47=radius_circler.png
-File48=radius_LeftTop.png
-File49=readBook_layout.bal
+File40=Mj_Rashid.ttf
+File41=note_icon.png
+File42=Open Book Emoji.png
+File43=other.png
+File44=pic1.jpg
+File45=pic2.jpg
+File46=pic3.jpg
+File47=pic4.jpg
+File48=pic5.jpg
+File49=radius_all.png
 File5=bg3.jpg
-File50=setting.png
-File51=setting_layout.bal
-File52=setting2.png
-File53=share.png
-File54=Smiling Face With Hearts.png
-File55=sp_bg.jpg
-File56=sp_bg2.jpg
-File57=tamrin_roz_layout.bal
-File58=tamrin13_layout.bal
-File59=tamrin14_layout.bal
+File50=radius_botton.png
+File51=radius_circler.png
+File52=radius_LeftTop.png
+File53=readBook_layout.bal
+File54=setting.png
+File55=setting_layout.bal
+File56=setting2.png
+File57=share.png
+File58=Smiling Face With Hearts.png
+File59=sp_bg.jpg
 File6=bg4.jpg
-File60=tamrin16_layout.bal
-File61=tamrin19_layout.bal
-File62=tamrin22_layout.bal
-File63=tamrin25_layout.bal
-File64=tamrin27_layout.bal
-File65=tamrin3_layout.bal
-File66=tamrin8_items.bal
-File67=tamrin8_layout.bal
-File68=tamrinat_layout.bal
-File69=tick.png
+File60=sp_bg2.jpg
+File61=tajrobiat_layout.bal
+File62=tamrin_roz_layout.bal
+File63=tamrin13_layout.bal
+File64=tamrin14_layout.bal
+File65=tamrin16_layout.bal
+File66=tamrin19_layout.bal
+File67=tamrin22_layout.bal
+File68=tamrin25_layout.bal
+File69=tamrin27_layout.bal
 File7=bg5.jpg
-File70=upload_pic.jpg
-File71=Vazir.ttf
+File70=tamrin3_layout.bal
+File71=tamrin8_items.bal
+File72=tamrin8_layout.bal
+File73=tamrinat_layout.bal
+File74=tick.png
+File75=upload_pic.jpg
+File76=Vazir.ttf
 File8=BMitra.ttf
 File9=book_layout.bal
 FileGroup1=Default Group
@@ -139,6 +144,11 @@ FileGroup69=Default Group
 FileGroup7=Default Group
 FileGroup70=Default Group
 FileGroup71=Default Group
+FileGroup72=Default Group
+FileGroup73=Default Group
+FileGroup74=Default Group
+FileGroup75=Default Group
+FileGroup76=Default Group
 FileGroup8=Default Group
 FileGroup9=Default Group
 Group=Default Group
@@ -150,23 +160,25 @@ Library5=stringfunctions
 Library6=webviewsettings
 Library7=xcustomlistview
 Library8=xui
+Library9=json
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>~\n~	 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />~\n~                            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />~\n~	)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~~\n~~\n~~\n~SetApplicationAttribute(android:requestLegacyExternalStorage, true)
 Module1=book_activity
 Module10=reagBook_activity
 Module11=setting_activity
 Module12=Starter
-Module13=tamrin_roz_activity
-Module14=tamrin13_activity
-Module15=tamrin14_activity
-Module16=tamrin16_activity
-Module17=tamrin19_activity
-Module18=tamrin22_activity
-Module19=tamrin25_activity
+Module13=tajrobiat_activity
+Module14=tamrin_roz_activity
+Module15=tamrin13_activity
+Module16=tamrin14_activity
+Module17=tamrin16_activity
+Module18=tamrin19_activity
+Module19=tamrin22_activity
 Module2=daftar_activity
-Module20=tamrin27_activity
-Module21=tamrin3_activity
-Module22=tamrin8_activity
-Module23=tamrinat_activity
+Module20=tamrin25_activity
+Module21=tamrin27_activity
+Module22=tamrin3_activity
+Module23=tamrin8_activity
+Module24=tamrinat_activity
 Module3=daftar_khasteha_activity
 Module4=daftar_ravabet_activity
 Module5=daftar_shokrgozari_activity
@@ -174,9 +186,9 @@ Module6=do_tamrin_roz_layout
 Module7=download_activity
 Module8=intro_activity
 Module9=myFunc
-NumberOfFiles=71
-NumberOfLibraries=8
-NumberOfModules=23
+NumberOfFiles=76
+NumberOfLibraries=9
+NumberOfModules=24
 Version=12.5
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -249,7 +261,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 		Activity.LoadLayout("main_layout")
 	
-		tim_splash.Initialize("tim_splash",100)
+		tim_splash.Initialize("tim_splash",300)
 		
 		tim_splash.Enabled=True
 		
@@ -274,9 +286,9 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	
 	
-	'If(File.Exists(File.DirInternal,"intro_pley")=False)Then
+	If(File.Exists(File.DirInternal,"intro_pley")=False)Then
 		StartActivity(intro_activity)
-	'End If
+	End If
 
 
 End Sub
@@ -672,4 +684,9 @@ Private Sub pan_tamrin_roz_Click
 	
 	
 	
+End Sub
+
+
+Private Sub pan_tajrobiat_Click
+	StartActivity(tajrobiat_activity)
 End Sub

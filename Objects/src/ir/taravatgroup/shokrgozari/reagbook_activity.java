@@ -349,14 +349,14 @@ public anywheresoftware.b4a.objects.WebViewWrapper _webview_player = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lbl_fav = null;
 public ir.taravatgroup.shokrgozari.main _main = null;
 public ir.taravatgroup.shokrgozari.myfunc _myfunc = null;
-public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
-public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
-public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
-public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.tajrobiat_activity _tajrobiat_activity = null;
 public ir.taravatgroup.shokrgozari.do_tamrin_roz_layout _do_tamrin_roz_layout = null;
 public ir.taravatgroup.shokrgozari.download_activity _download_activity = null;
+public ir.taravatgroup.shokrgozari.book_activity _book_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_activity _daftar_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_khasteha_activity _daftar_khasteha_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_ravabet_activity _daftar_ravabet_activity = null;
+public ir.taravatgroup.shokrgozari.daftar_shokrgozari_activity _daftar_shokrgozari_activity = null;
 public ir.taravatgroup.shokrgozari.intro_activity _intro_activity = null;
 public ir.taravatgroup.shokrgozari.setting_activity _setting_activity = null;
 public ir.taravatgroup.shokrgozari.starter _starter = null;
@@ -370,6 +370,7 @@ public ir.taravatgroup.shokrgozari.tamrin25_activity _tamrin25_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin27_activity _tamrin27_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
+public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
 
 public static void initializeProcessGlobals() {
@@ -428,7 +429,7 @@ if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywo
 _str_html_pleyer = "<html><head><meta name='viewport' content='width=device-width, initial-scale=1'></head><audio style='width:100%;' controls><source src='"+mostCurrent._xui.FileUri(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._sound_addres)+"' type='audio/mpeg' ></audio></html>";
  }else {
  //BA.debugLineNum = 77;BA.debugLine="Dim str_html_pleyer As String=\"<html><head><meta";
-_str_html_pleyer = "<html><head><meta name='viewport' content='width=device-width, initial-scale=1'></head><audio style='width:100%;' controls><source src='https://m2ebadi.whi.ir/shokrgozari/sounds/"+mostCurrent._sound_addres+"' type='audio/mpeg' ></audio></html>";
+_str_html_pleyer = "<html><head><meta name='viewport' content='width=device-width, initial-scale=1'></head><audio style='width:100%;' controls><source src='https://m2ebadi.iapp.ir/shokrgozari/sounds/"+mostCurrent._sound_addres+"' type='audio/mpeg' ></audio></html>";
  };
  //BA.debugLineNum = 83;BA.debugLine="WebView_player.Color=Colors.ARGB(0,0,0,0)";
 mostCurrent._webview_player.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (0),(int) (0),(int) (0),(int) (0)));
