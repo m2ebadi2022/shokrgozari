@@ -11,6 +11,8 @@ java.util.Map<String, anywheresoftware.b4a.keywords.LayoutBuilder.ViewWrapperAnd
 anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
 views.get("btn_home").vw.setLeft((int)((50d / 100 * width) - (views.get("btn_home").vw.getWidth() / 2)));
 views.get("imageview1").vw.setLeft((int)((50d / 100 * width) - (views.get("imageview1").vw.getWidth() / 2)));
+views.get("panel2").vw.setLeft((int)((50d / 100 * width) - (views.get("panel2").vw.getWidth() / 2)));
+views.get("panel2").vw.setTop((int)((45d / 100 * height) - (views.get("panel2").vw.getHeight() / 2)));
 
 }
 }

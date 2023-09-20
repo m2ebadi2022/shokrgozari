@@ -472,8 +472,8 @@ mostCurrent._lbl_icon_roz.setVisible(anywheresoftware.b4a.keywords.Common.True);
  }else if((_code_state==0)) { 
  //BA.debugLineNum = 112;BA.debugLine="lbl_icon_roz.TextColor=0xFFFF211F";
 mostCurrent._lbl_icon_roz.setTextColor(((int)0xffff211f));
- //BA.debugLineNum = 114;BA.debugLine="If(pos_scroll= 0)Then";
-if ((_pos_scroll==0)) { 
+ //BA.debugLineNum = 114;BA.debugLine="If(pos_scroll= -1)Then";
+if ((_pos_scroll==-1)) { 
  //BA.debugLineNum = 115;BA.debugLine="pos_scroll=i";
 _pos_scroll = _i;
  };
@@ -501,8 +501,8 @@ mostCurrent._cuslistv_data = new b4a.example3.customlistview();
 mostCurrent._xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
  //BA.debugLineNum = 17;BA.debugLine="Dim p As B4XView";
 mostCurrent._p = new anywheresoftware.b4a.objects.B4XViewWrapper();
- //BA.debugLineNum = 19;BA.debugLine="Dim pos_scroll As Int=0";
-_pos_scroll = (int) (0);
+ //BA.debugLineNum = 19;BA.debugLine="Dim pos_scroll As Int=-1";
+_pos_scroll = (int) (-1);
  //BA.debugLineNum = 21;BA.debugLine="Private lbl_roz As Label";
 mostCurrent._lbl_roz = new anywheresoftware.b4a.objects.LabelWrapper();
  //BA.debugLineNum = 22;BA.debugLine="Private lbl_icon_roz As Label";

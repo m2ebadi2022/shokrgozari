@@ -11,7 +11,6 @@ java.util.Map<String, anywheresoftware.b4a.keywords.LayoutBuilder.ViewWrapperAnd
 anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
 views.get("imageview2").vw.setLeft((int)((50d / 100 * width) - (views.get("imageview2").vw.getWidth() / 2)));
 views.get("imageview3").vw.setLeft((int)((50d / 100 * width) - (views.get("imageview3").vw.getWidth() / 2)));
-//BA.debugLineNum = 6;BA.debugLine="ImageView4.HorizontalCenter=50%x"[intro_layout/General script]
 views.get("imageview4").vw.setLeft((int)((50d / 100 * width) - (views.get("imageview4").vw.getWidth() / 2)));
 //BA.debugLineNum = 8;BA.debugLine="Label9.HorizontalCenter=50%x"[intro_layout/General script]
 views.get("label9").vw.setLeft((int)((50d / 100 * width) - (views.get("label9").vw.getWidth() / 2)));

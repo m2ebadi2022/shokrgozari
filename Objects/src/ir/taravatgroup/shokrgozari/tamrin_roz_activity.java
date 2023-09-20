@@ -903,6 +903,8 @@ _i.Initialize(_i.ACTION_VIEW,_url);
  //BA.debugLineNum = 367;BA.debugLine="StartActivity(i)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(_i.getObject()));
  };
+ //BA.debugLineNum = 370;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 372;BA.debugLine="End Sub";
 return false;
 }

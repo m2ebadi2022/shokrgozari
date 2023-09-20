@@ -10,12 +10,13 @@ c:\android\tools\..\extras\b4a_remote\androidx\annotation\annotation-experimenta
 c:\android\tools\..\extras\b4a_remote\androidx\lifecycle\lifecycle-runtime\2.5.1\unpacked-lifecycle-runtime-2.5.1\jars\classes.zip
 c:\android\tools\..\extras\b4a_remote\androidx\versionedparcelable\versionedparcelable\1.1.1\unpacked-versionedparcelable-1.1.1\jars\classes.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-core-63822317162000\dex_v1\core.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-json-63822317162000\dex_v1\json.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-sql-63822317164000\dex_v1\sql.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-stringfunctions-63530416118000\dex_v1\stringfunctions.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-webviewsettings-63472733258000\dex_v1\webviewsettings.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-xcustomlistview-63822317164000\dex_v1\xcustomlistview.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-xui-63822317164000\dex_v1\xui.zip
-C:\Android\tools\..\extras\b4a_local\unpacked-json-63822317162000\dex_v1\json.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-richstring-63610060324000\dex_v1\richstring.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-stringutils-63822317164000\dex_v1\stringutils.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-javaobject-63822317162000\dex_v1\javaobject.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-phone-63822317162000\dex_v1\phone.zip
@@ -155,7 +156,6 @@ E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\R.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\reagbook_activity$1.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\reagbook_activity$B4AMenuItemsClickListener.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\reagbook_activity$HandleKeyDelayed.dex
-E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\reagbook_activity$ResumableSub_setter.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\reagbook_activity$ResumeMessage.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\reagbook_activity$WaitForLayout.dex
 E:\myProject\b4a\shokrgozari\Objects\dexed\ir\taravatgroup\shokrgozari\reagbook_activity.dex

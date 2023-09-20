@@ -177,19 +177,16 @@ Private Sub lbl_dark_view_Click
 	End If
 End Sub
 
-
-Sub setter
-	
-	Dim rp As RuntimePermissions
-	rp.CheckAndRequest(rp.PERMISSION_WRITE_EXTERNAL_STORAGE)
-	Wait For Activity_PermissionResult (Permission As String, Result As Boolean)
-	If Result Then
-		
-		
-   
-	End If
-	
-End Sub
+'
+'Sub setter
+'	
+'	Dim rp As RuntimePermissions
+'	rp.CheckAndRequest(rp.PERMISSION_WRITE_EXTERNAL_STORAGE)
+'	Wait For Activity_PermissionResult (Permission As String, Result As Boolean)
+'	If Result Then
+'	End If
+'	
+'End Sub
 
 Private Sub lbl_go_tamrin_Click
 	If((Main.current_book_content_id-1)=0)Then

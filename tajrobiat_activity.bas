@@ -25,22 +25,41 @@ Sub Globals
 	Private webV_tajrobiat As WebView
 	Dim j As HttpJob
 	
+	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	Activity.LoadLayout("tajrobiat_layout")
 	j.Initialize("", Me)
-
-	fill_webView
+	
+		
+		fill_webView
+		
+	check_internet
+	
 
 End Sub
 
+
+
+
+
 Sub fill_webView 
-	webV_tajrobiat.LoadHtml("")
-	
-	webV_tajrobiat.LoadUrl("https://m2ebadi.iapp.ir/shokrgozari/chat_shokrgozari.php")
-	
+	If(myFunc.check_internet=True)Then
+		webV_tajrobiat.LoadHtml("")
+		
+		webV_tajrobiat.LoadUrl("https://m2ebadi.iapp.ir/shokrgozari/chat_shokrgozari.php?div_id="&Main.phon.GetSettings("android_id"))
+	Else
+		Dim result12 As Int
+		result12 = Msgbox2Async("اتصال اینترنت را بررسی کنید", "توجه!", "تلاش دوباره", "", "", Null,False)
+		
+		If(result12=DialogResponse.POSITIVE)Then
+			fill_webView
+		End If
+			
+	End If
+
 End Sub
 
 
@@ -93,10 +112,11 @@ End Sub
 
 Private Sub lbl_addComment_send_Click
 	
-	j.Download("https://m2ebadi.iapp.ir/shokrgozari/chat_shokrgozari.php?priv=pass2023&var=1& name="&et_addComment_title.Text&"&msg="&et_addComment_content.Text)
+	j.Download("https://m2ebadi.iapp.ir/shokrgozari/chat_shokrgozari_add.php?priv=pass2023&div_id="&Main.phon.GetSettings("android_id")&"&name="&et_addComment_title.Text&"&msg="&et_addComment_content.Text)
 	Wait For JobDone(job As HttpJob)
 	If job.Success Then
-		Log(job.GetString)
+		
+		ToastMessageShow("با تشکر ، نظر شما ارسال شد.",False)
 	End If
 	j.Release
 	
@@ -105,3 +125,61 @@ Private Sub lbl_addComment_send_Click
 	fill_webView
 	pan_all_send_comment.Visible=False
 End Sub
+
+
+
+Sub check_internet As Boolean
+	
+	
+	
+	Dim connected As Boolean=False
+	If Main.phon.GetDataState="CONNECTED" Then
+		connected=True
+	
+		
+		
+		
+'		Dim jo As HttpJob
+'		jo.Initialize("jo", Me)
+'		
+'		jo.Download("https://m2ebadi.iapp.ir/shokrgozari/chek_internet.html")
+		
+'		Wait For JobDone(jo As HttpJob)
+'		If jo.Success Then
+'			
+'			If(jo.GetString.Contains("connected")=True)Then
+'				connected=True
+'				ProgressDialogHide
+'			Else
+'				
+'				
+'				Dim result12 As Int
+'				result12 = Msgbox2("اتصال اینترنت را بررسی کنید", "توجه!", "تلاش دوباره", "", "", Null)
+'		
+'				If(result12=DialogResponse.POSITIVE)Then
+'					fill_webView
+'				End If
+'				
+'				
+'				connected=False
+'				
+'			End If
+'			
+'		End If
+'		jo.Release
+
+	Else
+		
+		
+		
+		
+		
+			
+	End If
+	
+	
+	
+	Return connected
+	
+End Sub
+

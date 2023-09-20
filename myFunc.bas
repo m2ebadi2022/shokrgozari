@@ -981,3 +981,18 @@ Sub get_daftar_shenase_titel (shenase As String) As String
 	Return res_str
 	
 End Sub
+
+
+
+Sub check_internet As Boolean
+	
+	Dim connected As Boolean
+	If Main.phon.GetDataState="CONNECTED" Then
+		connected=True
+	Else If Main.phon.GetSettings("wifi_on")=1 Then
+		connected=True
+	End If
+	
+	
+	Return connected
+End Sub

@@ -22,7 +22,7 @@ Sub Globals
 	Private xui As XUI
 	Dim p As B4XView
 	
-	Dim pos_scroll As Int=0
+	Dim pos_scroll As Int=-1
 	
 	Private lbl_roz As Label
 	Private lbl_icon_roz As Label
@@ -117,7 +117,7 @@ Sub fill_list
 		Else If(code_state = 0 )Then
 			lbl_icon_roz.TextColor=0xFFFF211F
 			
-			If(pos_scroll= 0)Then
+			If(pos_scroll= -1)Then
 				pos_scroll=i
 				
 			End If

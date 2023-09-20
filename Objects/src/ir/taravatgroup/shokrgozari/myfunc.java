@@ -36,6 +36,24 @@ public ir.taravatgroup.shokrgozari.tamrin3_activity _tamrin3_activity = null;
 public ir.taravatgroup.shokrgozari.tamrin8_activity _tamrin8_activity = null;
 public ir.taravatgroup.shokrgozari.tamrinat_activity _tamrinat_activity = null;
 public ir.taravatgroup.shokrgozari.httputils2service _httputils2service = null;
+public static boolean  _check_internet(anywheresoftware.b4a.BA _ba) throws Exception{
+boolean _connected = false;
+ //BA.debugLineNum = 981;BA.debugLine="Sub check_internet As Boolean";
+ //BA.debugLineNum = 983;BA.debugLine="Dim connected As Boolean";
+_connected = false;
+ //BA.debugLineNum = 984;BA.debugLine="If Main.phon.GetDataState=\"CONNECTED\" Then";
+if ((mostCurrent._main._phon /*anywheresoftware.b4a.phone.Phone*/ .GetDataState()).equals("CONNECTED")) { 
+ //BA.debugLineNum = 985;BA.debugLine="connected=True";
+_connected = anywheresoftware.b4a.keywords.Common.True;
+ }else if((mostCurrent._main._phon /*anywheresoftware.b4a.phone.Phone*/ .GetSettings("wifi_on")).equals(BA.NumberToString(1))) { 
+ //BA.debugLineNum = 987;BA.debugLine="connected=True";
+_connected = anywheresoftware.b4a.keywords.Common.True;
+ };
+ //BA.debugLineNum = 991;BA.debugLine="Return connected";
+if (true) return _connected;
+ //BA.debugLineNum = 992;BA.debugLine="End Sub";
+return false;
+}
 public static String  _connection_sql(anywheresoftware.b4a.BA _ba) throws Exception{
  //BA.debugLineNum = 10;BA.debugLine="Sub connection_sql";
  //BA.debugLineNum = 11;BA.debugLine="If(File.Exists(File.DirInternal,\"db.db\")=False)Th";
@@ -132,7 +150,7 @@ mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/  = (any
  //BA.debugLineNum = 337;BA.debugLine="Do While Main.res.NextRow";
 while (mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .NextRow()) {
  //BA.debugLineNum = 338;BA.debugLine="Log(Main.res.Getint(\"id\")&\"	\"&Main.res.Getint(\"r";
-anywheresoftware.b4a.keywords.Common.LogImpl("23276806",BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id"))+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("roz"))+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("num"))+"	"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("mohebat")+"	"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("elat")+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state")),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("13276806",BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("id"))+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("roz"))+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("num"))+"	"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("mohebat")+"	"+mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetString("elat")+"	"+BA.NumberToString(mostCurrent._main._res /*anywheresoftware.b4a.sql.SQL.ResultSetWrapper*/ .GetInt("state")),0);
  }
 ;
  //BA.debugLineNum = 342;BA.debugLine="Main.sql.Close";

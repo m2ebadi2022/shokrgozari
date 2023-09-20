@@ -557,7 +557,7 @@ case 15:
 this.state = 16;
 this.catchState = 0;
  //BA.debugLineNum = 203;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("28585245",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("18716317",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  //BA.debugLineNum = 204;BA.debugLine="ToastMessageShow(\"منتظر باشید ..\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("منتظر باشید .."),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;

@@ -552,119 +552,53 @@ return "";
 }
 public static String  _lbl_fav_click() throws Exception{
 int _fav_state = 0;
- //BA.debugLineNum = 202;BA.debugLine="Private Sub lbl_fav_Click";
- //BA.debugLineNum = 204;BA.debugLine="Dim fav_state As Int = myFunc.get_fav_byId(Main.c";
+ //BA.debugLineNum = 199;BA.debugLine="Private Sub lbl_fav_Click";
+ //BA.debugLineNum = 201;BA.debugLine="Dim fav_state As Int = myFunc.get_fav_byId(Main.c";
 _fav_state = mostCurrent._myfunc._get_fav_byid /*int*/ (mostCurrent.activityBA,mostCurrent._main._current_book_content_id /*int*/ );
- //BA.debugLineNum = 207;BA.debugLine="If(fav_state=1)Then";
+ //BA.debugLineNum = 204;BA.debugLine="If(fav_state=1)Then";
 if ((_fav_state==1)) { 
- //BA.debugLineNum = 209;BA.debugLine="myFunc.set_fav_book(Main.current_book_content_id";
+ //BA.debugLineNum = 206;BA.debugLine="myFunc.set_fav_book(Main.current_book_content_id";
 mostCurrent._myfunc._set_fav_book /*String*/ (mostCurrent.activityBA,mostCurrent._main._current_book_content_id /*int*/ ,(int) (0));
- //BA.debugLineNum = 210;BA.debugLine="lbl_fav.Text=Chr(0xF08A)";
+ //BA.debugLineNum = 207;BA.debugLine="lbl_fav.Text=Chr(0xF08A)";
 mostCurrent._lbl_fav.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf08a))));
- //BA.debugLineNum = 211;BA.debugLine="lbl_fav.TextColor=0xFF686868";
+ //BA.debugLineNum = 208;BA.debugLine="lbl_fav.TextColor=0xFF686868";
 mostCurrent._lbl_fav.setTextColor(((int)0xff686868));
  }else {
- //BA.debugLineNum = 213;BA.debugLine="myFunc.set_fav_book(Main.current_book_content_id";
+ //BA.debugLineNum = 210;BA.debugLine="myFunc.set_fav_book(Main.current_book_content_id";
 mostCurrent._myfunc._set_fav_book /*String*/ (mostCurrent.activityBA,mostCurrent._main._current_book_content_id /*int*/ ,(int) (1));
- //BA.debugLineNum = 214;BA.debugLine="lbl_fav.Text=Chr(0xF004)";
+ //BA.debugLineNum = 211;BA.debugLine="lbl_fav.Text=Chr(0xF004)";
 mostCurrent._lbl_fav.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.Chr(((int)0xf004))));
- //BA.debugLineNum = 215;BA.debugLine="lbl_fav.TextColor=0xFFFF3838";
+ //BA.debugLineNum = 212;BA.debugLine="lbl_fav.TextColor=0xFFFF3838";
 mostCurrent._lbl_fav.setTextColor(((int)0xffff3838));
  };
- //BA.debugLineNum = 219;BA.debugLine="End Sub";
+ //BA.debugLineNum = 216;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_go_tamrin_click() throws Exception{
- //BA.debugLineNum = 188;BA.debugLine="Private Sub lbl_go_tamrin_Click";
- //BA.debugLineNum = 189;BA.debugLine="If((Main.current_book_content_id-1)=0)Then";
+ //BA.debugLineNum = 185;BA.debugLine="Private Sub lbl_go_tamrin_Click";
+ //BA.debugLineNum = 186;BA.debugLine="If((Main.current_book_content_id-1)=0)Then";
 if (((mostCurrent._main._current_book_content_id /*int*/ -1)==0)) { 
- //BA.debugLineNum = 190;BA.debugLine="ToastMessageShow(\"بدون تمرین\",False)";
+ //BA.debugLineNum = 187;BA.debugLine="ToastMessageShow(\"بدون تمرین\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("بدون تمرین"),anywheresoftware.b4a.keywords.Common.False);
  }else if(((mostCurrent._main._current_book_content_id /*int*/ -1)==29)) { 
- //BA.debugLineNum = 192;BA.debugLine="ToastMessageShow(\"بدون تمرین\",False)";
+ //BA.debugLineNum = 189;BA.debugLine="ToastMessageShow(\"بدون تمرین\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("بدون تمرین"),anywheresoftware.b4a.keywords.Common.False);
  }else {
- //BA.debugLineNum = 194;BA.debugLine="Main.current_roz_tamrin=Main.current_book_conten";
+ //BA.debugLineNum = 191;BA.debugLine="Main.current_roz_tamrin=Main.current_book_conten";
 mostCurrent._main._current_roz_tamrin /*int*/  = (int) (mostCurrent._main._current_book_content_id /*int*/ -1);
- //BA.debugLineNum = 195;BA.debugLine="WebView1.LoadHtml(\"\")";
+ //BA.debugLineNum = 192;BA.debugLine="WebView1.LoadHtml(\"\")";
 mostCurrent._webview1.LoadHtml("");
- //BA.debugLineNum = 196;BA.debugLine="WebView_player.LoadHtml(\"\")";
+ //BA.debugLineNum = 193;BA.debugLine="WebView_player.LoadHtml(\"\")";
 mostCurrent._webview_player.LoadHtml("");
- //BA.debugLineNum = 197;BA.debugLine="StartActivity(tamrin_roz_activity)";
+ //BA.debugLineNum = 194;BA.debugLine="StartActivity(tamrin_roz_activity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._tamrin_roz_activity.getObject()));
  };
- //BA.debugLineNum = 200;BA.debugLine="End Sub";
+ //BA.debugLineNum = 197;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
-}
-public static void  _setter() throws Exception{
-ResumableSub_setter rsub = new ResumableSub_setter(null);
-rsub.resume(processBA, null);
-}
-public static class ResumableSub_setter extends BA.ResumableSub {
-public ResumableSub_setter(ir.taravatgroup.shokrgozari.reagbook_activity parent) {
-this.parent = parent;
-}
-ir.taravatgroup.shokrgozari.reagbook_activity parent;
-anywheresoftware.b4a.objects.RuntimePermissions _rp = null;
-String _permission = "";
-boolean _result = false;
-
-@Override
-public void resume(BA ba, Object[] result) throws Exception{
-
-    while (true) {
-        switch (state) {
-            case -1:
-return;
-
-case 0:
-//C
-this.state = 1;
- //BA.debugLineNum = 177;BA.debugLine="Dim rp As RuntimePermissions";
-_rp = new anywheresoftware.b4a.objects.RuntimePermissions();
- //BA.debugLineNum = 178;BA.debugLine="rp.CheckAndRequest(rp.PERMISSION_WRITE_EXTERNAL_S";
-_rp.CheckAndRequest(processBA,_rp.PERMISSION_WRITE_EXTERNAL_STORAGE);
- //BA.debugLineNum = 179;BA.debugLine="Wait For Activity_PermissionResult (Permission As";
-anywheresoftware.b4a.keywords.Common.WaitFor("activity_permissionresult", processBA, this, null);
-this.state = 5;
-return;
-case 5:
-//C
-this.state = 1;
-_permission = (String) result[0];
-_result = (Boolean) result[1];
-;
- //BA.debugLineNum = 180;BA.debugLine="If Result Then";
-if (true) break;
-
-case 1:
-//if
-this.state = 4;
-if (_result) { 
-this.state = 3;
-}if (true) break;
-
-case 3:
-//C
-this.state = 4;
- if (true) break;
-
-case 4:
-//C
-this.state = -1;
-;
- //BA.debugLineNum = 186;BA.debugLine="End Sub";
-if (true) break;
-
-            }
-        }
-    }
-}
-public static void  _activity_permissionresult(String _permission,boolean _result) throws Exception{
 }
 }

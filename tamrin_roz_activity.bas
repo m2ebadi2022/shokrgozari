@@ -373,6 +373,6 @@ Private Sub WebView1_OverrideUrl (Url As String) As Boolean
 		StartActivity(i)
 	End If
 	
-	
+	Return True
 	
 End Sub

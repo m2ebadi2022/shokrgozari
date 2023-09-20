@@ -37,42 +37,43 @@ File40=Mj_Rashid.ttf
 File41=note_icon.png
 File42=Open Book Emoji.png
 File43=other.png
-File44=pic1.jpg
-File45=pic2.jpg
-File46=pic3.jpg
-File47=pic4.jpg
-File48=pic5.jpg
-File49=radius_all.png
+File44=pic_don.jpg
+File45=pic1.jpg
+File46=pic2.jpg
+File47=pic3.jpg
+File48=pic4.jpg
+File49=pic5.jpg
 File5=bg3.jpg
-File50=radius_botton.png
-File51=radius_circler.png
-File52=radius_LeftTop.png
-File53=readBook_layout.bal
-File54=setting.png
-File55=setting_layout.bal
-File56=setting2.png
-File57=share.png
-File58=Smiling Face With Hearts.png
-File59=sp_bg.jpg
+File50=radius_all.png
+File51=radius_botton.png
+File52=radius_circler.png
+File53=radius_LeftTop.png
+File54=readBook_layout.bal
+File55=setting.png
+File56=setting_layout.bal
+File57=setting2.png
+File58=share.png
+File59=Smiling Face With Hearts.png
 File6=bg4.jpg
-File60=sp_bg2.jpg
-File61=tajrobiat_layout.bal
-File62=tamrin_roz_layout.bal
-File63=tamrin13_layout.bal
-File64=tamrin14_layout.bal
-File65=tamrin16_layout.bal
-File66=tamrin19_layout.bal
-File67=tamrin22_layout.bal
-File68=tamrin25_layout.bal
-File69=tamrin27_layout.bal
+File60=sp_bg.jpg
+File61=sp_bg2.jpg
+File62=tajrobiat_layout.bal
+File63=tamrin_roz_layout.bal
+File64=tamrin13_layout.bal
+File65=tamrin14_layout.bal
+File66=tamrin16_layout.bal
+File67=tamrin19_layout.bal
+File68=tamrin22_layout.bal
+File69=tamrin25_layout.bal
 File7=bg5.jpg
-File70=tamrin3_layout.bal
-File71=tamrin8_items.bal
-File72=tamrin8_layout.bal
-File73=tamrinat_layout.bal
-File74=tick.png
-File75=upload_pic.jpg
-File76=Vazir.ttf
+File70=tamrin27_layout.bal
+File71=tamrin3_layout.bal
+File72=tamrin8_items.bal
+File73=tamrin8_layout.bal
+File74=tamrinat_layout.bal
+File75=tick.png
+File76=upload_pic.jpg
+File77=Vazir.ttf
 File8=BMitra.ttf
 File9=book_layout.bal
 FileGroup1=Default Group
@@ -149,18 +150,20 @@ FileGroup73=Default Group
 FileGroup74=Default Group
 FileGroup75=Default Group
 FileGroup76=Default Group
+FileGroup77=Default Group
 FileGroup8=Default Group
 FileGroup9=Default Group
 Group=Default Group
 Library1=core
+Library10=richstring
 Library2=fileprovider
-Library3=okhttputils2
-Library4=sql
-Library5=stringfunctions
-Library6=webviewsettings
-Library7=xcustomlistview
-Library8=xui
-Library9=json
+Library3=json
+Library4=okhttputils2
+Library5=sql
+Library6=stringfunctions
+Library7=webviewsettings
+Library8=xcustomlistview
+Library9=xui
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>~\n~	 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />~\n~                            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />~\n~	)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~~\n~~\n~~\n~SetApplicationAttribute(android:requestLegacyExternalStorage, true)
 Module1=book_activity
 Module10=reagBook_activity
@@ -186,8 +189,8 @@ Module6=do_tamrin_roz_layout
 Module7=download_activity
 Module8=intro_activity
 Module9=myFunc
-NumberOfFiles=76
-NumberOfLibraries=9
+NumberOfFiles=77
+NumberOfLibraries=10
 NumberOfModules=24
 Version=12.5
 @EndOfDesignText@
@@ -213,6 +216,7 @@ Sub Process_Globals
 	Dim current_book_content_id As Int =0
 	Dim daftar_shenase As String=""
 	
+	Dim phon As Phone
 	
 	Dim sql As SQL
 	Dim res As ResultSet
@@ -255,13 +259,14 @@ Sub Globals
 	Private pan_circle As Panel
 	Private pan_main3 As Panel
 	Private pan_main2 As Panel
+	Private pan_all_donate As Panel
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	
 		Activity.LoadLayout("main_layout")
 	
-		tim_splash.Initialize("tim_splash",300)
+		tim_splash.Initialize("tim_splash",2700)
 		
 		tim_splash.Enabled=True
 		
@@ -497,9 +502,15 @@ End Sub
 Sub get_tamrin1_for_lsv(id As Int)
 	lsv_roz.Clear
 	lsv_roz.TwoLinesLayout.Label.Width=90%x
-	lsv_roz.TwoLinesLayout.Label.TextColor=Colors.Green
+	
+	'lsv_roz.TwoLinesLayout.Label.Height=100dip
+	lsv_roz.TwoLinesLayout.ItemHeight=80dip
+	
+	
+	lsv_roz.TwoLinesLayout.Label.TextColor=0xFF009C74
 	
 	lsv_roz.TwoLinesLayout.SecondLabel.Width=90%x
+	lsv_roz.TwoLinesLayout.SecondLabel.Height=50dip
 	
 	lbl_roz_lsv.Text="روز "&id
 	Dim strFunc As StringFunctions
@@ -519,6 +530,7 @@ Sub get_tamrin1_for_lsv(id As Int)
 		If(list_num.Get(2)<>"null"  And list_num.Get(2)<>"" )Then
 		
 			lsv_roz.AddTwoLines((i+1)&" : "&list_num.Get(2),list_num.Get(3))
+			
 		End If
 		
 	Next
@@ -598,7 +610,14 @@ Sub Activity_KeyPress (KeyCode As Int)
 		
 		
 		If(current_indexPage<>1)Then
-			btn_home_Click
+			If(pan_all_lsv.Visible=True)Then
+				pan_all_lsv.Visible=False
+			else If(pan_all_donate.Visible=True)Then
+					pan_all_donate.Visible=False
+			Else
+					btn_home_Click
+			End If
+			
 		Else
 			
 			Msgbox2Async("آیا از برنامه خارج میشوید!", "", "بله", "نه", "", Null, False)
@@ -634,6 +653,7 @@ Private Sub pan_otherMyApps_Click
 		
 		
 	Catch
+		MsgboxAsync("1- اتصال اینترنت را بررسی کنید."&CRLF&"2- برنامه بازار را نصب کنید.","خطا")
 		Log(LastException)
 	End Try
 	
@@ -646,12 +666,13 @@ Private Sub pan_comment_Click
 	Try
 		Dim market As Intent
 		Dim url As String
-		url="bazaar://details?id=ir.taravatgroup.ezafekari2"
+		url="bazaar://details?id=ir.taravatgroup.shokrgozari"
 		market.Initialize(market.ACTION_EDIT,url)
 		StartActivity(market)
 		
 		
 	Catch
+		MsgboxAsync("1- اتصال اینترنت را بررسی کنید."&CRLF&"2- برنامه بازار را نصب کنید.","خطا")
 		Log(LastException)
 	End Try
 	
@@ -661,14 +682,18 @@ Private Sub pan_comment_Click
 End Sub
 
 Private Sub pan_info_Click
-	Msgbox("گروه برنامه نویسی طراوت"&CRLF&"v1.0"&CRLF&"1402-05","درباره ما")
+	Dim str_matn As RichString
+	str_matn.Initialize("گروه برنامه نویسی طراوت"&CRLF&"{bl}v1.0"&CRLF&"1402-06{bl}"&CRLF&"ایمیل ارتباطی :"&CRLF&"{gr}m2ebadi1369@outlook.com{gr}")
+	str_matn.Color2(Colors.Blue,"{bl}")
+	str_matn.Color2(Colors.Magenta,"{gr}")
+	
+	Msgbox2Async(str_matn,"درباره ما","باشه","","",Null,True)
 End Sub
 
 Private Sub pan_donate_Click
-	Dim i As Intent
-	Dim url As String="https://zarinp.al/taravatgroup"
-	i.Initialize(i.ACTION_VIEW, url)
-	StartActivity(i)
+	pan_all_donate.Visible=True
+	
+	
 End Sub
 
 Private Sub pan_tamrin_roz_Click
@@ -688,5 +713,37 @@ End Sub
 
 
 Private Sub pan_tajrobiat_Click
-	StartActivity(tajrobiat_activity)
+	
+	
+	If(myFunc.check_internet=True)Then
+		
+		StartActivity(tajrobiat_activity)
+	Else
+			
+		Dim result12 As Int
+		result12 = Msgbox2Async("اتصال اینترنت را بررسی کنید", "توجه!", "تلاش دوباره", "", "", Null,False)
+		
+		If(result12=DialogResponse.POSITIVE)Then
+			pan_tajrobiat_Click
+		End If
+			
+			
+	End If
+	
+End Sub
+
+Private Sub lbl_goDonate_Click
+	Dim i As Intent
+	Dim url As String="https://zarinp.al/taravatgroup"
+	i.Initialize(i.ACTION_VIEW, url)
+	StartActivity(i)
+	pan_all_donate_Click
+End Sub
+
+Private Sub pan_all_donate_Click
+	pan_all_donate.Visible=False
+End Sub
+
+Private Sub Panel2_Click
+	
 End Sub
